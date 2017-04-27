@@ -1,0 +1,110 @@
+\documentclass[notes]{beamer}       			% compila sia i frame che le note
+%\documentclass{beamer}              			% compila solo i frame
+%\documentclass[notes=only]{beamer}  	% compila solo le note
+
+% ita language and encoding
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+% impostazioni base delle slide - tema, colori, caratteri, ... (deic.uab.es/~iblanes/beamer_gallery/)
+\mode<presentation>
+{
+	\usetheme{CambridgeUS}      % or try Darmstadt, Madrid, Warsaw, ...
+  	\usecolortheme{rose} 			% or try albatross, beaver, crane, orchid, rose ...
+	\usefonttheme{structurebold} % or try structureitalicserif, structuresmallcapsserif
+}
+
+% settagio dati principali del file - titolo, autore, ...
+\title[AMS-02 (Alpha Magnetic Spectrometer)]{\textbf{\LARGE AMS-02}}
+\subtitle{Alpha Magnetic Spectrometer}
+\author{Daniele Di Bari}
+\institute[]{\small{Università degli studi di Perugia}\\ \small{Corso di laurea magistrale in fisica}}
+\date[27 Aprile 2017]{\scriptsize{27 Aprile 2017}}
+
+% settaggio prima slide
+\setbeamertemplate{title page}
+{
+      \usebeamerfont{institute}
+      \insertinstitute
+      
+      \vspace{1.5cm}      
+      
+      %\usebeamerfont{title}
+      \inserttitle\par
+      
+      \vspace{0.25cm}      
+      
+      \usebeamerfont{subtitle}
+      \insertsubtitle\par
+      
+      \vspace{1.25cm}      
+
+      
+      \usebeamerfont{author}
+      \insertauthor
+
+      \usebeamerfont{date}
+      \insertdate
+}
+
+\begin{document}
+
+\begin{frame}
+
+\titlepage
+
+\end{frame}
+
+\note{ 
+   Salve, sono Gabriele di Bari e oggi parlerà della mia tesi che riguarda:\\
+   Differential Evolution per reti neurali
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% page counter
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{100em}%
+    \small\insertframenumber/\inserttotalframenumber
+    \vspace*{0.3em}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+
+Questa è la seconda slide.
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Introduction}
+
+\begin{itemize}
+  \item Your introduction goes here!
+  \item Use \texttt{itemize} to organize your main points.
+\end{itemize}
+
+\end{frame}
+
+\note{Everything you want}
+
+\begin{frame}
+    \frametitle{Development}
+
+    Lot of interesting things
+
+\end{frame}
+
+\note[itemize]{
+\item point 1
+\item point 2
+}
+
+\begin{frame}
+    \frametitle{Development}
+
+    Lot of interesting things
+
+\end{frame}
+
+\end{document}
