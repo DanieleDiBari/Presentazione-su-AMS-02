@@ -310,13 +310,18 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 %	\end{columns}
 %\end{frame}
 
-\begin{frame}
+\begin{frame}[label=AMS-apparatus_img]
 	\frametitle{Technical Requirement}
 	\framesubtitle{general structure of the AMS apparatus}
 	\begin{center}
 		\vspace{-0.45cm}
 		\includegraphics[height=0.7\paperheight]{Schem_structure_of_AMS-02.png}
+
+	%\vspace{-0.5cm}
+
+		\hyperlink{AMS-apparatus_list}{\beamerbutton{link to AMS apparatus list}}
 	\end{center}
+	\vspace{-0.25cm}
 \end{frame}
 
 \begin{frame}
@@ -428,7 +433,9 @@ Despite the detection concept is very similar to the modern accelerator experime
 \end{frame}
 
 \section{The subdetectors of AMS-02}
-\begin{frame}{The AMS-02's subdetectors}{from the top to the bottom}	
+\begin{frame}[label=AMS-apparatus_list]
+	\frametitle{The AMS-02's subdetectors}
+	\framesubtitle{from the top to the bottom}	
 	\begin{itemize}
 		\item	\textitem{TRD}{Trasition Radiation Detector}, identifies electrons and positrons among other CRs.
 		\item	\textitem{ToF}{Time of Flight}, warns the sub-detectors of incoming CRs.
@@ -442,6 +449,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 		\item	\textitem{RICH}{Ring-Imaging CHerenkov detector}, measures with high precision the velocity of CRs.
 		\item	\textitem{ECAL}{Electromagnetic CALorimeter}, measures energy of incoming electrons, positrons and $\gamma$-rays.
 	\end{itemize}
+	\hfill \hyperlink{AMS-apparatus_img}{\beamerbutton{link to AMS apparatus scheme}}
 \end{frame}
 
 \subsection{TRD}
@@ -454,10 +462,10 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\begin{block}{\small{The main features of TRD are:}}
 		%\vspace{-0.25cm}
 		\begin{itemize}\small{
-			\item[$\circ$] to discriminate between  $e^+$ and $p$ whit a proton rejection of $10^{-2} \div 10^{-3}$ 
+			\item[$\circ$] \textbf{to discriminate} between  $e^+$ and $p$ whit a proton rejection of $10^{-2} \div 10^{-3}$ 
 						in the energy range between $10$ and $300 GeV$.$^1$
 						
-			\item[$\circ$] to identify the nuclei by measurement of the charge $|Z|$.
+			\item[$\circ$] \textbf{to identify} the nuclei by measurement of the charge $|Z|$.
 		}\end{itemize}
 %		\vspace{-0.55cm}
 %		\begin{center}
@@ -501,26 +509,29 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{the main features of transition radiation process}
 
-	\begin{itemize}
-		\small{
-			\item \textbf{The emission spectrum of TR depends on the traversed material and on the particle's energy.} 
-					 Typically, this emission phenomena is relevant for ultra-relativistic particle ($\gamma \geqslant 300$) 
-					 and the emitted photon are soft X-rays (i.e. they have an energy of the order of a few $KeV$).
-			\item \textbf{Total energy emitted per interface crossed is proportional to $\gamma$} and therefore 
-					 to the $E/mc^2$ ratio.
-			\item \textbf{Number of emitted TR photons per interface crossed is small}, 
-					 e.g. for a unit charge $\sim (3 \cdot 137)^{-1}$
-			\item Particle must traverse a minimum distance, the so-called 
-					 \textbf{formation zone $D_f$}, in order to efficiently emit TR.
-			\item Very small emission angle: $\theta \lesssim \gamma^{-1}$. \textbf{TR photons stay close to particle's track.}
-		}
-	\end{itemize}
-%	\begin{columns}
-%		\begin{column}{0.65\textwidth}\end{column}
-%		\begin{column}{0.35\textwidth}
-%			\hyperlink{TR-details}{\beamerbutton{click here for more details on TR}}
-%		\end{column}
-%	\end{columns}
+	\small{
+	Typically, this emission phenomena \textbf{is relevant for ultra-relativistic particles} ($\gamma \geqslant 300$) 
+	and the emitted photon are \textbf{soft X-rays}, i.e. TR-photons have an energy of the order of a few $KeV$.
+	
+		\begin{itemize}
+			\justifying
+			\item  The \textbf{emission spectrum of  TR depends on} the density of the traversed material $\rho$, on the particle's energy $E$ and on the modulus of its electric charge $|Z|$.
+%			\vspace{-0.1cm}
+%			\begin{itemize} 
+%				\item[$\circ$] density of the traversed material, $\rho$;
+%				\item[$\circ$] energy of the particle, $E$;
+%				\item[$\circ$] modulus of the electric charge of the particle, $|Z|$.
+%			\end{itemize}					 % the density of the traversed material, on the particle's energy and on the modulus of its electric charge.
+			\item \textbf{Total energy emitted per interface crossed, $W_{TR}$, is proportional to $\gamma$}.
+			\item \textbf{Number of emitted TR-photons per interface crossed is small}, 
+					 e.g. for a unit charge $N_{TR} \sim (3 \cdot 137)^{-1}$
+			\item Exist a minimum distance $D_f$, called \textbf{formation zone}, that the particle has to traverse in order to efficiently emit TR photons.
+			\item Due to the very small emission angle, $\theta_{TR} \lesssim \gamma^{-1}$, \textbf{TR-photons stay close to particle's track}.
+		
+		\end{itemize}
+	}
+
+	\vspace{-0.35cm}
 	\hfill \hyperlink{TR-details}{\beamerbutton{click here for more details on TR}}
 \end{frame}
 
