@@ -4,11 +4,11 @@
 
 % ita language and encoding
 \usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}
+%\usepackage[italian]{babel}
 
 % formattazione
 \usepackage{ragged2e} 							% pacchetto che contiene il comando \justifying
-\apptocmd{\frame}{}{\justifying}{}  	% --> applica la giustificazione a tutti i frame del documento
+%\apptocmd{\frame}{}{\justifying}{}  	% --> applica la giustificazione a tutti i frame del documento
 %\justifying											% --> applica la giustificazione a tutto il documento
 
 % graphics style
@@ -164,7 +164,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \tableofcontents
 \end{frame}
 
-\begin{frame}<presentation:0>
+\begin{frame}<presentation:0>[noframenumbering]
 	\frametitle{Technical Question about the Detector}
 	AMS is a particle physics experiment in space, so it focuses on the detection of particles, but:
 	\begin{itemize}
@@ -190,7 +190,9 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\setbeamertemplate{background}{white}
 	\frametitle{Introduction}
 	\framesubtitle{The Alpha Magnetic Spectrometer}
-	AMS-02 is a general purpose \textbf{high energy particle detector}  designed to operate as an external module on the International Space Station.
+	\justifying
+	AMS-02 is a general purpose \textbf{high energy particle detector}  designed to operate as an external module on the
+	International Space Station.
 	
 	\vspace{0.25cm}
 	\begin{block}{Purpose of the AMS experiment}
@@ -222,10 +224,11 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \begin{frame}
     \frametitle{Technical Requirements}
     \framesubtitle{from Physics Goals}
+    \justifying
     
 	Physical goals involve \textbf{technical requirements for the AMS detector}:
 	
-	\begin{itemize}
+	\begin{itemize}\justifying
 		\item	\bluetextbf{Dark Matter $\Rightarrow$}
 					to get $e^+/p$ rejection of $\sim10^{-6}$ for the measurement of the positron fraction.
 		\item	\bluetextbf{Matter/Antimatter Asymmetry $\Rightarrow$}
@@ -269,7 +272,8 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\vspace{-0.2cm}
     \begin{itemize}
     	\item[\footnotesize{$\blacktriangleright$}] 
-    		\footnotesize{There is a strong demand for precision measurements of cosmic rays in the energy region from 10 to 1000 
+    		\footnotesize{\justifying
+    		There is a strong demand for precision measurements of cosmic rays in the energy region from 10 to 1000 
     		$GeV$ as the measurements of positron fraction, i.e.  $e^+ / (e^+ + e^-)$, by AMS-01, HEAT, PAMELA and FERMI 
     		indicate a large deviation of this ratio from the production of $e^+$ and $e^-$ predicted by a model that includes only 
     		ordinary CR collisions.
@@ -437,6 +441,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\frametitle{The AMS-02's subdetectors}
 	\framesubtitle{from the top to the bottom}	
 	\begin{itemize}
+		\justifying
 		\item	\textitem{TRD}{Trasition Radiation Detector}, identifies electrons and positrons among other CRs.
 		\item	\textitem{ToF}{Time of Flight}, warns the sub-detectors of incoming CRs.
 		\item	\bluetextbf{Magnetic Spectrometer}, detects the particle charge sign, separating matter from antimatter. Main 
@@ -472,7 +477,8 @@ Despite the detection concept is very similar to the modern accelerator experime
 %			\includegraphics[height=0.35\paperheight]{TRD-Photo-05.jpeg}
 %		\end{center}
 	\end{block}
-	\footnotetext[1]{This seems that, even if $e^+$ and $p$ 
+	\footnotetext[1]{\justifying
+						This seems that, even if $e^+$ and $p$ 
 						have the same charge, and so they are somewhat similar (i.e. in the other sub-detector, apart for the ECAL, 
 						$e^+$ and $p$ with different energy give the same signals and therefore they may be confused), TRD may
 						wrongly interpreter a $p$ as an $e^+$ only every $100 \div 1000$ real $p$ events.}
@@ -545,15 +551,15 @@ Despite the detection concept is very similar to the modern accelerator experime
 				\justifying
 				The AMS-02 TRD is based on a well-proven design\footnotemark[1] with multiple irregular boundary 
 				crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with 
-				$\text{Xe} / \text{CO}_2$ gas to detect the TR-photons. 
+				gas mixture ($80 \% \: \text{Xe} - 20\% \: \text{CO}_2$) to detect the TR-photons. 
 			
 				\vspace{0.15cm}
-				The TRD consists of 20 layers of fleece and straw tube modules.
+				The TRD consists of 20 layers of fleece and straw tube modules - in each layers there are several:
 			\end{column}
 			\begin{column}{0.325\textwidth}
 				\vspace{-4ex}
 				\begin{center}
-					\includegraphics[width=0.925\columnwidth]{TRD-Stack.png}
+					\includegraphics[width=\columnwidth]{TRD-Stack.png}
 				
 					\hspace{0.4cm}\hyperlink{TRD-Mech_Struct}{\beamerbutton{TRD's mechanical structure}}
 				\end{center}
@@ -562,6 +568,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 	
 		%\vspace{0.15cm}
 		\begin{itemize}
+			\justifying
 			\item \bluetextbf{TRD radiator}\\
 				The fleece material LRP 375 BK has a density of $0.06 g/cm^3$ and polypropylene/polyethylene 
 				fibers with a thickness of $10 \mu m$.
@@ -572,14 +579,64 @@ Despite the detection concept is very similar to the modern accelerator experime
 	}
 \end{frame}
 
-%	
-%%	It consists of 328 TRD modules, each containing 16 straw tubes (for a total of 5248 straw tubes), of lengths between 0.8 and 2 m are arranged in 20 layers each with 20 mm of LRP 375 BK ($0.06 g/cm^3$ polypropylene/polyethylene $10 \mu m$ fiber fleece).	
-%	
-%	The straw tubes
-%have a diameter of 6 mm, a length of 2.2m and are made
-%from a double-layer kapton–aluminum foil of 72 mm.
-%	
-%
+
+\begin{frame}[label=TRD-Straws]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{more about the straw tubes of a TRD straw module}
+	\justifying
+	The straw tubes have a diameter of 6 mm and different lengths, up to 2.2m. Their walls are made of 72 $\mu m$ a 
+	double-layer kapton–aluminum foil that work as cathodes. A 30 $\mu m$ thick fine gold plated wire (tensioned with 1N) 
+	in the center of the tube works as anode for the proportional chamber.
+
+	\begin{columns}
+		\begin{column}{0.125\textwidth}\end{column}
+		\begin{column}{0.75\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth]{TRD-StrawMod-01.png}
+				\vspace{0.1cm}
+				\includegraphics[width=0.75\textwidth]{TRD-StrawMod-02.png}
+				\footnotesize{\caption{\justifying An example of a TRD straw module (up) and a schematic view of its section (down),
+				 where also are drawn the longitudinal and vertical carbon fiber stiffeners used for the mechanical stabilization of the
+				 module.}}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.125\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{space qualification of the straw tubes}
+	\justifying	
+	\small{Space qualification tests have been carried out for eight 0.7m long straw modules.}
+	
+	\small{They underwent vibration tests (0.5 g sine sweep followed by 6.8 g random test followed by 0.5 g sine sweep) as
+	well as thermo-vacuum-cycle tests (between -40 and +60 $^\circ{C}$) followed again by vibration tests. No significant
+	changes in eigenfrequencies, gas tightness or gas gain were observed.}
+	
+	\begin{columns}
+		\begin{column}{0.2\textwidth}\end{column}
+		\begin{column}{0.45\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.95\textwidth]{TRD-StrawsQual-01.png}
+				
+				%\footnotesize{\caption{\justifying AAA}}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.3\textwidth}\justifying
+			
+			\vspace{0.5cm}
+			\footnotesize{\bluetextbf{Figure:}
+			
+			TRD thermal vacuum test of 4 straw detector modules}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+	
+\end{frame}
+
 %The lower and upper four layers are oriented parallel to the AMS-02 magnetic field while the middle 12
 %layers run perpendicular to provide 3D tracking. They are supported by a conical octagon, as shown in
 %Figure 2.27, made of aluminum-honeycomb walls with carbon-fiber skins and bulkheads. A mechanical
@@ -600,24 +657,85 @@ Despite the detection concept is very similar to the modern accelerator experime
 
 %	
 
-\begin{frame}{TRD - Transition Radiation Detector}{more about TRD straw modules}
-The straw tubes have a diameter of 6 mm, a length of 2.2m and are made from a double-layer kapton–aluminum foil of 72 mm. For the production of gas tight modules each straw was tested individually with helium at 2.8 bar for 5 min in a setup sensitive to the gas diffusion limit through the straw wall [4]. The straw modules (Fig. 1) are closed with polycarbonate endpieces which serve as gas manifolds and center the Cu–Te-crimp plugs to hold a 30 mm gold-plated
-tungsten wire tensioned with 1N. The modules are
-mechanically stabilized by longitudinal and vertical carbon
-fiber stiffeners. The wire positioning precision was verified
-with a high-resolution computer-tomography-scan [5]
-(Fig. 2). Each flight module is tested individually for wire
-tension, gas tightness, leakage current and gas gain
-homogeneity. In total, 328 modules of lengths up to 2m
-are supported by a conically shaped octagon structure
-made of aluminum–honeycomb walls with carbon-fiber
-skins and bulkheads (Fig. 3). The mechanical precision
-below 100 mm kept the measured average gas gain
+
+%Space qualification tests have been carried out for eight 0.7m long straw modules.
+%
+%They underwent vibration tests (0.5 g sine sweep followed by 6.8 g random test followed by 0.5 g sine sweep) as well as thermo-vacuum-cycle tests (between -40 and +60 $^\circ{C}$) followed again by vibration tests. No significant changes in eigenfrequencies, gas tightness or gas gain were observed.
+
+\begin{frame}
+In total, 328 modules (overall, 5248 straws) arranged on 20 layers that are supported by a conically shaped octagon structure made of aluminum–honeycomb walls with carbon-fiber skins and bulkheads. 
+
+	\begin{columns}
+		\begin{column}{0.125\textwidth}\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth]{TRD-Support-02.png}
+				\footnotesize{\caption{ANO}}
+%				\justifying An example of a TRD straw module (up) and a schematic view of its section (down),
+%				 where also are drawn the longitudinal and vertical carbon fiber stiffeners used for the mechanical stabilization of the
+%				 module.}}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.125\textwidth}\end{column}
+	\end{columns}
+The upper and lower four layers run parallel to the magnetic field, the others perpendicular to provide 3D tracking. 
+
+The TRD will be fully covered in a multi-layer-insulation (MLI) foil to keep the spatial orbit temperature gradient below 1K. 
 \end{frame}
+
+
+\begin{frame}<presentation:0>[noframenumbering]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{structural verification of the TRD support}
+	\vspace{-1cm}
+	\begin{columns}[t]
+		\begin{column}{0.015\textwidth}\end{column}
+		\begin{column}{0.425\textwidth}
+			\begin{figure}
+				\centering
+				\small{\bluetextbf{Modal Analysis}}
+				
+				\includegraphics[width=0.725\textwidth]{TRD-Support-03.png}
+				
+				\justifying								
+				\footnotesize{Coupled load modal analysis\\
+									 FEC: $f_0 = 67.1 Hz$\\
+									 (NASA requirement: $f_0 > 50 Hz$)}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.425\textwidth}
+			\begin{figure}
+				\centering
+				\small{\bluetextbf{Displacement} }
+				\includegraphics[width=0.725\textwidth]{TRD-Support-04.png}
+				
+				\justifying								
+				\scriptsize{Main accelerations during shuttle 
+									 start: 7.7g in x; and at landing: 8.9g
+									in z.\\
+									 Max. displacement 0.73mm well within elastic limits.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.015\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+%Each flight module is tested individually for wire
+%tension, gas tightness, leakage current and gas gain
+%homogeneity.  The mechanical precision
+%below 100 mm kept the measured average gas gain variations of the integrated 328 straw modules below 0.7%
+
+%The TRD will be fully covered in a
+%multi-layer-insulation (MLI) foil to keep the spatial orbit
+%temperature gradient below 1K. 
 
 \begin{frame}{TRD - Transition Radiation Detector}{the challenge for the AMS-02 experiment}
 The challenge is to build such a detector in a space-qualified way with strict limits on outgassing, gas tightness, weight and power consumption whilst assuring safety and gas gain homogeneity in a harsh environment during payload lift and in orbit without the possibility of further access to the experiment. This involves detailed finite-element calculations as well as subcomponent vibration and thermo-vacuum-cycle tests. The optimized AMS-02 TRD design with 2m diameter and with 5248 straw tubes weighs less than 500 kg.
 \end{frame}
+
+
 
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
 	\begin{itemize}
@@ -630,7 +748,7 @@ The challenge is to build such a detector in a space-qualified way with strict l
 
 \appendix
 
-\begin{frame}[label=TR-details]
+\begin{frame}[label=TR-details,noframenumbering]
 	\frametitle{TRD}
 	\framesubtitle{Transition Radiation Detector}
 	\hyperlink{TRD-main}{\beamerbutton{back to TRD}}
@@ -663,7 +781,7 @@ The challenge is to build such a detector in a space-qualified way with strict l
 	}
 \end{frame}
 
-\begin{frame}[label=TRD-Mech_Struct]
+\begin{frame}[label=TRD-Mech_Struct,noframenumbering]
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{mechanical structure \hspace{6.85cm}\hyperlink{TRD-Design}{\beamerbutton{back to TRD design}}}
 	\begin{center}
@@ -671,5 +789,8 @@ The challenge is to build such a detector in a space-qualified way with strict l
 		\includegraphics[height=0.775\paperheight]{TRD-Struct-04.png}
 	\end{center}
 \end{frame}
+
+
+
 
 \end{document}
