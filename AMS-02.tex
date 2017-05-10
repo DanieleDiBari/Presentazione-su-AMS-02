@@ -164,7 +164,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \tableofcontents
 \end{frame}
 
-\begin{frame}
+\begin{frame}<presentation:0>
 	\frametitle{Technical Question about the Detector}
 	AMS is a particle physics experiment in space, so it focuses on the detection of particles, but:
 	\begin{itemize}
@@ -516,6 +516,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 		\begin{itemize}
 			\justifying
 			\item  The \textbf{emission spectrum of  TR depends on} the density of the traversed material $\rho$, on the particle's energy $E$ and on the modulus of its electric charge $|Z|$.
+%		ALTERNATIVA alla FRASE PRECEDENTE
 %			\vspace{-0.1cm}
 %			\begin{itemize} 
 %				\item[$\circ$] density of the traversed material, $\rho$;
@@ -535,21 +536,86 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\hfill \hyperlink{TR-details}{\beamerbutton{click here for more details on TR}}
 \end{frame}
 
-\begin{frame}{TRD - Transition Radiation Detector}{based on a well-proven design }
-Since the particle momentum is determined with the AMS-02 silicon tracker by measuring the trajectory inside the magnet, the detected transition radiation (TR) can be used to distinguish between particles of different masses, like positrons and protons.
-
-	\begin{columns}
-		\begin{column}{0.4\textwidth}
-			\includegraphics[width=0.9\columnwidth]{TRD-Stack.png}
-		\end{column}
-		\begin{column}{0.6\textwidth}
-			The AMS-02 TRD is based on a well-proven design with multiple irregular boundary crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with $\text{Xe} / \text{CO}_2$ gas to detect the TR-photons. The TRD consists of 20 layers of fleece and straw tube modules.
-		\end{column}
-	\end{columns}
-
+\begin{frame}[label=TRD-Design]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{based on a well-proven design}
+	\small{
+		\begin{columns}
+			\begin{column}{0.675\textwidth}
+				\justifying
+				The AMS-02 TRD is based on a well-proven design\footnotemark[1] with multiple irregular boundary 
+				crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with 
+				$\text{Xe} / \text{CO}_2$ gas to detect the TR-photons. 
+			
+				\vspace{0.15cm}
+				The TRD consists of 20 layers of fleece and straw tube modules.
+			\end{column}
+			\begin{column}{0.325\textwidth}
+				\vspace{-4ex}
+				\begin{center}
+					\includegraphics[width=0.925\columnwidth]{TRD-Stack.png}
+				
+					\hspace{0.4cm}\hyperlink{TRD-Mech_Struct}{\beamerbutton{TRD's mechanical structure}}
+				\end{center}
+			\end{column}
+		\end{columns}	
+	
+		%\vspace{0.15cm}
+		\begin{itemize}
+			\item \bluetextbf{TRD radiator}\\
+				The fleece material LRP 375 BK has a density of $0.06 g/cm^3$ and polypropylene/polyethylene 
+				fibers with a thickness of $10 \mu m$.
+			\item \bluetextbf{TRD straw modules}\\
+				The TR-photons are detected in proportional mode modules, each consisting of 16 straw tubes.
+		\end{itemize}
+		\footnotetext[1]{This coming from the R\&D work for ground based experiments - ATLAS and HERA}
+	}
 \end{frame}
 
-\begin{frame}
+%	
+%%	It consists of 328 TRD modules, each containing 16 straw tubes (for a total of 5248 straw tubes), of lengths between 0.8 and 2 m are arranged in 20 layers each with 20 mm of LRP 375 BK ($0.06 g/cm^3$ polypropylene/polyethylene $10 \mu m$ fiber fleece).	
+%	
+%	The straw tubes
+%have a diameter of 6 mm, a length of 2.2m and are made
+%from a double-layer kapton–aluminum foil of 72 mm.
+%	
+%
+%The lower and upper four layers are oriented parallel to the AMS-02 magnetic field while the middle 12
+%layers run perpendicular to provide 3D tracking. They are supported by a conical octagon, as shown in
+%Figure 2.27, made of aluminum-honeycomb walls with carbon-fiber skins and bulkheads. A mechanical
+%precision of better than 100 μm assures gas gain homogeneity better than 1%. On the outside of the
+%conical octagon structure a grid structure (see Figure 2.25), built out of carbon fiber tubes, will be
+%attached to support the services (gas tubes, HV cables, signal cables).	
+%	
+%	The modules are placed in a conical octagon support structure in
+%alternate projections to provide 3D tracking	
+%
+%	 with multiple irregular boundary crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with $\text{Xe} / \text{CO}_2$ gas to detect the TR-photons. The TRD consists of 20 layers of fleece and straw tube modules.	
+%
+%
+%	\begin{center}
+%		\includegraphics[width=0.35\paperheight]{TRD-Stack.png}
+%	\end{center}
+%	
+
+%	
+
+\begin{frame}{TRD - Transition Radiation Detector}{more about TRD straw modules}
+The straw tubes have a diameter of 6 mm, a length of 2.2m and are made from a double-layer kapton–aluminum foil of 72 mm. For the production of gas tight modules each straw was tested individually with helium at 2.8 bar for 5 min in a setup sensitive to the gas diffusion limit through the straw wall [4]. The straw modules (Fig. 1) are closed with polycarbonate endpieces which serve as gas manifolds and center the Cu–Te-crimp plugs to hold a 30 mm gold-plated
+tungsten wire tensioned with 1N. The modules are
+mechanically stabilized by longitudinal and vertical carbon
+fiber stiffeners. The wire positioning precision was verified
+with a high-resolution computer-tomography-scan [5]
+(Fig. 2). Each flight module is tested individually for wire
+tension, gas tightness, leakage current and gas gain
+homogeneity. In total, 328 modules of lengths up to 2m
+are supported by a conically shaped octagon structure
+made of aluminum–honeycomb walls with carbon-fiber
+skins and bulkheads (Fig. 3). The mechanical precision
+below 100 mm kept the measured average gas gain
+\end{frame}
+
+\begin{frame}{TRD - Transition Radiation Detector}{the challenge for the AMS-02 experiment}
 The challenge is to build such a detector in a space-qualified way with strict limits on outgassing, gas tightness, weight and power consumption whilst assuring safety and gas gain homogeneity in a harsh environment during payload lift and in orbit without the possibility of further access to the experiment. This involves detailed finite-element calculations as well as subcomponent vibration and thermo-vacuum-cycle tests. The optimized AMS-02 TRD design with 2m diameter and with 5248 straw tubes weighs less than 500 kg.
 \end{frame}
 
@@ -562,6 +628,7 @@ The challenge is to build such a detector in a space-qualified way with strict l
 	\end{itemize}
 \end{frame}
 
+\appendix
 
 \begin{frame}[label=TR-details]
 	\frametitle{TRD}
@@ -594,6 +661,15 @@ The challenge is to build such a detector in a space-qualified way with strict l
 		D_{f} \simeq \frac{2 c}{\omega \left( \gamma^{-2} + \theta_{TR}^2 + \xi^2 \right)}
 	\end{equation*}
 	}
+\end{frame}
+
+\begin{frame}[label=TRD-Mech_Struct]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{mechanical structure \hspace{6.85cm}\hyperlink{TRD-Design}{\beamerbutton{back to TRD design}}}
+	\begin{center}
+		\vspace{-0.32cm}
+		\includegraphics[height=0.775\paperheight]{TRD-Struct-04.png}
+	\end{center}
 \end{frame}
 
 \end{document}
