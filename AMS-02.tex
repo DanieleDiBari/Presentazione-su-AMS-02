@@ -1,5 +1,5 @@
-\documentclass[notes]{beamer}       			% compila sia i frame che le note
-%\documentclass{beamer}              			% compila solo i frame
+%\documentclass[notes]{beamer}       		% compila sia i frame che le note
+\documentclass{beamer}              				% compila solo i frame
 %\documentclass[notes=only]{beamer}  	% compila solo le note
 
 % ita language and encoding
@@ -561,7 +561,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 				\begin{center}
 					\includegraphics[width=\columnwidth]{TRD-Stack.png}
 				
-					\hspace{0.4cm}\hyperlink{TRD-Mech_Struct}{\beamerbutton{TRD's mechanical structure}}
+					\hspace{0.4cm}\hyperlink{TRD-Module}{\beamerbutton{photo of a TRD module}}
 				\end{center}
 			\end{column}
 		\end{columns}	
@@ -606,9 +606,9 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\end{columns}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=Supp_Struct]
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{TRD support structure}
+	\framesubtitle{the support structure of the TRD\hspace{2.35cm}\hyperlink{TRD-Mech_Struct}{\beamerbutton{more about the Mechanical Structure of the TRD}}}
 	\justifying
 	\small{In total, 328 modules (overall, 5248 straws) arranged on 20 layers that are supported by a conically shaped octagon
 	structure made of aluminum honeycomb walls with carbon-fiber skins and bulkheads.}
@@ -645,7 +645,34 @@ Despite the detection concept is very similar to the modern accelerator experime
 %The TRD will be fully covered in a multi-layer-insulation (MLI) foil to keep the spatial orbit temperature gradient below 1K. 
 \end{frame}
 
-\begin{frame}
+
+\begin{frame}{TRD - Transition Radiation Detector}{the challenge for the AMS-02 experiment}
+	\justifying
+	\small{The challenge is to \textbf{build such a detector in a space-qualified way with strict limits} on outgassing, gas tightness, 
+	weight and power consumption whilst assuring safety and gas gain homogeneity in a harsh environment during payload lift and 
+	in orbit without the possibility of further access to the experiment.}
+	
+	\vspace{-0.25cm}
+	\begin{columns}
+		\begin{column}{0.125\textwidth}\end{column}
+		\begin{column}{0.65\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.75\textwidth]{TRD-Weights.png}
+				
+				\scriptsize{The optimized AMS-02 TRD design weighs less than $500 kg$.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.125\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace{0.25cm}
+	\small{This \textbf{involves} detailed \textit{finite-element calculations} as well as \textit{subcomponent vibration and 
+	thermo-vacuum-cycle tests}.}
+	
+\end{frame}
+
+\begin{frame}[label=TRD-SQ_StrawsMod]
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{space qualification of the straw modules}
 	\justifying	
@@ -680,10 +707,10 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\hfill\hyperlink{TRD-SpaceQual}{\beamerbutton{more details on Space Qualification}}
 \end{frame}
 
-\begin{frame}[label=TRD-SQ_TestStruct,noframenumbering]
+\begin{frame}
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{structural verification of the TRD support}
-	\vspace{-1cm}
+	\vspace{-1.15cm}
 	\begin{columns}[t]
 		\begin{column}{0.015\textwidth}\end{column}
 		\begin{column}{0.425\textwidth}
@@ -694,72 +721,38 @@ Despite the detection concept is very similar to the modern accelerator experime
 				\includegraphics[width=0.725\textwidth]{TRD-Support-03.png}
 				
 				\justifying								
-				\footnotesize{Coupled load modal analysis\\
-									 FEC: $f_0 = 67.1 Hz$\\
-									 (NASA requirement: $f_0 > 50 Hz$)}
+				\scriptsize{Finite-elements calculation \textbf{coupled load modal analysis}\footnotemark[1]:\\
+								\hspace{0.17cm} - $f_0 = 67.1 Hz$\\
+								\textbf{NASA requirement}: $f_0 > 50 Hz$}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.02\textwidth}\end{column}
 		\begin{column}{0.425\textwidth}
 			\begin{figure}
 				\centering
-				\small{\bluetextbf{Displacement} }
+				\small{\bluetextbf{Displacement}}
 				\includegraphics[width=0.725\textwidth]{TRD-Support-04.png}
 				
 				\justifying								
-				\scriptsize{Main accelerations during shuttle 
-									 start: 7.7g in x; and at landing: 8.9g
-									in z.\\
-									 Max. displacement 0.73mm well within elastic limits.}
+				\scriptsize{\textbf{Main accelerations} (simulating shuttle):\\
+								\hspace{0.17cm} - $7.7g$ in $x$ at start; $8.9g$ in $z$ at landing.\\
+								\textbf{Maximum displacement}:\\
+								\hspace{0.17cm} - $0.73 mm$, well within elastic limits.}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.015\textwidth}\end{column}
 	\end{columns}
-	\footnotetext[1]{\justifying
-Coupled loads analysis (CLA) is a critical process for many high-technology systems including launch vehicles and satellites. CLA predicts responses caused by major dynamic and quasistatic loading events such as liftoff, gust, buffet, and engine startup and shutdown. CLA helps to minimize risk and maximize the probability of mission success.}
+	\footnotetext[1]{\justifying\scriptsize{
+	Coupled loads modal analysis (CLA) is a critical process for many high-technology systems including launch vehicles and 
+	satellites. CLA predicts responses caused by major dynamic and quasistatic loading events such as liftoff, gust, buffet, and 
+	engine startup and shutdown.\\
+	CLA helps to minimize risk and maximize the probability of mission success.}}
 	
 \end{frame}
-%The lower and upper four layers are oriented parallel to the AMS-02 magnetic field while the middle 12
-%layers run perpendicular to provide 3D tracking. They are supported by a conical octagon, as shown in
-%Figure 2.27, made of aluminum-honeycomb walls with carbon-fiber skins and bulkheads. A mechanical
-%precision of better than 100 μm assures gas gain homogeneity better than 1%. On the outside of the
-%conical octagon structure a grid structure (see Figure 2.25), built out of carbon fiber tubes, will be
-%attached to support the services (gas tubes, HV cables, signal cables).	
-%	
-%	The modules are placed in a conical octagon support structure in
-%alternate projections to provide 3D tracking	
-%
-%	 with multiple irregular boundary crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with $\text{Xe} / \text{CO}_2$ gas to detect the TR-photons. The TRD consists of 20 layers of fleece and straw tube modules.	
-%
-%
-%	\begin{center}
-%		\includegraphics[width=0.35\paperheight]{TRD-Stack.png}
-%	\end{center}
-%	
-
-%	
-
-
-%Space qualification tests have been carried out for eight 0.7m long straw modules.
-%
-%They underwent vibration tests (0.5 g sine sweep followed by 6.8 g random test followed by 0.5 g sine sweep) as well as thermo-vacuum-cycle tests (between -40 and +60 $^\circ{C}$) followed again by vibration tests. No significant changes in eigenfrequencies, gas tightness or gas gain were observed.
-
-
-
-
-
-%Each flight module is tested individually for wire
-%tension, gas tightness, leakage current and gas gain
-%homogeneity.  The mechanical precision
-%below 100 mm kept the measured average gas gain variations of the integrated 328 straw modules below 0.7%
-
 %The TRD will be fully covered in a
 %multi-layer-insulation (MLI) foil to keep the spatial orbit
 %temperature gradient below 1K. 
 
-\begin{frame}{TRD - Transition Radiation Detector}{the challenge for the AMS-02 experiment}
-The challenge is to build such a detector in a space-qualified way with strict limits on outgassing, gas tightness, weight and power consumption whilst assuring safety and gas gain homogeneity in a harsh environment during payload lift and in orbit without the possibility of further access to the experiment. This involves detailed finite-element calculations as well as subcomponent vibration and thermo-vacuum-cycle tests. The optimized AMS-02 TRD design with 2m diameter and with 5248 straw tubes weighs less than 500 kg.
-\end{frame}
 
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
 	\begin{itemize}
@@ -774,27 +767,78 @@ The challenge is to build such a detector in a space-qualified way with strict l
 
 \begin{frame}[label=TR-details,noframenumbering]
 	\frametitle{TRD}
-	\framesubtitle{Transition Radiation Detector}
-	\hyperlink{TRD-main}{\beamerbutton{back to TRD}}
+	\framesubtitle{Transition Radiation - Angular Distribution	\hspace{4.35cm}\hyperlink{TRD-main}{\beamerbutton{back to TRD}}}
+	\justifying
 	\footnotesize{
+	The frequency spectrum of TR emitted by a particle with charge $Z e$ upon perpendicular traversal through a single interface between two media with dielectric constants $\epsilon_f$ and $\epsilon_g$ has been calculated by Ginzburg and Frank and
+by Garibian. These calculations show that for highly relativistic particles most of the radiation is emitted in the x-ray region. 
+%	\begin{equation*}
+%		\frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta)
+%	\end{equation*}	
+		
+%	\begin{equation*}
+%		f_0 (\theta) = \theta^3 \left( \frac{1}{\gamma^{-2} + \theta^2 + \left(\omega_f / \omega \right)^2} - \frac{1}{\gamma^{-2} + \theta^2 + \left(\omega_g / \omega \right)^2} \right)
+%	\end{equation*}		
+	}
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+		\justifying
+		
+		In this case, $\epsilon_{f,g} \simeq 1 - \omega_{f,g}^2/\omega^2$ (where $\omega_{f,g}$ are the plasma frequencies of the two media) and the expression for the differential radiation intensity is:
+
+$$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$.
+
+%2
+%		In this case, $\epsilon_{f,g} \simeq 1 - \omega_{f,g}^2/\omega^2$ where:
+%		
+%$$ \omega_{f,g} = 28.8 \: \sqrt{\rho_{f,g} \, \frac{Z_{f,g}}{A_{f,g}}} \: eV $$
+%
+%are the plasma frequencies, $\rho_{f,g}$ the densities of material, $Z_{f,g}$ the atomic numbers and $A_{f,g}$ the atomic weights of the two media. The expression for the differential radiation intensity is:
+%
+%$$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$		
+
+%	3	
+%		In this case, $\epsilon_{f,g} \simeq 1 - \omega_{f,g}^2/\omega^2$ where $\omega_{f,g}$ are the plasma frequencies of the two media:
+%		
+%		$$ \omega_{f,g} = 28.8 \: \sqrt{\rho_{f,g} \, \frac{Z_{f,g}}{A_{f,g}}} \: eV $$
+%
+%and the expression for the differential radiation intensity is:
+%
+%$$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$
+%
+%where $\rho_{f,g}$ are the densities of material, $Z_{f,g}$ the atomic numbers, and $A_{f,g}$ the atomic weights of the two media.
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth]{TR-AngularDistr.png}
+				
+				%\scriptsize{Angular distribution of a single surface yield.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
 	\begin{equation*} 
-		\frac{dW}{d\omega} = \frac{Z^2 \alpha}{\pi} \left[ \frac{\epsilon_f^2 + \epsilon_g^2 + 2 \gamma^{-2}}{\xi_f^2-\xi_g^2}	\ln \left( \frac{\gamma^{-2} + \epsilon_f^2}{\gamma^{-2} + \epsilon_g^2} \right) - 2 \right]
+		\frac{dW}{d(\hbar\omega)} = \frac{Z^2 \alpha}{\pi} \left[ \frac{\omega_f^2 + \omega_g^2 + 2 \omega^2 \gamma^{-2}}{\omega_f^2-\omega_g^2}	\ln \left( \frac{\omega^2 \gamma^{-2} + \omega_f^2}{\omega^2 \gamma^{-2} + \omega_g^2} \right) - 2 \right]
 	\end{equation*}
 	
 	\begin{equation*}
-		\frac{dW}{d\omega} \simeq \frac{Z^2 e^2}{6 \pi c} \left( \frac{\omega_c}{\omega} \right)^4
+		\frac{dW}{d\omega} \simeq 
+		\left\{
+		\begin{array}{ll}
+		\frac{2 Z^2 \alpha \hbar}{\pi}  \left( \ln \frac{\omega_f}{\omega_g} - 1 \right) \quad \quad \omega < \gamma \omega_g
+		\vspace{0.15cm}\\
+		\frac{2 Z^2 \alpha \hbar}{\pi}  \ln \frac{\omega_f}{\omega} \quad \quad \quad \quad \quad \gamma \omega_g < \omega < \gamma \omega_f \vspace{0.15cm}\\
+		\frac{Z^2 \alpha \hbar}{6 \pi}  \left( \frac{\omega_f}{\omega} \right)^4 \quad \quad \quad \quad \quad \gamma \omega_f < \omega
+		\end{array}
+		\right.
 	\end{equation*}
 	
 	\begin{equation*}
-	\frac{dW}{d\omega} \simeq \frac{2 Z^2 e^2}{\pi c} \ln \left( \frac{\omega_c}{\omega} \right)
-	\end{equation*}
-	
-	\begin{equation*}
-	\frac{dW}{d\omega} \simeq \frac{2 Z^2 e^2}{\pi c} \left[ \ln \left( \frac{\omega_c}{\omega} \right) - 1 \right]
-	\end{equation*}
-	
-	\begin{equation*}
-		W_{TR} \simeq Z^2 \cdot \frac{\hbar \omega_p}{3\cdot 137} \cdot \gamma \propto Z^2 \cdot \frac{E}{m c^2}
+		W_{TR} \simeq Z^2 \cdot \frac{\hbar \alpha}{3} \cdot \frac{(\omega_f - \omega_g)^2}{\omega_f + \omega_g} \gamma \propto Z^2 \cdot \frac{E}{m c^2}
 	\end{equation*}
 	\begin{equation*}
 		\theta_{TR} \lesssim \gamma^{-1}
@@ -802,12 +846,20 @@ The challenge is to build such a detector in a space-qualified way with strict l
 	\begin{equation*}
 		D_{f} \simeq \frac{2 c}{\omega \left( \gamma^{-2} + \theta_{TR}^2 + \xi^2 \right)}
 	\end{equation*}
-	}
+\end{frame}
+
+\begin{frame}[label=TRD-Module,noframenumbering]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{photo of a radiator and a straw module \hspace{4cm}\hyperlink{TRD-Design}{\beamerbutton{back to TRD design}}}
+	%\begin{center}
+		\vspace{-0.1cm}
+		\includegraphics[width=0.95\paperwidth]{TRD-RadEStraws.png}
+	%\end{center}
 \end{frame}
 
 \begin{frame}[label=TRD-Mech_Struct,noframenumbering]
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{mechanical structure \hspace{6.85cm}\hyperlink{TRD-Design}{\beamerbutton{back to TRD design}}}
+	\framesubtitle{mechanical structure \hspace{6.85cm}\hyperlink{TRD-Supp_Struct}{\beamerbutton{back to TRD design}}}
 	\begin{center}
 		\vspace{-0.32cm}
 		\includegraphics[height=0.775\paperheight]{TRD-Struct-04.png}
@@ -844,8 +896,7 @@ The challenge is to build such a detector in a space-qualified way with strict l
 		}
 	\end{itemize}
 
-	\hfill\hyperlink{TRD-SQ_TestStruct}{\beamerbutton{something on the space qualification of the TRD support structure}}
-	
+	\hfill\hyperlink{TRD-SQ_StrawsMod}{\beamerbutton{back to the previous slide}}
 	\footnotetext[1]{\scriptsize{Finite Elements Calculation}}
 	\footnotetext[2]{\scriptsize{Max-Planck-Institut fur Extraterrestrische Physik, Munchen, Germany}}
 \end{frame}
