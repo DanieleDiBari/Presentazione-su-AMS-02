@@ -1,5 +1,5 @@
-%\documentclass[notes]{beamer}       			% compila sia i frame che le note
-\documentclass{beamer}              			% compila solo i frame
+\documentclass[notes]{beamer}       			% compila sia i frame che le note
+%\documentclass{beamer}              			% compila solo i frame
 %\documentclass[notes=only]{beamer}  	% compila solo le note
 
 % ita language and encoding
@@ -549,7 +549,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 		\begin{columns}
 			\begin{column}{0.675\textwidth}
 				\justifying
-				The AMS-02 TRD is based on a well-proven design\footnotemark[1] with multiple irregular boundary 
+				The \textbf{AMS-02  TRD is based on a well-proven design}\footnotemark[1] with multiple irregular boundary 
 				crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with 
 				gas mixture ($80 \% \: \text{Xe} - 20\% \: \text{CO}_2$) to detect the TR-photons. 
 			
@@ -584,10 +584,11 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{more about the straw tubes of a TRD straw module}
 	\justifying
-	The straw tubes have a diameter of 6 mm and different lengths, up to 2.2m. Their walls are made of 72 $\mu m$ a 
-	double-layer kapton–aluminum foil that work as cathodes. A 30 $\mu m$ thick fine gold plated wire (tensioned with 1N) 
-	in the center of the tube works as anode for the proportional chamber.
+	The straw tubes have a diameter of 6 mm and different lengths, up to 2m. Their walls, made of 72 $\mu m$ a 
+	double-layer kapton–aluminum foil, work as cathodes. In the center of each tube, there is a 30 $\mu m$ thick fine 
+	gold plated wire (tensioned with 1N) that works as anode for the proportional chamber.
 
+	\vspace{-0.15cm}
 	\begin{columns}
 		\begin{column}{0.125\textwidth}\end{column}
 		\begin{column}{0.75\textwidth}
@@ -607,14 +608,50 @@ Despite the detection concept is very similar to the modern accelerator experime
 
 \begin{frame}
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{space qualification of the straw tubes}
+	\framesubtitle{TRD support structure}
+	\justifying
+	\small{In total, 328 modules (overall, 5248 straws) arranged on 20 layers that are supported by a conically shaped octagon
+	structure made of aluminum honeycomb walls with carbon-fiber skins and bulkheads.}
+	
+	\vspace{-0.25cm}
+	\begin{columns}
+		\begin{column}{0.24\textwidth}\end{column}
+		\begin{column}{0.37\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth]{TRD-Support-05.png}
+				
+				%\footnotesize{\caption{\justifying AAA}}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.3\textwidth}\justifying
+			
+			\vspace{0.5cm}
+			\footnotesize{\bluetextbf{Figure:}
+			
+			TRD support structure. 
+			
+			The \textbf{octagonal pyramid shape} has been chosen to optimize the TRD acceptance and to minimize the weight
+			and the size of the apparatus.}
+		\end{column}
+		\begin{column}{0.09\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace{0.25cm}
+	\small{The structure has a mechanical precision of 100 $\mu m$ to avoid wire displacement or straw walls deformation. 
+
+	The upper and lower four layers run parallel to the magnetic field, the others perpendicular to \textbf{provide 3D 
+	tracking}.}
+%The TRD will be fully covered in a multi-layer-insulation (MLI) foil to keep the spatial orbit temperature gradient below 1K. 
+\end{frame}
+
+\begin{frame}
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{space qualification of the straw modules}
 	\justifying	
 	\small{Space qualification tests have been carried out for eight 0.7m long straw modules.}
 	
-	\small{They underwent vibration tests (0.5 g sine sweep followed by 6.8 g random test followed by 0.5 g sine sweep) as
-	well as thermo-vacuum-cycle tests (between -40 and +60 $^\circ{C}$) followed again by vibration tests. No significant
-	changes in eigenfrequencies, gas tightness or gas gain were observed.}
-	
+	\vspace{-0.25cm}
 	\begin{columns}
 		\begin{column}{0.2\textwidth}\end{column}
 		\begin{column}{0.45\textwidth}
@@ -625,67 +662,25 @@ Despite the detection concept is very similar to the modern accelerator experime
 				%\footnotesize{\caption{\justifying AAA}}
 			\end{figure}
 		\end{column}
-		\begin{column}{0.3\textwidth}\justifying
+		\begin{column}{0.27\textwidth}\justifying
 			
 			\vspace{0.5cm}
-			\footnotesize{\bluetextbf{Figure:}
+			\footnotesize{\bluetextbf{Figure}
 			
 			TRD thermal vacuum test of 4 straw detector modules}
 		\end{column}
-		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.08\textwidth}\end{column}
 	\end{columns}
 	
+	\vspace{0.25cm}
+	\small{They underwent vibration tests (0.5 g sine sweep followed by 6.8 g random test followed by 0.5 g sine sweep) as
+	well as thermo-vacuum-cycle tests (from -40 and +60 $^\circ{C}$) followed again by vibration tests. \textbf{No significant
+	changes in eigenfrequencies, gas tightness or gas gain were observed.}}
+	
+	\hfill\hyperlink{TRD-SpaceQual}{\beamerbutton{more details on Space Qualification}}
 \end{frame}
 
-%The lower and upper four layers are oriented parallel to the AMS-02 magnetic field while the middle 12
-%layers run perpendicular to provide 3D tracking. They are supported by a conical octagon, as shown in
-%Figure 2.27, made of aluminum-honeycomb walls with carbon-fiber skins and bulkheads. A mechanical
-%precision of better than 100 μm assures gas gain homogeneity better than 1%. On the outside of the
-%conical octagon structure a grid structure (see Figure 2.25), built out of carbon fiber tubes, will be
-%attached to support the services (gas tubes, HV cables, signal cables).	
-%	
-%	The modules are placed in a conical octagon support structure in
-%alternate projections to provide 3D tracking	
-%
-%	 with multiple irregular boundary crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with $\text{Xe} / \text{CO}_2$ gas to detect the TR-photons. The TRD consists of 20 layers of fleece and straw tube modules.	
-%
-%
-%	\begin{center}
-%		\includegraphics[width=0.35\paperheight]{TRD-Stack.png}
-%	\end{center}
-%	
-
-%	
-
-
-%Space qualification tests have been carried out for eight 0.7m long straw modules.
-%
-%They underwent vibration tests (0.5 g sine sweep followed by 6.8 g random test followed by 0.5 g sine sweep) as well as thermo-vacuum-cycle tests (between -40 and +60 $^\circ{C}$) followed again by vibration tests. No significant changes in eigenfrequencies, gas tightness or gas gain were observed.
-
-\begin{frame}
-In total, 328 modules (overall, 5248 straws) arranged on 20 layers that are supported by a conically shaped octagon structure made of aluminum–honeycomb walls with carbon-fiber skins and bulkheads. 
-
-	\begin{columns}
-		\begin{column}{0.125\textwidth}\end{column}
-		\begin{column}{0.5\textwidth}
-			\begin{figure}
-				\centering
-				\includegraphics[width=\textwidth]{TRD-Support-02.png}
-				\footnotesize{\caption{ANO}}
-%				\justifying An example of a TRD straw module (up) and a schematic view of its section (down),
-%				 where also are drawn the longitudinal and vertical carbon fiber stiffeners used for the mechanical stabilization of the
-%				 module.}}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.125\textwidth}\end{column}
-	\end{columns}
-The upper and lower four layers run parallel to the magnetic field, the others perpendicular to provide 3D tracking. 
-
-The TRD will be fully covered in a multi-layer-insulation (MLI) foil to keep the spatial orbit temperature gradient below 1K. 
-\end{frame}
-
-
-\begin{frame}<presentation:0>[noframenumbering]
+\begin{frame}[label=TRD-SQ_TestStruct,noframenumbering]
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{structural verification of the TRD support}
 	\vspace{-1cm}
@@ -720,7 +715,38 @@ The TRD will be fully covered in a multi-layer-insulation (MLI) foil to keep the
 		\end{column}
 		\begin{column}{0.015\textwidth}\end{column}
 	\end{columns}
+	\footnotetext[1]{\justifying
+Coupled loads analysis (CLA) is a critical process for many high-technology systems including launch vehicles and satellites. CLA predicts responses caused by major dynamic and quasistatic loading events such as liftoff, gust, buffet, and engine startup and shutdown. CLA helps to minimize risk and maximize the probability of mission success.}
+	
 \end{frame}
+%The lower and upper four layers are oriented parallel to the AMS-02 magnetic field while the middle 12
+%layers run perpendicular to provide 3D tracking. They are supported by a conical octagon, as shown in
+%Figure 2.27, made of aluminum-honeycomb walls with carbon-fiber skins and bulkheads. A mechanical
+%precision of better than 100 μm assures gas gain homogeneity better than 1%. On the outside of the
+%conical octagon structure a grid structure (see Figure 2.25), built out of carbon fiber tubes, will be
+%attached to support the services (gas tubes, HV cables, signal cables).	
+%	
+%	The modules are placed in a conical octagon support structure in
+%alternate projections to provide 3D tracking	
+%
+%	 with multiple irregular boundary crossings in a 20-mm fleece radiator and straw tube proportional wire chambers filled with $\text{Xe} / \text{CO}_2$ gas to detect the TR-photons. The TRD consists of 20 layers of fleece and straw tube modules.	
+%
+%
+%	\begin{center}
+%		\includegraphics[width=0.35\paperheight]{TRD-Stack.png}
+%	\end{center}
+%	
+
+%	
+
+
+%Space qualification tests have been carried out for eight 0.7m long straw modules.
+%
+%They underwent vibration tests (0.5 g sine sweep followed by 6.8 g random test followed by 0.5 g sine sweep) as well as thermo-vacuum-cycle tests (between -40 and +60 $^\circ{C}$) followed again by vibration tests. No significant changes in eigenfrequencies, gas tightness or gas gain were observed.
+
+
+
+
 
 %Each flight module is tested individually for wire
 %tension, gas tightness, leakage current and gas gain
@@ -734,8 +760,6 @@ The TRD will be fully covered in a multi-layer-insulation (MLI) foil to keep the
 \begin{frame}{TRD - Transition Radiation Detector}{the challenge for the AMS-02 experiment}
 The challenge is to build such a detector in a space-qualified way with strict limits on outgassing, gas tightness, weight and power consumption whilst assuring safety and gas gain homogeneity in a harsh environment during payload lift and in orbit without the possibility of further access to the experiment. This involves detailed finite-element calculations as well as subcomponent vibration and thermo-vacuum-cycle tests. The optimized AMS-02 TRD design with 2m diameter and with 5248 straw tubes weighs less than 500 kg.
 \end{frame}
-
-
 
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
 	\begin{itemize}
@@ -790,6 +814,41 @@ The challenge is to build such a detector in a space-qualified way with strict l
 	\end{center}
 \end{frame}
 
+\begin{frame}[label=TRD-SpaceQual,noframenumbering]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{more details on the space qualification of the straw modules}
+	\justifying
+	
+	\vspace{-0.25cm}
+	\scriptsize{Space qualification tests include vibration tests to simulate a space shuttle launch and thermal-vacuum tests, as 
+	well as electromagnetic interference and corona tests. Gasgain and gastightness of the straw modules has 
+	been	monitored during these tests.}
+	
+	\begin{itemize}
+		\justifying
+		\scriptsize{
+		\item	For the \bluetextbf{vibration test}, a test jigg with 4 modules with a maximum length of $659 \, mm$ was used. 
+					The test was performed on a vibration table, test cycles include a sine sweep $(0.5 \, g)$ from 10 to $2000 \, Hz$ 
+					to	determine the first eigenfrequency of the structure, a random spectrum with a mean acceleration of $6.8 \, g$ to 
+					simulate launch or landing with a space shuttle, and a second sine sweep to verify the first eigenfrequency has not 
+					changed after performing the random  spectrum. 
+					The test results show no such change. The measured first eigenfrequency of a module (length: $40 \, cm$) is 
+					$f_0 = 128.5 \, Hz$. 
+					A Comparison of this result with a FEC\footnotemark[1] coupled load modal analysis 	show good agreement.
+		\item	For the \bluetextbf{thermal-vacuum test}, the same 4-layer test jigg has been inserted into a thermal-vacuum 
+					tank at the MPE\footnotemark[2].
+					During 70 hours, 9 thermocycles have been performed, with temperatures ranging from $-40 \: ^\circ{C}$ to
+					$+60 \: ^\circ{C}$. 
+					The test jigg was kept in vacuum at $10^{-6} mbar$. After thermal cycling, the 4 modules of the jigg were tested
+					again 	for gastightness and gasgain, with no significant changes in both values.
+		}
+	\end{itemize}
+
+	\hfill\hyperlink{TRD-SQ_TestStruct}{\beamerbutton{something on the space qualification of the TRD support structure}}
+	
+	\footnotetext[1]{\scriptsize{Finite Elements Calculation}}
+	\footnotetext[2]{\scriptsize{Max-Planck-Institut fur Extraterrestrische Physik, Munchen, Germany}}
+\end{frame}
 
 
 
