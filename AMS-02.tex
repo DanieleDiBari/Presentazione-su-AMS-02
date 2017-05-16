@@ -249,7 +249,8 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \note{
 	Esiste un forte interesse nell'effettuare delle misure di precisione della frazione di positroni dei raggi cosmici nella regione 
 	energetica da 10 a 1000 GeV, in quanto le misurazioni di $e^+ / (e^+ + e^-)$, da AMS-01, HEAT, PAMELA e FERMI indicano 
-	una grande deviazione di questo rapporto dalla produzione di e+ e e- previsto da un modello che comprende solo collisioni ordinarie del raggio cosmico.
+	una grande deviazione di questo rapporto dalla produzione di e+ e e- previsto da un modello che comprende solo collisioni 
+	ordinarie del raggio cosmico.
    	 
    	These available measurements are both at too low an energy and of too limited statistics to shed the light on the origin of this 
    	significant excess.
@@ -470,7 +471,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 			\item[$\circ$] \textbf{to discriminate} between  $e^+$ and $p$ whit a proton rejection of $10^{-2} \div 10^{-3}$ 
 						in the energy range between $10$ and $300 GeV$.$^1$
 						
-			\item[$\circ$] \textbf{to identify} the nuclei by measurement of the charge $|Z|$.
+			\item[$\circ$] \textbf{to identify} light nuclei by measurement of the charge $|Z|$.
 		}\end{itemize}
 %		\vspace{-0.55cm}
 %		\begin{center}
@@ -611,11 +612,12 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{the most critical design issue}
 	\justifying
-	\small{The most critical design issue is \textbf{the gas tightness of the straw modules}. In the vacuum of space, \textit{gas 
-	continuously diffuses out of the straw tubes}.  In order to operate the detector at stable parameters, the TRD is coupled to a 
-	gas supplier system.}
+	\footnotesize{The most critical design issue is \textbf{the gas tightness of the straw modules}. In the vacuum of space,
+	\textit{gas continuously diffuses out of the straw tubes}.  In order to operate the detector at stable parameters and to 
+	compensate the gas gain change due to gas diffusion, a daily high voltage adjustment is performed, and the gas is refilled every 
+	month by a gas supplier system.}
 
-	\vspace{-0.5cm}
+	\vspace{-0.65cm}
 	\begin{columns}
 		\begin{column}{0.1\textwidth}\end{column}
 		\begin{column}{0.8\textwidth}
@@ -634,10 +636,11 @@ Despite the detection concept is very similar to the modern accelerator experime
 		\begin{column}{0.05\textwidth}\end{column}
 		\begin{column}{0.9\textwidth}
 			\justifying
-			\scriptsize{\textitem{Figure}{schematic view and photo of the TRD gas system}: The gas in the supply boxes is first 
-			mixed (BOX-S). A pump (BOX-C) helps the circulation of the gas through 41 gas circuits, feeding the whole TRD detection 
-			volume. Each gas circuit is composed of eight straw tubes connected in series. Ten separate manifolds with a shut-off 
-			valve control a variable number of gas circuits. Single gas groups can be isolated in case of a gas leak in a tube.}
+			\scriptsize{\textitem{Figure}{TRD gas system}: The gas in the supply boxes is first 
+			mixed (BOX-S), visible in the photo. A pump (BOX-C) helps the circulation of the gas through 41 gas circuits, feeding the
+			whole TRD detection volume. Each gas circuit is composed of eight straw tubes connected in series. Ten separate 
+			manifolds with a shut-off valve control a variable number of gas circuits. Single gas groups can be isolated in case of a gas 
+			leak in a tube.}
 		\end{column}
 		\begin{column}{0.05\textwidth}\end{column}
 	\end{columns}
@@ -865,7 +868,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 
 \begin{frame}
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{performance}
+	\framesubtitle{performance (proton rejection)}
 	\justifying
 	\small{The proton rejection power of the AMS-02 TRD design has been verified with a full 20 layer prototype in testbeams. 
 	Protons are separated from electrons with a combined neural network analysis.
@@ -900,6 +903,160 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\footnotetext[1]{\justifying\scriptsize{TRD performs better in space than expected by rejection studies in beam tests on ground.}}
 \end{frame}
 
+\begin{frame}[label=TRD-ChargePerform1]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{performance (measurement of the charge)}
+	\justifying
+	\vspace{-0.1cm}
+	
+	\small{To perform charge measurements is used the dependence of $dE/dx$ on particle charge, $Z$, that is also 
+			dependent on path length and rigidity. }
+		
+	\vspace{-0.05cm}
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.5\textwidth}
+			\justifying
+			
+			\small{Therefore, in AMS data analysis, \textbf{the distributions of $dE/dx$ in each tube} is parametrized as analytical 
+			functions of these variables, called $dE/dx$ \textit{Probability Density Functions} ($dE/dx$ \textit{PDFs}), which are 
+			used in determination of $Z$ by a likelihood method.
+
+			\vspace{0.1cm}
+			\textbf{For particles with $Z$ larger than 6, the ADC readout of the straw tubes is saturated}. }
+			
+			\vspace{0.1cm}
+			To extend the measurements to 	particles with higher charge, as well as increase the			
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.47\textwidth}
+			\centering
+			\vspace{0.05cm}
+			
+			\includegraphics[width=\columnwidth]{TRD-ChargeMeas-dEPDFs.png}
+
+			\vspace{-0.1cm}
+			\begin{columns}
+				\begin{column}{0.15\textwidth}\end{column}
+				\begin{column}{0.8\textwidth}
+					\justifying			
+					\scriptsize{\bluetextbf{Figure:}\\
+					$dE/dx$ \textit{PDFs} of He, Li, Be, and B, derived from flight data.}		
+					%\vspace{0.1cm}
+				\end{column}
+				\begin{column}{0.05\textwidth}\end{column}
+			\end{columns}						
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}		
+	
+	\vspace{0.1cm}
+	\small{resolution for light ions, additional information of the produced delta rays can also is utilized for charge measurements.}
+	
+	\vspace{-0.2cm}
+	\hfill\hyperlink{TRD-DeltaTech1}{\textbf{\beamerbutton{more about delta rays technique}}}
+\end{frame}
+
+%% VERSIONE ALTERNATIVA DELLA SLIDE PRECEDENTE
+%\begin{frame}
+%	\frametitle{TRD - Transition Radiation Detector}
+%	\framesubtitle{performance (measurement of the charge)}
+%	\justifying
+%	\vspace{-0.1cm}
+%	\small{
+%	To perform charge measurements is used the dependence of $dE/dx$ on particle charge, $Z$, that is also dependent on path 
+%	length and rigidity. Therefore, in AMS data analysis, \textbf{the distributions of $dE/dx$ in each tube} is parametrized as analytical 
+%	functions of these variables, called $dE/dx$ \textit{Probability Density Functions} ($dE/dx$ \textit{PDFs}), which are used in 
+%	determination of $Z$ by a likelihood method.
+%	
+%	\vspace{-0.35cm}
+%	\begin{columns}
+%		\begin{column}{0.24\textwidth}\end{column}
+%		\begin{column}{0.415\textwidth}
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.95\textwidth]{TRD-ChargeMeas-dEPDFs.png}
+%				
+%				%\footnotesize{\caption{\justifying AAA}}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.295\textwidth}\justifying
+%			
+%			\vspace{0.1cm}
+%			\footnotesize{\bluetextbf{Figure}
+%			
+%			$dE/dx$ \textit{PDFs} of Helium, Lithium, Beryllium, and Boron, derived from flight data.}
+%		\end{column}
+%		\begin{column}{0.14\textwidth}\end{column}
+%	\end{columns}
+%	
+%	\vspace{0.1cm}
+%	\textbf{For particles with $Z$ larger than 6, the ADC readout of the straw tubes is saturated}. To extend the measurements to 
+%	particles with higher charge, as well as increase the resolution for light ions, additional information of the produced delta rays 
+%	can also is utilized for charge measurements.
+%	}
+%\end{frame}
+
+\begin{frame}
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{performance (measurement of the charge)}
+	\justifying
+	
+	\small{The TRD of AMS is able to identify light cosmic ray nuclei by measuring $dE/dx$ within its ADC dynamic range. This
+	measurements can be improved and extended to higher $Z$ counting the number of delta rays 
+	produced in AMS.}
+	
+	\vspace{-0.45cm}
+	\begin{columns}[t]
+		\begin{column}{0.015\textwidth}\end{column}
+		\begin{column}{0.475\textwidth}
+			\begin{figure}
+				\centering
+				%\small{\bluetextbf{Modal Analysis}}
+				\includegraphics[width=0.9\textwidth]{TRD-ChargeMeas.png}
+				
+				%\scriptsize{\bluetextbf{Figure 1:}}\\
+				\begin{columns}
+					\begin{column}{0.06\textwidth}\end{column}
+					\begin{column}{0.9\textwidth}
+						\justifying								
+						\scriptsize{\bluetextbf{Figure 1:} Distribution of charge of cosmic ray nuclei measured by the TRD alone.}
+					\end{column}
+					\begin{column}{0.02\textwidth}\end{column}
+				\end{columns}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.475\textwidth}
+			\begin{figure}
+				\centering
+				%\small{\bluetextbf{Displacement}}
+				\includegraphics[width=0.9\textwidth]{TRD-ChargeMeas-Comparation.png}
+				
+				%\scriptsize{\bluetextbf{Figure 2:}}\\
+				\begin{columns}
+					\begin{column}{0.05\textwidth}\end{column}
+					\begin{column}{0.9\textwidth}
+						\justifying								
+						\scriptsize{\bluetextbf{Figure 2:} Comparison between charge measured by the TRD and charge measured by the 
+						inner Silicon Tracker.}
+					\end{column}
+					\begin{column}{0.05\textwidth}\end{column}
+				\end{columns}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.015\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace{0.3cm}
+	\small{The performance studied from ISS flight data shows \textbf{heavy nuclei up to Fe can be identified}.}
+	
+\end{frame}
+
+\subsection{ToF}
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+\end{frame}
 
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
 	\begin{itemize}
@@ -909,12 +1066,6 @@ Despite the detection concept is very similar to the modern accelerator experime
 		\item	\bluetextbf{Electronics}, transform the signals detected by the various particle detectors into digital information to be analysed by computers.
 	\end{itemize}
 \end{frame}
-
-
-\begin{frame}
-	\frametitle{ToF - Time of Flight}
-\end{frame}
-
 
 \appendix
 \setbeamertemplate{footline}
@@ -929,7 +1080,7 @@ Despite the detection concept is very similar to the modern accelerator experime
     		\usebeamerfont{title in head/foot}\insertshortinstitute
  		 \end{beamercolorbox}%
  		 \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1ex,right,rightskip=4ex]{date in head/foot}%
- 		 	\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}(deepening)
+ 		 	\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{0.3cm}(insights)
  		 \end{beamercolorbox}
  		 }%
  	\vskip0pt%
@@ -1077,6 +1228,106 @@ $$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$
 	\hfill\hyperlink{TRD-SQ_StrawsMod}{\textbf{\beamerbutton{back to the previous slide}}}
 	\footnotetext[1]{\scriptsize{Finite Elements Calculation}}
 	\footnotetext[2]{\scriptsize{Max-Planck-Institut fur Extraterrestrische Physik, Munchen, Germany}}
+\end{frame}
+
+
+\begin{frame}[label=TRD-DeltaTech1,noframenumbering]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{delta rays technique - 1\hspace{2.8cm}
+			\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{back to TRD performance}}}
+			\hspace{0.1cm}\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{more about this technique}}}
+			}
+	\justifying
+	\vspace{-0.15cm}
+	\small{When charged particles pass through the TRD, the produced $keV$ scale delta rays travel almost perpendicular to the particle velocity, and some of them can be detected by the drift tubes not passed by the ions but in the vicinity (a few $cm$) of the particle track. 
+	These tubes are tagged as \textit{delta ray tubes}, whereas the tubes passed by ions are defined as $dE/dx$ \textit{tubes}. 
+	The signals in \textit{delta ray tubes} are typically far below the ADC saturation threshold. Particles with higher $Z$ corresponds to more delta rays, hence a higher ADC signal in \textit{delta ray tubes}.}
+
+	\vspace{-0.35cm}
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.55\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.95\textwidth]{TRD-ChargeMeas-DeltaAmpl.png}
+				
+				%\footnotesize{\caption{\justifying AAA}}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.35\textwidth}\justifying
+			
+			\vspace{0.1cm}
+			\footnotesize{\bluetextbf{Delta ray amplitudes}}
+			
+			\footnotesize{Figure shows the average signal in delta ray tubes as a function of charge measured by the Silicon 
+			Tracker. Clear differences of signals between different ion species can be seen.}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+
+%	\begin{columns}
+%		\begin{column}{0.05\textwidth}\end{column}
+%		\begin{column}{0.9\textwidth}
+%			\begin{figure}
+%				\centering				
+%				\includegraphics[height=0.3\paperheight]{TRD-ChargeMeas-DeltaAmpl.png}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.05\textwidth}\end{column}
+%	\end{columns}	
+%	
+%	\vspace{0.15cm}
+%	\begin{columns}
+%		\begin{column}{0.05\textwidth}\end{column}
+%		\begin{column}{0.9\textwidth}
+%			\justifying
+%			\footnotesize{Figure shows the average signal in delta ray tubes as a function of charge measured by the Silicon 
+%			Tracker. Clear differences of signals between different ion species can be seen.}
+%		\end{column}
+%		\begin{column}{0.05\textwidth}\end{column}
+%	\end{columns}
+%	\vspace{0.15cm}
+%	\hfill\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{back to TRD performance}}}
+%	\hspace{1ex}\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{more about this technique}}}
+\end{frame}
+
+\begin{frame}[label=TRD-DeltaTech2,noframenumbering]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{delta rays technique - 2\hspace{2.8cm}
+			\hyperlink{TRD-DeltaTech1}{\textbf{\beamerbutton{back to the previous slide}}}
+			\hspace{0.1cm}\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{return to TRD performance}}}
+			}
+	\justifying
+	\small{The dependences of \textit{delta ray tube} amplitude on layer and inclination are studied and no obvious dependence is found. However, the \textit{delta ray tube} amplitude does change with increasing energy of the incoming particle.}
+
+	\vspace{-0.2cm}
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth]{TRD-ChargeMeas-DeltaSat.png}
+				
+				%\footnotesize{\caption{\justifying AAA}}
+			\end{figure}
+		\end{column}
+		%\begin{column}{0.0\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}\justifying
+			
+			\vspace{0.1cm}
+			\footnotesize{\bluetextbf{Delta ray amplitudes}}
+			
+			\footnotesize{Plot of the amplitude as a function of rigidity for Z = 6 particles, from which we observed the number of delta rays increases with rigidity for rigidity below $25 GV$, and is almost constant in higher rigidity ranges.}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace{0.2cm}
+	\small{Similar to $dE/dx$ \textit{PDFs}, we get \textit{Delta Ray PDFs} by parametrization on \textit{delta ray tube} amplitude distributions.}
+	
+%	\vspace{0.3cm}
+%	\hfill\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{back to the previous slide}}}
+%	\hspace{1ex}\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{return to TRD performance}}}
 \end{frame}
 
 
