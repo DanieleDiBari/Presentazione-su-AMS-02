@@ -17,7 +17,7 @@
 \usepackage{shadowtext}
 
 %image paths
-\graphicspath{{./Immagini/}{./Immagini/TRD/}}
+\graphicspath{{./Immagini/}{./Immagini/TRD/}{./Immagini/ToF/}}
 
 % impostazioni base delle slide - tema, colori, caratteri, ... (deic.uab.es/~iblanes/beamer_gallery/)
 \mode<presentation>
@@ -274,7 +274,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
     \begin{itemize}
     	\item[\footnotesize{$\blacktriangleright$}] 
     		\footnotesize{\justifying
-    		There is a strong demand for precision measurements of cosmic rays in the energy region from 10 to 1000 
+    		There is a strong demand for precision measurements of CRs in the energy region from 10 to 1000 
     		$GeV$ as the measurements of positron fraction, i.e.  $e^+ / (e^+ + e^-)$, by AMS-01, HEAT, PAMELA and FERMI 
     		indicate a large deviation of this ratio from the production of $e^+$ and $e^-$ predicted by a model that includes only 
     		ordinary CR collisions.
@@ -319,14 +319,14 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\frametitle{Technical Requirement}
 	\framesubtitle{general structure of the AMS apparatus}
 	\begin{center}
-		\vspace{-0.45cm}
-		\includegraphics[height=0.7\paperheight]{Schem_structure_of_AMS-02.png}
+		\vspace{-0.15cm}
+		\hspace{-0.35cm}\includegraphics[height=0.7\paperheight]{Schem_structure_of_AMS.png}
 
-	%\vspace{-0.5cm}
+		\vspace{-0.35cm}
 
-		\hyperlink{AMS-apparatus_list}{\textbf{\beamerbutton{link to AMS apparatus list}}}
+		\hspace{0.25cm}\hyperlink{AMS-apparatus_list}{\textbf{\beamerbutton{link to AMS apparatus list}}}
 	\end{center}
-	\vspace{-0.25cm}
+	%\vspace{-0.25cm}
 \end{frame}
 
 \begin{frame}
@@ -364,53 +364,89 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 %	\end{center}
 %\end{frame}
 
-\subsection{space-borne experiment}
+\subsection{of a space-borne experiment}
 \begin{frame}
-	\frametitle{Particle Detector in Space} 
-	\framesubtitle{The challenge of a space-borne experiment}
+	\frametitle{Technical Requirement} 
+	\framesubtitle{why a particle detector in the space?}
+	\justifying
 	
-The absorption thickness of the Earth's atmosphere, corresponding to an average of 25 radiation lengths (X0), screens the ground from primary CRs, which interact before reaching the detector. 
-
-Direct detection of electromagnetically interacting CRs is therefore carried in space. In order to identify the nature of the detected particles, space borne instruments exploit typical high energy physics detection techniques, like um precision tracking using silicon detector technology or calorimetric energy measurements. 
-
-\end{frame}
-
-\begin{frame}
-	\frametitle{Technical Requirement} 
-	\framesubtitle{of a space-borne experiment}
-
-Despite the detection concept is very similar to the modern accelerator experiments, the technological realization differs significantly. The requirements of a space borne experiment are in fact very challenging. Weight, dimension and power consumption constraints limit the size of the detector (thus their acceptance) to the $\sim$ 10 m$^3$ range. The limited bandwidth for the data transfer (to ground), the extreme thermal environment and the transport from ground to space also shape critically the detector concept.
+	The absorption thickness of the Earth's atmosphere, corresponding to an average of 25 radiation lengths ($X_0$), screens the 
+	ground from primary CRs, which interact before reaching the detector. 
+	
+	\vspace{0.25cm}
+	\textbf{Direct detection of electromagnetically interacting CRs is therefore carried in space.} 
+	
+	\vspace{0.25cm}
+	In order to identify the nature of the detected particles, space borne instruments exploit typical high energy physics detection 	
+	techniques, like $\mu m$ precision tracking using silicon detector technology or calorimetric energy measurements. 
 
 \end{frame}
 
 \begin{frame}
 	\frametitle{Technical Requirement} 
 	\framesubtitle{of a space-borne experiment}
-	New environment for HEP experiments
-	\begin{itemize}
-		\item	Operation in vacuum
-		\item	Acceleration during start and landing up to 9g
-		\item 	Temperature variations from $-180^\circ C$ to $+50 ^\circ C$
-		\item	Deposition limits on ISS $< 10^{-14} \frac{g}{s \cdot cm^2}$
-		\item	Weight limited to 13500 lb
-		\item	Datarate $1 Mbyte/s$ via 1 datalink
-		\item	Power consumption limited to 2kW
-		\item	Powersupply at 120 V via 1 powercable
-		\item	Redundancy
-	\end{itemize}
+	\justifying
+	
+	\small{Despite the detection concept is very similar to the modern accelerator experiments, the technological realization differs 
+	significantly.}
+	
+	\vspace{0.15cm}
+	\small{\textbf{The requirements of a space borne experiment are in fact very challenging.}}
+	
+	\vspace{0.1cm}
+	\begin{block}{The challenging requirements of a space born experiment}
+		\justifying
+		\small{
+		Weight, dimension and power consumption constraints limit the size of the detector (thus their acceptance) to the 
+		$\sim 10 m^3$ range.
+		The limited bandwidth for the data transfer (to ground), the extreme thermal environment and the transport from ground to 
+		space also shape critically the detector concept.
+		
+		Moreover, there is practically no way to fix any kind of problem with detectors and subsystem of AMS-02 once that it 
+		is on the ISS\footnotemark[1].
+%		Moreover, there is practically no way to fix any problem with AMS-02 detectors and subsystems when it's on the ISS
+%		\footnotemark[1].
+		}
+	\end{block}
+	
+%	\footnotetext[1]{It is necessary a high degree of redundancy for the detector design to ensure that the functioning of the 
+%	experiment remain on the required parameters for all the life time of the ISS (at least 20 years).}
+	\footnotetext[1]{An high degree of redundancy in detector design is required to ensure that the operation of the experiment 
+	remains within the required physical parameter for the entire lifetime of the ISS (at least 20 years)}
 \end{frame}
+
+%\begin{frame}
+%	\frametitle{Technical Requirement} 
+%	\framesubtitle{of a space-borne experiment}
+%	New environment for HEP experiments
+%	\begin{itemize}
+%		\item	Operation in vacuum
+%		\item	Acceleration during start and landing up to 9g
+%		\item 	Temperature variations from $-180 \: ^\circ{C}$ to $+50 \: ^\circ{C}$
+%		\item	Deposition limits on ISS $< 10^{-14} \frac{g}{s \cdot cm^2}$
+%		\item	Weight limited to 13500 lb
+%		\item	Datarate $1 Mbyte/s$ via 1 datalink
+%		\item	Power consumption limited to 2kW
+%		\item	Powersupply at 120 V via 1 powercable
+%		\item	Redundancy
+%	\end{itemize}
+%\end{frame}
 
 \subsection{the protype (AMS-01)}
 \begin{frame}
 	\frametitle{AMS-01} 
 	\framesubtitle{The protype of AMS-02}
-	%In order to ensure that technologies used in the detector construction work reliably in space, a scaled down detector 
-	(AMS-01) was built and flown in 1998 onboard the STS-91 mission for 10 days.
-	Before installation on the Space Station, AMS performed an engineering flight on the Space Shuttle to ensure that:
+	\justifying	
+	
+	%	In order to ensure that technologies used in the detector construction work reliably in space, a scaled down detector 
+	%	(AMS-01) was built and flown in 1998 onboard the STS-91 mission for 10 days.	
+	Before installation on the Space Station was built a \textbf{scaled down detector of AMS} that,  in 1998, perform an 
+	engineering flight of 10 days on the Space Shuttle Discovery (STS-91 flight) with the purpose of ensure that:
 	
 	\begin{itemize}
+		\justifying	
 		\item	The AMS experiment can function properly in space; in vacuum with orbital temperature changes from -65 to 40 
-					$^{\circ}$C and in the intense radiation background (which contains heavy nuclei causing single event latch-up in 
+					$^{\circ}{C}$ and in the intense radiation background (which contains heavy nuclei causing single event latch-up in 
 					chips).
 		\item	The detector can withstand the tremendous vibrations (150 dB) and acceleration (3 g) at launch and the 
 					deacceleration (6.5 g) at landing;
@@ -462,7 +498,7 @@ Despite the detection concept is very similar to the modern accelerator experime
 \begin{frame}{TRD - Transition Radiation Detector}%{Particle ID \& 3D tracking}
 	\vspace{-0.55cm}
 	\begin{center}
-	\includegraphics[height=0.35\paperheight]{TRD-Photo-05.jpeg}
+		\includegraphics[height=0.35\paperheight]{TRD-Photo-05.jpeg}
 	\end{center}
 	\vspace{-0.45cm}
 	\begin{block}{\small{The main features of TRD are:}}
@@ -663,8 +699,8 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\vspace{-0.25cm}
 	\small{The available supplies of gas, $49.5 kg$ of Xe and $4.5 kg$ of $\text{CO}_2$, will have to last for three years of 
 	operation. 
-	Using as standard conditions $1 \, bar$ and $298 \, ^{\circ}K$, this corresponds to $8420 \, l$ of Xe and $2530 \, l$ of 
-	$\text{CO}_2$.}
+	Using as standard conditions $1 \, bar$ and 298 $^{\circ}{K}$, this corresponds to $8420 \, l$ of Xe and $2530 \, l$ 
+	of $\text{CO}_2$.}
 \end{frame}
 
 
@@ -706,7 +742,8 @@ Despite the detection concept is very similar to the modern accelerator experime
 
 \begin{frame}[label=TRD-Supp_Struct]
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{the support structure of the TRD\hspace{2.2cm}\hyperlink{TRD-Mech_Struct}{\beamerbutton{more about the Mechanical Structure of the TRD}}}
+	\framesubtitle{the support structure of the TRD}%\hspace{2.2cm}\hyperlink{TRD-Mech_Struct}{\beamerbutton{more about 
+%	the Mechanical Structure of the TRD}}}
 	\justifying
 	\small{In total, 328 modules (overall, 5248 straws) arranged on 20 layers that are supported by a conically shaped octagon
 	structure made of aluminum honeycomb walls with carbon-fiber skins and bulkheads.}
@@ -741,16 +778,18 @@ Despite the detection concept is very similar to the modern accelerator experime
 	The upper and lower four layers run parallel to the magnetic field, the others perpendicular to \textbf{provide 3D 
 	tracking}.}
 %The TRD will be fully covered in a multi-layer-insulation (MLI) foil to keep the spatial orbit temperature gradient below 1K. 
+
+	\vspace{-0.25cm}\hfill\hyperlink{TRD-Mech_Struct}{\beamerbutton{more on the TRD's Mechanical Structure}}
 \end{frame}
 
 
 \begin{frame}{TRD - Transition Radiation Detector}{the challenge for the AMS-02 experiment}
 	\justifying
 	\small{The challenge is to \textbf{build such a detector in a space-qualified way with strict limits} on outgassing, gas tightness, 
-	weight and power consumption whilst assuring safety and gas gain homogeneity in a harsh environment during payload lift and 
-	in orbit without the possibility of further access to the experiment.}
+	weight and power consumption (less than $185 W$) whilst assuring safety and gas gain homogeneity in a harsh environment 
+	during payload lift and in orbit without the possibility of further access to the experiment.}
 	
-	\vspace{-0.25cm}
+	\vspace{-0.5cm}
 	\begin{columns}
 		\begin{column}{0.125\textwidth}\end{column}
 		\begin{column}{0.65\textwidth}
@@ -768,6 +807,8 @@ Despite the detection concept is very similar to the modern accelerator experime
 	\small{This \textbf{involves} detailed \textit{finite-element calculations} as well as \textit{subcomponent vibration and 
 	thermo-vacuum-cycle tests}.}
 	
+%	\footnotetext[1]{AMS-02 has a limited power consumption budget of $2000 W$, from which the TRD takes a part of less
+%	than $185 W$.}	
 \end{frame}
 
 \begin{frame}[label=TRD-SQ_StrawsMod]
@@ -1056,6 +1097,89 @@ Despite the detection concept is very similar to the modern accelerator experime
 \subsection{ToF}
 \begin{frame}
 	\frametitle{ToF - Time of Flight}
+	\justifying
+
+	\vspace*{-0.25cm}
+	
+	\begin{center}
+		%\scriptsize{\bluetextit{Top view of the upper (left) and lower (right) ToF paddles during an assembly test.}}
+		%\vspace{0.1cm}
+		\includegraphics[height=0.25\paperheight]{ToF-Photo-01.png}
+
+		\vspace*{0.1cm}		
+		
+		\begin{columns}
+			\begin{column}{0.13\textwidth}\end{column}
+			\begin{column}{0.74\textwidth}\justifying
+				\scriptsize{\bluetextbf{Figure:} Top view of the upper (left) and lower (right) ToF paddles during an assembly test.}
+			\end{column}
+			\begin{column}{0.13\textwidth}\end{column}
+		\end{columns}
+	\end{center}
+	
+	\vspace*{-0.45cm}
+	
+	\begin{block}{\small{The ToF system has been completely designed and built to provide:}}
+		%\vspace{-0.25cm}
+		\begin{itemize}\justifying
+		\small{
+			\item	The \textbf{fast trigger} to the experiment.
+			%\vspace{-0.05cm}
+			\item	The \textbf{measurement of the time-of-flight} of the particles traversing the detector with a resolution 
+						sufficient \textit{to distinguish}:
+						\vspace{-0.05cm}
+						\begin{itemize}\justifying
+							\item[$\circ$]	\textit{upward from downward going particles} at a level of $10^{-9}$;
+							\item[$\circ$]	\textit{anti-protons from electrons} up to about $1.2 GeV$.
+						\end{itemize}
+			%\vspace{-0.05cm}
+			\item 	The \textbf{measurement of primary cosmic nuclei velocity}, with a resolution of a few percent, \textbf{and of 
+						their absolute charge} up to at least $Z = 15$.
+		}
+		\end{itemize}
+	\end{block}
+	%\scriptsize{\footnotetext[1]{\justifying This is based on previous experience and well-established techniques.}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{}
+	\justifying
+	The TOF system is composed by 4 layers of scintillator counters, two above and two below the AMS magnet.
+	The four layers have respectively 8,8,10,8 paddles of different lengths (between 117 and 134 cm), longitudinally overlapping 
+	by 0.5 cm to avoid geometrical inefficiencies. Each counter (fig. 2) is made of a 1 cm thick scintillator paddle, optically coupled 
+	at both ends with photomultiplier tubes (PMTs).
+	The external counters have a trapezoidal shape in order to maximize the acceptance.
+\end{frame}
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{culo}
+	\justifying
+	
+	\small{
+	The main parameters taken into account while designing the detector have been the following:	
+	
+	\textbf{Total sensitive area}
+	AMS-02 has been designed to have a large acceptance for cosmic ray tracks. To match the full acceptance of the magnet, each 
+	layer of the ToF system has to cover a circular area of about $1.6 m^2$.
+	
+	\textbf{Trigger selection}
+	
+	\textbf{Weight}
+	Given the strong limitations in the total weight of the AMS detector, the TOF system was allotted $268 kg$ to accommodate 
+	for the detector it self and for the support structure.
+	
+	\textbf{Power consumption}
+	The TOF system was allowed to use about $150 W$ for photomultiplier tube operation and signal read-out, out of the $2 kW$ 
+	electric power given by NASA to the AMS experiment on the ISS.
+	
+	\textbf{Time-of-flight resolution}
+	A resolution in the ToF better than $180 ps$ is needed to satisfy the physics requirements. The choice 	was one centimetre 
+	thick scintillator, as a compromise between the minimum thickness and the light output needed to reach 
+	this resolution.
+	}
+	
 \end{frame}
 
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
@@ -1065,6 +1189,77 @@ Despite the detection concept is very similar to the modern accelerator experime
 		\item	\bluetextbf{Star Tracker and GPS}, defines the position and orientation of the AMS-02 experiment.
 		\item	\bluetextbf{Electronics}, transform the signals detected by the various particle detectors into digital information to be analysed by computers.
 	\end{itemize}
+\end{frame}
+
+
+\section{Bibliography}
+\begin{frame}[allowframebreaks]
+	\frametitle{Bibliography}
+	\justifying
+		
+	\bluetextbf{General information on the AMS-02 experiment:}
+	
+	\begin{thebibliography}{99}
+	\setbeamertemplate{bibliography item}[text]
+	\scriptsize{
+	\bibitem{Ting} 
+	S. Ting, ``\textit{The Alpha Magnetic Spectrometer on the International Space Station}'' Nuclear Physics B (Proc. Suppl.) 
+	243-244 (2013) 12–24
+	
+	\bibitem{Kounine} 
+	A. Kounine, ``\textit{THE ALPHA MAGNETIC SPECTROMETER ON THE INTERNATIONAL SPACE STATION}'' Int. J. Mod. Phys. E, 
+	21, 1230005 (2012).
+	
+	\bibitem{AMSCollab}
+	AMS Collaboration, ``\textit{AMS on ISS - Construction of a particle physics detector on the International Space Station}'' AMS 
+	Internal Note.
+	
+	\bibitem{Duranti}
+	M. Duranti, ``\textit{Measurement of the Atmospheric Muon Flux on Ground with the AMS-02 Detector}'' PhD thesis, University 
+	of Perugia	(2011)
+		
+	\bibitem{Vagelli}
+	V. Vagelli, ``\textit{Measurement of the cosmic $e^+ + e^-$ Flux from 0.5 GeV to 1 TeV with the Alpha Magnetic 
+	Spectrometer (AMS-02) on the International Space Station}'' PhD thesis, Karlsruher Institut f\"{u}r Technologie (2014).
+	
+	\bibitem{AMS-website}
+	AMS Collaboration, ``\textit{AMS-02 - The Alpha Magnetic Spectrometer Experiment}'' \url{http://www.ams02.org/}
+	}
+
+	\framebreak
+	\hspace{-0.7cm}\normalsize{\bluetextbf{On the Transition Radiation Detector (TRD):}}		
+	
+	\scriptsize{
+	\bibitem{Kirn-1}
+	T. Kirn, ``\textit{The AMS-02 transition radiation detector}'' Nuclear Instruments and Methods in Physics Research A 581 
+	(2007) 156–159.
+	
+	\bibitem{Kirn-2}
+	T. Kirn, ``\textit{The AMS-02TRDontheinternationalspacestation}'' Nuclear Instruments and Methods in Physics Research A 
+	706 (2013) 43–47.
+	
+	\bibitem{Sun}
+	W. Sun, A. Kounine and Z. Weng, ``\textit{Measurement of the absolute charge of cosmic ray nuclei with the AMS Transition 
+	Radiation Detector}'' 33rd International Cosmic Ray Conference, Rio de Janeiro (2013).
+	}
+	
+	\vspace{0.25cm}
+	\hspace{-0.7cm}\normalsize{\bluetextbf{On the Time of Flight detector (ToF):}}
+	
+	\scriptsize{
+	\bibitem{Bindi-1}
+	V. Bindi et al., ``\textit{The scintillator detector for the fast trigger and time-of-flight (TOF) measurement of the space 
+	experiment AMS-02}'' Nuclear Instruments and Methods in Physics Research A 623 (2010) 968–981.
+	
+	\bibitem{Bindi-2}
+	V. Bindi et al., ``\textit{The AMS-02 time of flight (TOF) system: construction and overall performances in space}'' 33rd 
+	International Cosmic Ray Conference, Rio de Janeiro (2013).
+	
+	\bibitem{Bindi-3}
+	V. Bindi et al., ``\textit{Calibration and performance of the AMS-02 time of flight detector in space}'' Nuclear Instruments and 
+	Methods in Physics Research A 743 (2014) 22–29.
+	}
+	\end{thebibliography}
 \end{frame}
 
 \appendix
@@ -1086,64 +1281,119 @@ Despite the detection concept is very similar to the modern accelerator experime
  	\vskip0pt%
 }
 
-\begin{frame}[label=TR-details,noframenumbering]
-	\frametitle{TRD}
-	\framesubtitle{Transition Radiation - Angular Distribution	\hspace{4.35cm}\hyperlink{TRD-main}{\beamerbutton{back to TRD}}}
+%% POSSIBILI SLIDE SULLA TERIA DELLA RADIAZIONE DI TRANSIZIONE
+\begin{frame}<presentation:0>[label=TR-details,noframenumbering]
+	\frametitle{TRD - Transition Radiation Detector}
+	\framesubtitle{Transition Radiation - Angular Distribution\hspace{4.35cm}\hyperlink{TRD-main}{\beamerbutton{back to TRD}}}
 	\justifying
 	\footnotesize{
-	The frequency spectrum of TR emitted by a particle with charge $Z e$ upon perpendicular traversal through a single interface between two media with dielectric constants $\epsilon_f$ and $\epsilon_g$ has been calculated by Ginzburg and Frank and
-by Garibian. These calculations show that for highly relativistic particles most of the radiation is emitted in the x-ray region. 
-%	\begin{equation*}
-%		\frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta)
-%	\end{equation*}	
-		
-%	\begin{equation*}
-%		f_0 (\theta) = \theta^3 \left( \frac{1}{\gamma^{-2} + \theta^2 + \left(\omega_f / \omega \right)^2} - \frac{1}{\gamma^{-2} + \theta^2 + \left(\omega_g / \omega \right)^2} \right)
-%	\end{equation*}		
-	}
+	The frequency spectrum of TR emitted by a particle with charge $Z e$ upon perpendicular traversal through a single interface 
+	between two media with dielectric constants $\epsilon_f$ and $\epsilon_g$ has been calculated by Ginzburg and Frank and
+	by Garibian. These calculations show that for highly relativistic particles most of the radiation is emitted in the x-ray region.}
+	
+	\vspace{-0.39cm}
+	%\vspace{0.05cm}
 	
 	\begin{columns}
-		\begin{column}{0.5\textwidth}
-		\justifying
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.51\textwidth}
+			\justifying
 		
-		In this case, $\epsilon_{f,g} \simeq 1 - \omega_{f,g}^2/\omega^2$ (where $\omega_{f,g}$ are the plasma frequencies of the two media) and the expression for the differential radiation intensity is:
+			%\vspace{-0.4cm}
+			\footnotesize{
 
-$$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$.
-
-%2
-%		In this case, $\epsilon_{f,g} \simeq 1 - \omega_{f,g}^2/\omega^2$ where:
-%		
-%$$ \omega_{f,g} = 28.8 \: \sqrt{\rho_{f,g} \, \frac{Z_{f,g}}{A_{f,g}}} \: eV $$
-%
-%are the plasma frequencies, $\rho_{f,g}$ the densities of material, $Z_{f,g}$ the atomic numbers and $A_{f,g}$ the atomic weights of the two media. The expression for the differential radiation intensity is:
-%
-%$$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$		
-
-%	3	
-%		In this case, $\epsilon_{f,g} \simeq 1 - \omega_{f,g}^2/\omega^2$ where $\omega_{f,g}$ are the plasma frequencies of the two media:
-%		
-%		$$ \omega_{f,g} = 28.8 \: \sqrt{\rho_{f,g} \, \frac{Z_{f,g}}{A_{f,g}}} \: eV $$
-%
-%and the expression for the differential radiation intensity is:
-%
-%$$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$
-%
-%where $\rho_{f,g}$ are the densities of material, $Z_{f,g}$ the atomic numbers, and $A_{f,g}$ the atomic weights of the two media.
+			In this case $\epsilon_{f,g} \simeq 1 - \omega_{f,g}^2/\omega^2$ and the expression for the 
+			\textbf{differential radiation intensity} is:
+		
+			\vspace{-0.15cm}
+			$$ \frac{dW}{d(\hbar \omega) \: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$				
+		
+			\vspace{0.1cm}
+			
+			where $\omega_{f,g}$ are the plasma frequencies of the two media, i.e.:
+			 
+			 \vspace{-0.4cm}
+			$$ \omega_{f,g} = 28.8 \: \sqrt{\rho_{f,g} \, \frac{Z_{f,g}}{A_{f,g}}} \: eV $$
+		
+			with $\rho_{f,g}$ that are the densities of the two materials, $Z_{f,g}$ the atomic numbers and $A_{f,g}$ the 
+			atomic weights.
+			}
 		\end{column}
-		\begin{column}{0.5\textwidth}
-			\begin{figure}
-				\centering
-				\includegraphics[width=\textwidth]{TR-AngularDistr.png}
-				
-				%\scriptsize{Angular distribution of a single surface yield.}
-			\end{figure}
+		\begin{column}{0.48\textwidth}
+			\centering
+			\vspace{0.45cm}
+			
+			\hspace{0.25cm}\scriptsize{\bluetextit{Angular distribution of a single surface yield.}}	
+			
+			\vspace{0.05cm}			
+			
+			\begin{columns}
+				\begin{column}{0.03\textwidth}\end{column}
+				\begin{column}{0.9\textwidth}
+					\centering
+					\includegraphics[width=\textwidth]{TR-AngularDistr.png}		
+				\end{column}
+				\begin{column}{0.07\textwidth}\end{column}
+			\end{columns}												
 		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
 	\end{columns}
 \end{frame}
 
+\begin{frame}<presentation:0>[noframenumbering]
+	\frametitle{TRD}
+	\framesubtitle{Transition Radiation - Angular Distribution\hspace{4.35cm}\hyperlink{TRD-main}{\beamerbutton{back to TRD}}}
+	\justifying
+	
+	\footnotesize{The distribution has a peak at the narrow angle $\theta \simeq \gamma^{-1}$ and extends to the angle of order
+	$\sqrt{\gamma^{-2} + \omega_f^2 / \omega^2}$.
+	Because the TR angle  $\theta \simeq \gamma^{-1}$ is very small, the practical application of the angle measurements is very 
+	difficult.}
+		
+	\vspace{-0.5cm}
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.32\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=\textwidth]{TR-EnergySpecrum.png}
+				
+				%\scriptsize{\bluetextbf{Figure:} The radiated TR spectrum from a polyethylene surface}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.67\textwidth}
+		\justifying
+		
+		\footnotesize{
+		The integration of $dW/(\hbar d\omega \: d\theta)$ respect to $\theta$ yields the energy spectrum: 
+		\begin{equation*} 
+		\frac{dW}{d(\hbar \omega)} = \frac{Z^2 \alpha}{\pi} \left[ \frac{\omega_f^2 + \omega_g^2 + 2 \omega^2 \gamma^{-2}}{\omega_f^2-\omega_g^2}	\ln \left( \frac{\omega^2 \gamma^{-2} + \omega_f^2}{\omega^2 \gamma^{-2} + \omega_g^2} \right) - 2 \right]
+	\end{equation*}
+		and, integrating this spectrum in $\hbar d\omega$, the total radiation intensities is obtained, namely:
+\begin{equation*}
+		W \simeq Z^2 \cdot \frac{\hbar \alpha}{3} \cdot \frac{(\omega_f - \omega_g)^2}{\omega_f + \omega_g} \gamma \propto Z^2 \cdot \frac{E}{m c^2}
+	\end{equation*}		
+%	The differential energy spectrum can be broken up in essentially three regions having respectively, constant, logarithmic, and power-law dependence on $\omega$ and $\gamma$
+%		\begin{equation*}
+%		\frac{dW}{d\omega} \simeq 
+%		\left\{
+%		\begin{array}{ll}
+%		\frac{2 Z^2 \alpha \hbar}{\pi}  \left( \ln \frac{\omega_f}{\omega_g} - 1 \right) \quad \quad \omega < \gamma \omega_g
+%		\vspace{0.15cm}\\
+%		\frac{2 Z^2 \alpha \hbar}{\pi}  \ln \frac{\omega_f}{\omega} \quad \quad \quad \quad \quad \gamma \omega_g < \omega < \gamma \omega_f \vspace{0.15cm}\\
+%		\frac{Z^2 \alpha \hbar}{6 \pi}  \left( \frac{\omega_f}{\omega} \right)^4 \quad \quad \quad \quad \quad \gamma \omega_f < \omega
+%		\end{array}
+%		\right.
+%	\end{equation*}
+		}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+		
+		
+\end{frame}
 
-
-\begin{frame}[noframenumbering]
+\begin{frame}<presentation:0>[noframenumbering]
 	\begin{equation*} 
 		\frac{dW}{d(\hbar\omega)} = \frac{Z^2 \alpha}{\pi} \left[ \frac{\omega_f^2 + \omega_g^2 + 2 \omega^2 \gamma^{-2}}{\omega_f^2-\omega_g^2}	\ln \left( \frac{\omega^2 \gamma^{-2} + \omega_f^2}{\omega^2 \gamma^{-2} + \omega_g^2} \right) - 2 \right]
 	\end{equation*}
@@ -1175,11 +1425,13 @@ $$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$
 
 \begin{frame}[label=TRD-Module,noframenumbering]
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{photo of a radiator and a straw module \hspace{4.125cm}\hyperlink{TRD-Design}{\beamerbutton{back to TRD design}}}
+	\framesubtitle{photo of a radiator and a straw module}%\hspace{4.125cm}\hyperlink{TRD-Design}{\beamerbutton{back to TRD design}}}
 	\begin{center}
 		\vspace{-0.1cm}
 		\includegraphics[height=0.65\paperheight]{TRD-RadEStraws-02mid.png}
 	\end{center}
+	
+	\vspace{-0.1cm}\hfill\hyperlink{TRD-Design}{\beamerbutton{back to TRD design}}
 \end{frame}
 
 
@@ -1233,10 +1485,10 @@ $$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$
 
 \begin{frame}[label=TRD-DeltaTech1,noframenumbering]
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{delta rays technique - 1\hspace{2.8cm}
-			\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{back to TRD performance}}}
-			\hspace{0.1cm}\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{more about this technique}}}
-			}
+	\framesubtitle{delta rays technique - 1}%\hspace{2.8cm}
+%			\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{back to TRD performance}}}
+%			\hspace{0.1cm}\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{more about this technique}}}
+%			}
 	\justifying
 	\vspace{-0.15cm}
 	\small{When charged particles pass through the TRD, the produced $keV$ scale delta rays travel almost perpendicular to the particle velocity, and some of them can be detected by the drift tubes not passed by the ions but in the vicinity (a few $cm$) of the particle track. 
@@ -1289,16 +1541,22 @@ $$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$
 %	\vspace{0.15cm}
 %	\hfill\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{back to TRD performance}}}
 %	\hspace{1ex}\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{more about this technique}}}
+
+	\hfill
+	\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{back to TRD performance}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{more about this technique}}}
 \end{frame}
 
 \begin{frame}[label=TRD-DeltaTech2,noframenumbering]
 	\frametitle{TRD - Transition Radiation Detector}
-	\framesubtitle{delta rays technique - 2\hspace{2.8cm}
-			\hyperlink{TRD-DeltaTech1}{\textbf{\beamerbutton{back to the previous slide}}}
-			\hspace{0.1cm}\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{return to TRD performance}}}
-			}
+	\framesubtitle{delta rays technique - 2}%\hspace{2.8cm}
+%			\hyperlink{TRD-DeltaTech1}{\textbf{\beamerbutton{back to the previous slide}}}
+%			\hspace{0.1cm}\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{return to TRD performance}}}
+%			}
 	\justifying
-	\small{The dependences of \textit{delta ray tube} amplitude on layer and inclination are studied and no obvious dependence is found. However, the \textit{delta ray tube} amplitude does change with increasing energy of the incoming particle.}
+	\small{The dependences of \textit{delta ray tube} amplitude on layer and inclination are studied and no obvious dependence is 
+	found. However, the \textit{delta ray tube} amplitude does change with increasing energy of the incoming particle.}
 
 	\vspace{-0.2cm}
 	\begin{columns}
@@ -1317,19 +1575,23 @@ $$ \frac{dW}{d(\hbar\omega)\: d\theta} = \frac{2 Z^2 \alpha}{\pi} f_0(\theta) $$
 			\vspace{0.1cm}
 			\footnotesize{\bluetextbf{Delta ray amplitudes}}
 			
-			\footnotesize{Plot of the amplitude as a function of rigidity for Z = 6 particles, from which we observed the number of delta rays increases with rigidity for rigidity below $25 GV$, and is almost constant in higher rigidity ranges.}
+			\footnotesize{Plot of the amplitude as a function of rigidity for Z = 6 particles, from which we observed the number of 
+			delta rays increases with rigidity for rigidity below $25 GV$, and is almost constant in higher rigidity ranges.}
 		\end{column}
 		\begin{column}{0.02\textwidth}\end{column}
 	\end{columns}
 	
 	\vspace{0.2cm}
-	\small{Similar to $dE/dx$ \textit{PDFs}, we get \textit{Delta Ray PDFs} by parametrization on \textit{delta ray tube} amplitude distributions.}
+	\small{Similar to $dE/dx$ \textit{PDFs}, we get \textit{Delta Ray PDFs} by parametrization on \textit{delta ray tube} 
+	amplitude distributions.}
 	
 %	\vspace{0.3cm}
 %	\hfill\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{back to the previous slide}}}
 %	\hspace{1ex}\hyperlink{TRD-DeltaTech2}{\textbf{\beamerbutton{return to TRD performance}}}
+	\hfill
+	\hyperlink{TRD-DeltaTech1}{\textbf{\beamerbutton{back to the previous slide}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{return to TRD performance}}}
 \end{frame}
-
-
 
 \end{document}
