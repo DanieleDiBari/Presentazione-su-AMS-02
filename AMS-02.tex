@@ -1099,25 +1099,31 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\frametitle{ToF - Time of Flight}
 	\justifying
 
-	\vspace*{-0.25cm}
+%    \vspace*{-0.25cm}
 	
-	\begin{center}
-		%\scriptsize{\bluetextit{Top view of the upper (left) and lower (right) ToF paddles during an assembly test.}}
-		%\vspace{0.1cm}
-		\includegraphics[height=0.25\paperheight]{ToF-Photo-01.png}
-
-		\vspace*{0.1cm}		
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.44\textwidth}\centering
+			\includegraphics[width=\columnwidth]{ToF-Photo-UToF-02.png}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.44\textwidth}\centering
+			\includegraphics[width=\columnwidth]{ToF-Photo-LToF-02.png}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.1cm}		
 		
-		\begin{columns}
-			\begin{column}{0.13\textwidth}\end{column}
-			\begin{column}{0.74\textwidth}\justifying
-				\scriptsize{\bluetextbf{Figure:} Top view of the upper (left) and lower (right) ToF paddles during an assembly test.}
-			\end{column}
-			\begin{column}{0.13\textwidth}\end{column}
-		\end{columns}
-	\end{center}
+	\begin{columns}
+		\begin{column}{0.13\textwidth}\end{column}
+		\begin{column}{0.74\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figure:} The completed upper and lower ToF before the final shielding.}
+		\end{column}
+		\begin{column}{0.13\textwidth}\end{column}
+	\end{columns}
 	
-	\vspace*{-0.45cm}
+	%\vspace*{-0.45cm}
 	
 	\begin{block}{\small{The ToF system has been completely designed and built to provide:}}
 		%\vspace{-0.25cm}
@@ -1143,44 +1149,164 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 
 \begin{frame}
 	\frametitle{ToF - Time of Flight}
-	\framesubtitle{}
+	\framesubtitle{parameters taken into account while designing the ToF detector}
 	\justifying
-	The TOF system is composed by 4 layers of scintillator counters, two above and two below the AMS magnet.
-	The four layers have respectively 8,8,10,8 paddles of different lengths (between 117 and 134 cm), longitudinally overlapping 
-	by 0.5 cm to avoid geometrical inefficiencies. Each counter (fig. 2) is made of a 1 cm thick scintillator paddle, optically coupled 
-	at both ends with photomultiplier tubes (PMTs).
-	The external counters have a trapezoidal shape in order to maximize the acceptance.
+	
+	\footnotesize{The main parameters taken into account have been the following:}
+	
+	\begin{itemize}
+		\justifying
+		\footnotesize{
+		\item[$\circ$]	\bluetextbf{Total sensitive area -}
+								AMS-02 has been designed to have a large acceptance for cosmic ray tracks. To match the full acceptance 
+								of the magnet, each layer of the ToF system has to cover a circular area of about $1.6 m^2$.
+		\item[$\circ$]	\bluetextbf{Trigger selection -}
+								A particle able to traverse the Upper and Lower ToF is said to be inside to the AMS acceptance. In this case 
+								the ToF alerts all the AMS sub-detectors and data from Tracker, TRD, RICH, ECAL, ACC and ToF itself are 
+								collected, processed and stored.
+		\item[$\circ$]	\bluetextbf{Weight -}
+								Given the limitations in the total weight of AMS, the TOF system was allotted $268 kg$ 
+								to accommodate for the detector it self and for the support structure.
+		\item[$\circ$]	\bluetextbf{Power consumption -}
+								The TOF system was allowed to use about $150 W$ for photomultiplier tube operation and signal read-out, 
+								out of the $2 kW$ electric power given by NASA to the AMS experiment on the ISS. 
+		\item[$\circ$]	\bluetextbf{Time-of-flight resolution -}
+								A resolution in the ToF better than $180 ps$ is needed to satisfy the physics requirements. The choice 	was 
+								$1 cm$ thick scintillator, as a compromise between the minimum thickness and the light output needed to 
+								reach this resolution.
+		}
+	\end{itemize}	
 \end{frame}
+
 
 \begin{frame}
 	\frametitle{ToF - Time of Flight}
-	\framesubtitle{culo}
+	\framesubtitle{the scintillation counters of the ToF detector}
 	\justifying
 	
-	\small{
-	The main parameters taken into account while designing the detector have been the following:	
+	\small{The \textbf{ToF system consists of two planes of scintillator paddles}: the first situated at the entrance of the 
+	magnetic volume, the second one at the exit.
 	
-	\textbf{Total sensitive area}
-	AMS-02 has been designed to have a large acceptance for cosmic ray tracks. To match the full acceptance of the magnet, each 
-	layer of the ToF system has to cover a circular area of about $1.6 m^2$.
+	Distance from the magnet: $\pm 626 mm$ - distance between the two planes:
+	$120 cm$. 
 	
-	\textbf{Trigger selection}
+	\textbf{Each plane contains two layers of counters}, in x and y directions, respectively.}
 	
-	\textbf{Weight}
-	Given the strong limitations in the total weight of the AMS detector, the TOF system was allotted $268 kg$ to accommodate 
-	for the detector it self and for the support structure.
+	\vspace*{-0.2cm}
+	\begin{center}
+		%\scriptsize{\bluetextit{Top view of the upper (left) and lower (right) ToF paddles during an assembly test.}}
+		%\vspace{0.1cm}
+		\includegraphics[height=0.25\paperheight]{ToF-Photo-UToF.png}
+		\hspace*{0.1cm}
+		\includegraphics[height=0.25\paperheight]{ToF-Photo-LToF.png}
+
+		\vspace*{0.1cm}		
+		
+		\begin{columns}
+			\begin{column}{0.1\textwidth}\end{column}
+			\begin{column}{0.8\textwidth}\justifying
+				\scriptsize{\bluetextbf{Figure (}\bluetextit{from left to right}\bluetextbf{):}  top view of the upper (layer 1 and 2) and 
+								lower (layer 3 and 4) ToF planes during an assembly test. These planes are called \textit{UToF} and 
+								\textit{LToF}, respectively.}
+			\end{column}
+			\begin{column}{0.1\textwidth}\end{column}
+		\end{columns}
+	\end{center}	
 	
-	\textbf{Power consumption}
-	The TOF system was allowed to use about $150 W$ for photomultiplier tube operation and signal read-out, out of the $2 kW$ 
-	electric power given by NASA to the AMS experiment on the ISS.
-	
-	\textbf{Time-of-flight resolution}
-	A resolution in the ToF better than $180 ps$ is needed to satisfy the physics requirements. The choice 	was one centimetre 
-	thick scintillator, as a compromise between the minimum thickness and the light output needed to reach 
-	this resolution.
-	}
-	
+	\vspace*{-0.2cm}
+	\small{Mechanical constraints, due to the support structures of the other AMS-02 detectors, required a \textbf{different 
+	design for the UToF}, mechanically connected to the TRD, \textbf{and for the LToF} mechanically connected to the Unique 
+	Support Structure.}
 \end{frame}
+
+\begin{frame}[label=ToF-Paddles]
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{a ToF paddle}
+	\justifying
+	
+	\small{The four ToF layers have, respectively, from the first to the last: 8, 8, 10 and 8 paddles (a paddle consists of a 
+	polyvinyltoluene EJ-200 scintillator).}
+	\vspace*{-0.3cm}
+	
+	\begin{columns}
+		\begin{column}{0.25\textwidth}\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\centering
+
+				\includegraphics[width=\textwidth]{ToF-Paddle-01.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.25\textwidth}\end{column}
+	\end{columns}	
+		\begin{columns}
+		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.8\textwidth}
+			\begin{figure}		
+				\centering
+				\vspace*{-0.4cm}
+				\scriptsize{\bluetextbf{Figure:}
+				Design of a TOF paddle.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.1\textwidth}\end{column}
+	\end{columns}	
+
+	\vspace{0.25cm}
+	\small{The internal paddles, of a layer, have a rectangular shape, $1 \, cm$ thick, $12 \, cm$ width and $110 \div 135 \, cm$ 
+	length, while the external counters have a trapezoidal shape with $18 \div 26 \, cm$ width and $110 \, cm$ length.
+	To ensure $100 \%$ trigger efficiency, neighbouring counters are overlapped by $0.5 \, cm$.}	
+	
+%	\begin{columns}
+%		\begin{column}{0.02\textwidth}\end{column}
+%		\begin{column}{0.44\textwidth}
+%			\begin{figure}
+%				\centering
+%				\vspace*{-0.15cm}
+%
+%				\includegraphics[width=\textwidth]{ToF-Paddle-01.png}
+%				%\vspace*{0.1cm}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.01\textwidth}\end{column}
+%		\begin{column}{0.45\textwidth}\justifying
+%			\vspace*{0.5cm}
+%			
+%			\includegraphics[width=\textwidth]{ToF-Paddle-02.png}
+%			
+%			\vspace{0.2cm}\scriptsize{\bluetextbf{Figures:}
+%			
+%			 Design of a TOF paddle (on the left) and photograph of an assembled paddle (on the top).}
+%		\end{column}
+%		\begin{column}{0.02\textwidth}\end{column}
+%	\end{columns}	
+	
+	\vspace*{0.2cm}	\hfill	
+	\hyperlink{ToF-CADpannels}{\textbf{\beamerbutton{more on EJ-200 scintillator}}}
+	\hspace{-0.1cm}
+	\hyperlink{ToF-CADpannels}{\textbf{\beamerbutton{more on ToF planes design}}}
+\end{frame}
+
+\begin{frame}
+	
+	Each side of a ToF counter is connected to 2 or 3 R5946 Hamamatsu Photo-Multiplier Tubes (PMTs)\footnotemark[2] through plexiglass light guides. 
+	The light guides can be straight, tilted or tilted and twisted to minimize the effect of magnetic field on the PMT signal. 
+	The 144 photomultipliers, connected to the 34 TOF paddles, are powered by 4 power supply (Scintillator High Voltage, SHV), which can provide a voltage between $1700 V$ and $2250 V$. The nominal gain of the photomultipliers is about $10^6$ when powered at $2000 V$.
+	
+	The PMTs fine-mesh R5946 Hamamatsu have been chosen for their capability of working in high magnetic fields, while keeping good timing characteristics.
+
+\end{frame}
+
+\begin{frame}
+	The long term operational reliability of the TOF system is assured by its modular design. 
+	Every counter is read at both sides by at least two photomultiplier tubes and it can still trigger with only one tube working. 
+	The same is true for the (unlikely) complete failure of one counter, as the normal trigger logic requires a signal in three layers out of four. 
+	In this way, the system is fault tolerant and somewhat redundant by design.
+	
+	%The powering and read-out electronics are protected with conformal coating from the highly ionizing low-orbit space environment and passed qualification tests to verify the absence of sparks, discharges or leakage. 
+	The one per one redundant design ensures constant operation even in case of a hardware failure in the power supplies or in the read-out electronics.
+\end{frame}
+
 
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
 	\begin{itemize}
@@ -1592,6 +1718,111 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\hyperlink{TRD-DeltaTech1}{\textbf{\beamerbutton{back to the previous slide}}}
 	\hspace{-0.1cm}
 	\hyperlink{TRD-ChargePerform1}{\textbf{\beamerbutton{return to TRD performance}}}
+\end{frame}
+
+\begin{frame}[label=ToF-CADpannels,noframenumbering]
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{scintillator counters and light guides CAD design for UToF and LToF}
+	
+	%\vspace*{-0.25cm}
+	\begin{columns}
+	\begin{column}{0.08\textwidth}\end{column}
+	\begin{column}{0.4\textwidth}
+		\centering
+		\includegraphics[height=0.58\paperheight]{ToF-PadsScheme_UToF.png}
+	\end{column}
+	\begin{column}{0.04\textwidth}\end{column}
+	\begin{column}{0.4\textwidth}
+		\centering
+		\includegraphics[height=0.58\paperheight]{ToF-PadsScheme_LToF.png}
+	\end{column}
+	\begin{column}{0.08\textwidth}\end{column}
+	\end{columns}
+	\begin{columns}
+	\begin{column}{0.11\textwidth}\end{column}
+	\begin{column}{0.34\textwidth}
+		\includegraphics[width=\columnwidth]{ToF-PadsScheme_UToF-side.png}
+	\end{column}
+	%\begin{column}{0.01\textwidth}\end{column}
+	\begin{column}{0.51\textwidth}
+		\justifying
+		
+		\vspace*{-0.25cm}\hspace*{0.35cm}\scriptsize{\bluetextbf{Figure:}}
+		\begin{itemize}\justifying
+			\tiny{
+			\item[$\triangleright$]	Top view of the scintillator counters and light guides CAD design for the UToF (top left) and LToF 
+												(right).
+			\item[$\triangleright$]	Side view of layer 1 (bottom left).
+			}
+		\end{itemize}
+						
+	\end{column}
+	\begin{column}{0.04\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.1cm}\hfill
+	\hyperlink{ToF-Paddles}{\textbf{\beamerbutton{back to the previous slide}}}
+	\hspace{-0.1cm}
+	\hyperlink{ToF-LISTpannels}{\textbf{\beamerbutton{list of all counter types}}}
+\end{frame}
+
+\begin{frame}[label=ToF-LISTpannels,noframenumbering]
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{counter types}
+	\justifying
+	\vspace*{-0.15cm}
+	
+	\scriptsize{List of all counter types with light guide shape, counter shape, dimensions, number of PMTs per side and efficiency 
+	of the light guides computed with the simulation\footnotemark[1].}
+	\vspace*{-0.3cm}
+	
+	\begin{center}
+		\includegraphics[height=0.505\paperheight]{ToF-ListOfCounters.png}
+	\end{center}		
+	\vspace*{-0.3cm}	
+	
+	\footnotetext[1]{\tiny{The light transmission efficiency of the 10 different light guide types was also simulated with a ray 
+	tracing program taking into account the angular distribution at the light guide entrance and the angular acceptance on the 
+	cathode glass window. For the trapezoidal counters, the simulation took into account also the counter geometry, therefore the 
+	efficiency is much smaller than for the rectangular counters.}}
+	
+	\hfill	
+	\hyperlink{ToF-CADpannels}{\textbf{\beamerbutton{back to the previous slide}}}
+	\hspace{-0.1cm}
+	\hyperlink{ToF-Paddles}{\textbf{\beamerbutton{return to the presentation}}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{property of EJ-200 Plastic Scintillator}
+	\justifying
+	\vspace{-0.1cm}
+	
+	\scriptsize{EJ-200 combines the two important properties of long optical attenuation length and fast timing which make it particularly useful for time-of-flight systems using scintillators greater than one meter long. 
+	%It is the detector of choice for many industrial applications, such as gauging and environmental protection, where high sensitivity and signal uniformity are critical operating requirements.
+	}%\vspace{-0.2cm}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.39\textwidth}
+			\includegraphics[width=\textwidth]{ToF-EJ200spectrum.png}
+			
+			\vspace*{0.1cm}
+			\includegraphics[width=\textwidth]{ToF-EJ200resp03.png}
+		\end{column}
+		\begin{column}{0.47\textwidth}
+			\vspace{-0.2cm}
+			\includegraphics[width=\textwidth]{ToF-EJ200prop.png}
+			
+			\vspace*{0.1cm}
+			\includegraphics[width=\textwidth]{ToF-EJ200chem.png}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}	
+	
+	\vspace{-0.3cm}
+	\hfill
+	\hyperlink{ToF-Paddles}{\textbf{\beamerbutton{return to the presentation}}}
 \end{frame}
 
 \end{document}
