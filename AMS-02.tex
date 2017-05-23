@@ -574,9 +574,9 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 		
 		\end{itemize}
 	}
-
-	\vspace{-0.35cm}
-	\hfill \hyperlink{TR-details}{\textbf{\beamerbutton{click here for more details on TR}}}
+%
+%	\vspace{-0.35cm}
+%	\hfill \hyperlink{TR-details}{\textbf{\beamerbutton{click here for more details on TR}}}
 \end{frame}
 
 \begin{frame}[label=TRD-Design]
@@ -1147,6 +1147,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	%\scriptsize{\footnotetext[1]{\justifying This is based on previous experience and well-established techniques.}}
 \end{frame}
 
+
 \begin{frame}
 	\frametitle{ToF - Time of Flight}
 	\framesubtitle{parameters taken into account while designing the ToF detector}
@@ -1165,10 +1166,10 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 								the ToF alerts all the AMS sub-detectors and data from Tracker, TRD, RICH, ECAL, ACC and ToF itself are 
 								collected, processed and stored.
 		\item[$\circ$]	\bluetextbf{Weight -}
-								Given the limitations in the total weight of AMS, the TOF system was allotted $268 kg$ 
+								Given the limitations in the total weight of AMS, the ToF system was allotted $268 kg$ 
 								to accommodate for the detector it self and for the support structure.
 		\item[$\circ$]	\bluetextbf{Power consumption -}
-								The TOF system was allowed to use about $150 W$ for photomultiplier tube operation and signal read-out, 
+								The ToF system was allowed to use about $150 W$ for photomultiplier tube operation and signal read-out, 
 								out of the $2 kW$ electric power given by NASA to the AMS experiment on the ISS. 
 		\item[$\circ$]	\bluetextbf{Time-of-flight resolution -}
 								A resolution in the ToF better than $180 ps$ is needed to satisfy the physics requirements. The choice 	was 
@@ -1282,30 +1283,273 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 %	\end{columns}	
 	
 	\vspace*{0.2cm}	\hfill	
-	\hyperlink{ToF-CADpannels}{\textbf{\beamerbutton{more on EJ-200 scintillator}}}
+	\hyperlink{ToF-EJ200}{\textbf{\beamerbutton{more on EJ-200 scintillator}}}
 	\hspace{-0.1cm}
 	\hyperlink{ToF-CADpannels}{\textbf{\beamerbutton{more on ToF planes design}}}
 \end{frame}
 
-\begin{frame}
-	
-	Each side of a ToF counter is connected to 2 or 3 R5946 Hamamatsu Photo-Multiplier Tubes (PMTs)\footnotemark[2] through plexiglass light guides. 
-	The light guides can be straight, tilted or tilted and twisted to minimize the effect of magnetic field on the PMT signal. 
-	The 144 photomultipliers, connected to the 34 TOF paddles, are powered by 4 power supply (Scintillator High Voltage, SHV), which can provide a voltage between $1700 V$ and $2250 V$. The nominal gain of the photomultipliers is about $10^6$ when powered at $2000 V$.
-	
-	The PMTs fine-mesh R5946 Hamamatsu have been chosen for their capability of working in high magnetic fields, while keeping good timing characteristics.
+\begin{frame}[label=ToF-MagneticField]
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{light detectors and the problem of the magnetic field}
+	\justifying
 
+	\vspace*{-0.1cm}	
+	\small{The Photo-Multiplier Tubes (PMTs) used to collect the light from the ToF scintillators should operate in the strong 
+	($2 \div 3 \, kG$) fringing field of the ``superconducting'' dipole magnet.}
+
+	\vspace*{-0.05cm}	
+	\begin{columns}
+		\begin{column}{0.27\textwidth}\end{column}
+		\begin{column}{0.33\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{ToF-MagneticField-01.png}
+		\end{column}
+		\begin{column}{0.26\textwidth}\justifying
+			\justifying			
+			\footnotesize{\bluetextbf{Figure:} Magnetic field magnitude at the vertical coordinate where the ToF planes are 
+			positioned.}
+		\end{column}
+		\begin{column}{0.14\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.15cm}
+	\small{Because of the field magnitude, and of weight limits, the \textbf{PMTs must withstand the magnetic field without 
+	shielding}. 
+			
+	The choice was fine-mesh PMTs, R5946 Hamamatsu, for their capability of working in high magnetic fields, while keeping 
+	good timing characteristics.}
+
+			
+%			With a 16 mesh dynode chain the gain is $10^6$ at $2000 \, V$ and zero magnetic field.
+
+%The light guides can be straight, tilted or tilted and twisted to minimize the effect of magnetic field on the PMT signal. 
+		
+%	The PMTs fine-mesh R5946 Hamamatsu have been chosen for their capability of working in high magnetic fields, while keeping good timing characteristics.
+	\hfill	
+	\hyperlink{ToF-R5946}{\textbf{\beamerbutton{more on R5946 Hamamatsu}}}
 \end{frame}
 
 \begin{frame}
-	The long term operational reliability of the TOF system is assured by its modular design. 
-	Every counter is read at both sides by at least two photomultiplier tubes and it can still trigger with only one tube working. 
-	The same is true for the (unlikely) complete failure of one counter, as the normal trigger logic requires a signal in three layers out of four. 
-	In this way, the system is fault tolerant and somewhat redundant by design.
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{the PMT R5946 Hamamatsu}
+	\justifying
 	
-	%The powering and read-out electronics are protected with conformal coating from the highly ionizing low-orbit space environment and passed qualification tests to verify the absence of sparks, discharges or leakage. 
-	The one per one redundant design ensures constant operation even in case of a hardware failure in the power supplies or in the read-out electronics.
+	\vspace*{-0.05cm}	
+	\small{Each side of a ToF counter is connected to 2 or 3 PMTs through plexiglass light guides that can be straight, tilted or 
+	tilted and twisted to minimize the effect of magnetic field on the PMT signal.} 
+
+	%\vspace*{-0.2cm}
+	\begin{center}
+		%\includegraphics[height=0.325\paperheight]{ToF-PMTphoto01.jpeg}
+		\includegraphics[height=0.335\paperheight]{ToF-PMTbasic02.png}		
+		\hspace*{0.25cm}
+		\includegraphics[height=0.335\paperheight]{ToF-LightGuide.png}
+	\end{center}		
+	
+	\vspace*{-0.1cm}
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} 
+			%Photo of a PMT, 
+			%On the left, photo of a PMT in housing with HV divider.
+		 	Dimensional outline and basing diagram (Unit: $mm$) on the left.
+		 	CAD picture, on the right, showing the light guide shape needed to match a scintillator paddle to the PM oriented 
+		 	according to the magnetic field vector, and all other mechanical elements.}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.2cm}
+	\small{In total there are 144 PMTs, connected to the 34 ToF paddles, that are powered by 4 power supply 
+	(Scintillator High Voltage - \textit{SHV}) which can provide a voltage between $1700 V$ and $2250 V$.}
 \end{frame}
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{mechanical supports for ToF planes}
+	\justifying
+	
+%	The long term operational reliability of the TOF system is assured by its modular design. 
+%	Every counter is read at both sides by at least two photomultiplier tubes and it can still trigger with only one tube working. 
+%	The same is true for the (unlikely) complete failure of one counter, as the normal trigger logic requires a signal in three layers out of four. 
+%	In this way, the system is fault tolerant and somewhat redundant by design.
+%	
+%	%The powering and read-out electronics are protected with conformal coating from the highly ionizing low-orbit space environment and passed qualification tests to verify the absence of sparks, discharges or leakage. 
+%	The one per one redundant design ensures constant operation even in case of a hardware failure in the power supplies or in the read-out electronics.
+	\vspace*{-0.05cm}
+	\small{Because of the space borne nature of the AMS experiment, the ToF system must \textbf{tolerate the 
+	high mechanical stresses and large temperature changes} without breaking or damaging of any part of the detector. 
+	
+%	Moreover, it must survive for several years in the harsh space environment, the main threats being the large temperature 
+%	changes depending of the ISS orbits and %attitudes.
+	}
+	
+	\vspace*{-0.05cm}
+	\begin{center}
+		\includegraphics[height=0.275\paperheight]{ToF-MechStrut-UToF-02.png}		
+		\hspace*{0.2cm}
+		\includegraphics[height=0.275\paperheight]{ToF-MechStrut-LToF-02.png}
+	\end{center}		
+	
+	\vspace*{-0.1cm}
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} 
+			Exploded view of the UToF (on the left) and of the LToF (right) where are visible the covers and the mechanical supports 
+		 	for ToF planes.}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.25cm}
+	
+	\small{To accomplish all that, \textbf{the counters are housed in mechanically robust and light-tight covers} with a system for 
+	fast depressurisation, supported by a structure conforming to the NASA specifications for Shuttle payloads about resistance to 
+	load and vibrations. The use of composite materials allows to keep the weight low.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{space qualification}
+	\justifying
+	
+	\small{To assess the ToF capability of operating in space, all of its components underwent several thermo-vacuum and 
+	vibration tests before their integration. 
+	
+	Subsequently, the UToF and LToF have been space qualified, passing through strict thermo-vacuum and vibration tests at 
+	SERMS laboratories in Terni.}
+	
+	\vspace*{-0.05cm}
+	\begin{center}
+		\includegraphics[height=0.315\paperheight]{ToF-SpaceQual-04.jpg}		
+		\hspace*{0.45cm}
+		\includegraphics[height=0.315\paperheight]{ToF-SpaceQual-05.jpg}
+	\end{center}		
+	
+	\vspace*{-0.1cm}
+	\begin{columns}
+		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.8\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} 
+		 	UToF being inserted into the thermo-vacuum chamber (left) and on the sliding table during the vibration test in the (x, y) 
+		 	plane (right).}
+		\end{column}
+		\begin{column}{0.1\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.2cm}	
+	
+	\small{\textbf{To ensure a long term reliability, a certain degree of redundancy has been implemented in the ToF system}: each 
+	counter is 4(6)-fold redundant in PMTs, and doubly redundant in powering and read-out electronics. }
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{performance (velocity measurement)}
+	\justifying
+	
+	\small{Since May 2011, the ToF detector is operating in the space station without major problems.}
+		
+	\begin{columns}
+		\begin{column}{0.13\textwidth}\end{column}
+		\begin{column}{0.55\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{ToF-VelRes.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.27\textwidth}\justifying
+			\justifying
+			\vspace*{-0.5cm}	
+					
+			\footnotesize{\bluetextbf{Figure:}\\
+			The velocity resolution of the ToF system improves with increasing particle charge $Z$.}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+	\end{columns}
+	\vspace*{0.2cm}
+	
+	\small{The particle velocity resolution is 4\% for $Z = 1$ and 1.2\% for $Z = 6$, corresponding to a time of flight resolution 
+	from $160 \, ps$ to $48 \, ps$, allowing to distinguish upward to downward going particles at level of $10^9$.}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{performance (trigger)}
+	\justifying
+	
+	\vspace*{-0.15cm}
+	\small{The normal trigger configuration in space requires a hit on three ToF layers out of four (in this way, the system is
+	tolerant for the complete failure of one counter).}
+	
+	\vspace*{-0.15cm}
+	\begin{center}
+		\includegraphics[height=0.375\paperheight]{ToF-Trigger-01.png}		
+		\hspace*{0.45cm}
+		\includegraphics[height=0.375\paperheight]{ToF-Trigger-02.png}
+	\end{center}		
+	
+	\vspace*{-0.1cm}
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} 
+			Left - the trigger efficiency curve for one ToF counter: the efficiency has been measured at different
+			PMT High Voltages (HV), close to the nominal one (up to $\pm 250 \, V$). 
+			
+			Right - the trigger efficiencies for all counters of the four ToF layers\footnotemark[1]. }
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.1cm}		
+	
+	\footnotetext[1]{\justifying{\scriptsize{
+	The ToF counter effiency is computed using the OR of the two sides. 
+	The efficiencies are of the order of 99\% for all, with the exception of two external counters.}}}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{performance (charge measurement)}
+	\justifying
+	
+	\vspace*{-0.15cm}
+	\small{Once all the dynamic and static calibration procedures are applied, the ToF is capable of measuring all particle charges 
+	from $Z = 1$ to $Z = 40$ with high precision. }
+	%Both anodes and dynodes have good resolution for charge measurement. Low charges ($1 \leqslant Z \leqslant 3$) are measured using anodes, middle charges ($4 \leqslant Z \leqslant 8$) are measured using both anodes and dynodes, and high charges ($Z > 8$) are measured using dynodes.
+
+	\vspace*{-0.15cm}
+	\begin{center}
+		\includegraphics[height=0.35\paperheight]{ToF-ChargeMeas-03.png}		
+		\hspace*{0.45cm}
+		\includegraphics[height=0.35\paperheight]{ToF-ChargeMeas-01.png}
+	\end{center}		
+	
+	\vspace*{-0.2cm}
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} 
+		 	In the left graph are shown ToF charge estimation for different ions. Instead, in the right one are shown anode (dashed line) and dynode (solid line) charge resolution in charge units (c.u.) as a function of $Z$; the error bars represent the standard deviation of the distribution of resolution for all ToF counters \cite{Bindi-3}.}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.2cm}	
+	\small{A single ToF counter has a charge resolution $\sim 0.16$ charge unit (c.u.) for Carbon ($Z = 6$) and $\sim 0.4$ charge unit for Iron ($Z = 6$).}
+\end{frame}
+
+\subsection{Spectrometer}
+\subsubsection{Magnet}
+
+
+
+\subsubsection{Silicon Tracker}
 
 
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
@@ -1792,7 +2036,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\hyperlink{ToF-Paddles}{\textbf{\beamerbutton{return to the presentation}}}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=ToF-EJ200,noframenumbering]
 	\frametitle{ToF - Time of Flight}
 	\framesubtitle{property of EJ-200 Plastic Scintillator}
 	\justifying
@@ -1823,6 +2067,69 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\vspace{-0.3cm}
 	\hfill
 	\hyperlink{ToF-Paddles}{\textbf{\beamerbutton{return to the presentation}}}
+\end{frame}
+	
+\begin{frame}[label=ToF-R5946,noframenumbering]
+	\frametitle{ToF - Time of Flight}
+	\framesubtitle{property of Hamamatsu R5946 PMTs}
+	\justifying
+	
+	\vspace*{-0.1cm}
+	\scriptsize{Hamamatsu R5946 PMTs, using 16 fine mesh dynodes, are able to operate even in strong magnetic fields, up 
+	to magnetic fields of $1 \, T$ and with a gain of $10^6$ in absence of magnetic field when it is powered at $2000 V$.}
+	\vspace*{0.1cm}
+%	\begin{columns}
+%		\begin{column}{0.01\textwidth}\end{column}
+%		\begin{column}{0.48\textwidth}\centering
+%			\footnotesize{\bluetextbf{Typical Spectral Response}}
+%		\end{column}
+%		\begin{column}{0.02\textwidth}\end{column}
+%		\begin{column}{0.48\textwidth}
+%			\footnotesize{\bluetextbf{Typical Gain in Magnetic Fields}}		
+%		\end{column}
+%		\begin{column}{0.01\textwidth}\end{column}
+%	\end{columns}
+
+% 
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.32\textwidth}
+			\centering
+			\includegraphics[height=0.4\paperheight]{ToF-PMTspectrum.png}
+		\end{column}
+		\begin{column}{0.34\textwidth}
+			\centering
+			\includegraphics[height=0.4\paperheight]{ToF-PMTgain.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.3\textwidth}
+			\centering
+			\includegraphics[height=0.25\paperheight]{ToF-PMTangle.png}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}	
+	
+	\vspace*{0.1cm}
+	\scriptsize{As can be seen in the \textbf{first graph}, the spectral response ranges of R5946 is from 300 to 600 $nm$ with a 
+	maximum response at 420 $nm$ (corresponding to a quantum efficiency of about 20\%).
+	%, which matches the scintillator output.
+	
+	The \textbf{second and the third ones} show the change of the gain due to the magnetic field. 
+	
+	Specifically, in the third are drawn the measured (squares) and the simulated (points) relative gain as a 
+	function of the angle between the PMT axis and the magnetic field, at two values of magnetic field: $1.5 \, kG$ (black) and 
+	$3 \, kG$ (white).}
+%	
+%	\begin{columns}
+%		\begin{column}{0.02\textwidth}\end{column}
+%		\begin{column}{0.06\textwidth}
+%		
+%		\end{column}
+%		\begin{column}{0.02\textwidth}\end{column}
+%	\end{columns}
+	 
+	\vspace*{-0.15cm}\hfill	
+	\hyperlink{ToF-MagneticField}{\textbf{\beamerbutton{return to the presentation}}}
 \end{frame}
 
 \end{document}
