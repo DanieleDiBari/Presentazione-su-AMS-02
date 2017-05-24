@@ -17,7 +17,12 @@
 \usepackage{shadowtext}
 
 %image paths
-\graphicspath{{./Immagini/}{./Immagini/TRD/}{./Immagini/ToF/}}
+\graphicspath{	
+	{./Immagini/}
+	{./Immagini/TRD/}
+	{./Immagini/ToF/}
+	{./Immagini/Magnetic_Spectrometer/}
+}
 
 % impostazioni base delle slide - tema, colori, caratteri, ... (deic.uab.es/~iblanes/beamer_gallery/)
 \mode<presentation>
@@ -1545,8 +1550,84 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \end{frame}
 
 \subsection{Spectrometer}
-\subsubsection{Magnet}
+\begin{frame}
+	\frametitle{Magnetic Spectrometer}
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.66\textwidth}\justifying
+			\justifying
+			
+			\small{The Magnetic Spectrometer (MS) is \textbf{the heart of the AMS experiment}.}
+			
+			\vspace*{0.1cm}			
+			
+			\small{Thanks to the magnetic field of the MS, AMS is able to measure the sign of the traversing particle and so 
+			to discriminate matter from antimatter.} 
+			%and from the radius of curvature it is possible to estimate the particle momentum.
+			
+			\vspace*{0.15cm}
 
+			\begin{block}{\footnotesize{Main component of the MS}}\justifying
+				\begin{columns}
+					\begin{column}{0.99\textwidth}
+						\vspace*{-0.25cm}
+						\begin{itemize}\justifying
+							\item	\footnotesize{The \bluetextit{Magnet}, which produces the magnetic field.}
+							\item	\footnotesize{The \bluetextit{Silicon Tracker}, that reconstruct the tracks of charged 
+										particles and measure, with an excellent resolution, the magnitude of their charges.}
+						\end{itemize}
+					\end{column}
+					\begin{column}{0.01\textwidth}\end{column}
+				\end{columns}
+			\end{block}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}	
+		\begin{column}{0.3\textwidth}
+			\centering
+			\includegraphics[height=0.565\paperheight]{MS-Magnet_Deflection-02.png}
+		\end{column}	
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	\vspace*{0.25cm}
+	\justifying
+			\scriptsize{In the \bluetextbf{figure} on the right is shown a schematic representation of a charged particle and its 
+			antiparticle that, with the same energy, pass through the MS.
+			Thanks to the magnetic field, the trajectories of the two particles are deflected of the same amount (because they have 
+			the same rigidity $R = p / |Z|$), 	but in opposite directions due to the different sign of their charges.}
+\end{frame}
+			
+\subsubsection{Magnet}
+\begin{frame}
+	\frametitle{Magnet}
+	\framesubtitle{design constraints}
+	\justifying
+	
+	\small{
+	The AMS-02 magnet is a permanent magnet designed to optimize the requirements of a large, powerful and uniform dipole magnetic field of a flight-qualified and relatively light-weighted system.
+	
+%	To design this with a large acceptance ($\sim 1 m^2 sr$) and strong analysing power ($BL^2 = 0.15 T m^2$) we must make the following considerations:
+
+	\begin{itemize}\justifying
+		\small{
+		\item The magnet will be launched into space and hence its weight must be as low as possible.
+		\item To avoid the yaw and pitch caused by the interaction of the magnet with the earth magnetic field, or in other words to 
+		ease the burden of the satellite altitude control system, there should be compensating facilities on the magnet so that the 
+		overall magnetic dipole moment of the magnet is minimum.
+		}
+	\end{itemize}
+	
+	The specific weight of iron is rather large. With an iron-free structure, the effective parts of the magnet consist totally of Nd-Fe-B, which has a specific weight of $7.4 \cdot 10^3 kg/m^3$. This reduces the gross weight of the magnet.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Magnet}
+	\framesubtitle{design constraints}
+	\justifying
+	%The commonly known structures of iron-free hollow dipole magnets that minimize the magnet with low leakage flux
+	
+%	The magnet is made of 6400 Nd-Fe-B blocks of sides 5×5×2.5 cm3. The blocks are arrayed in 100 circle shaped 64 elements layers (one layer is depicted in Fig. 2.2), constituting a cylinder of length 800 mm, inner radius r1 = 111.5 cm and outer radius r2 = 129.9 cm. The blocks are arranged to form 64 segments with varying field directions in order to produce a 0.15 T field intensity in the magnet center [6].
+\end{frame}
 
 
 \subsubsection{Silicon Tracker}
@@ -1602,11 +1683,11 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\scriptsize{
 	\bibitem{Kirn-1}
 	T. Kirn, ``\textit{The AMS-02 transition radiation detector}'' Nuclear Instruments and Methods in Physics Research A 581 
-	(2007) 156–159.
+	(2007) 156-159.
 	
 	\bibitem{Kirn-2}
-	T. Kirn, ``\textit{The AMS-02TRDontheinternationalspacestation}'' Nuclear Instruments and Methods in Physics Research A 
-	706 (2013) 43–47.
+	T. Kirn, ``\textit{The AMS-02 TRD on the international space station}'' Nuclear Instruments and Methods in Physics Research A 
+	706 (2013) 43-47.
 	
 	\bibitem{Sun}
 	W. Sun, A. Kounine and Z. Weng, ``\textit{Measurement of the absolute charge of cosmic ray nuclei with the AMS Transition 
@@ -1619,7 +1700,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\scriptsize{
 	\bibitem{Bindi-1}
 	V. Bindi et al., ``\textit{The scintillator detector for the fast trigger and time-of-flight (TOF) measurement of the space 
-	experiment AMS-02}'' Nuclear Instruments and Methods in Physics Research A 623 (2010) 968–981.
+	experiment AMS-02}'' Nuclear Instruments and Methods in Physics Research A 623 (2010) 968-981.
 	
 	\bibitem{Bindi-2}
 	V. Bindi et al., ``\textit{The AMS-02 time of flight (TOF) system: construction and overall performances in space}'' 33rd 
@@ -1627,8 +1708,28 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	
 	\bibitem{Bindi-3}
 	V. Bindi et al., ``\textit{Calibration and performance of the AMS-02 time of flight detector in space}'' Nuclear Instruments and 
-	Methods in Physics Research A 743 (2014) 22–29.
+	Methods in Physics Research A 743 (2014) 22-29.
 	}
+	
+	\framebreak
+	\hspace{-0.7cm}\normalsize{\bluetextbf{On the Magnetic Spectrometer}}		
+	
+	\vspace{0.25cm}
+	\hspace{-0.7cm}\small{\bluetextbf{$\triangleright$ Magnet:}}
+	
+	\scriptsize{
+	\bibitem{Ahlen}
+	S. Ahlen et al., ``\textit{An antimatter spectrometer in space}'' Nuclear Instruments and Methods in Physics Research A 350 
+	(1994) 351-367.
+	
+	\bibitem{Lubelsmeyer}
+	K. L\"{u}belsmeyer et al., ``\textit{Upgrade of the Alpha Magnetic Spectrometer (AMS-02) for long term operation on the 
+	International Space Station (ISS)}'' Nuclear Instruments and Methods in Physics Research A 654 (2011) 639-648.
+	}
+	
+	\vspace{0.25cm}
+	\hspace{-0.7cm}\small{\bluetextbf{$\triangleright$ Silicon Tracker:}}
+	
 	\end{thebibliography}
 \end{frame}
 
