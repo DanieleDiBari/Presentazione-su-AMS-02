@@ -22,6 +22,7 @@
 	{./Immagini/TRD/}
 	{./Immagini/ToF/}
 	{./Immagini/Magnetic_Spectrometer/}
+	{./Immagini/Magnetic_Spectrometer/Magnet/}
 }
 
 % impostazioni base delle slide - tema, colori, caratteri, ... (deic.uab.es/~iblanes/beamer_gallery/)
@@ -1555,7 +1556,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	
 	\begin{columns}
 		\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.66\textwidth}\justifying
+		\begin{column}{0.66\textwidth}
 			\justifying
 			
 			\small{The Magnetic Spectrometer (MS) is \textbf{the heart of the AMS experiment}.}
@@ -1584,14 +1585,16 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 		\end{column}
 		\begin{column}{0.02\textwidth}\end{column}	
 		\begin{column}{0.3\textwidth}
-			\centering
-			\includegraphics[height=0.565\paperheight]{MS-Magnet_Deflection-02.png}
+			\centering	
+			\includegraphics[height=0.555\paperheight]{MS-Magnet_Deflection-02.png}
+			
+			\scriptsize{\bluetextbf{Schematic picture of MS}}
 		\end{column}	
 		\begin{column}{0.01\textwidth}\end{column}
 	\end{columns}
 	\vspace*{0.25cm}
 	\justifying
-			\scriptsize{In the \bluetextbf{figure} on the right is shown a schematic representation of a charged particle and its 
+			\scriptsize{In the \bluetextit{figure on the right} is shown a schematic representation of a charged particle and its 
 			antiparticle that, with the same energy, pass through the MS.
 			Thanks to the magnetic field, the trajectories of the two particles are deflected of the same amount (because they have 
 			the same rigidity $R = p / |Z|$), 	but in opposite directions due to the different sign of their charges.}
@@ -1600,36 +1603,319 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \subsubsection{Magnet}
 \begin{frame}
 	\frametitle{Magnet}
-	\framesubtitle{design constraints}
+	\framesubtitle{the permanent magnet of AMS-02}
 	\justifying
-	
-	\small{
-	The AMS-02 magnet is a permanent magnet designed to optimize the requirements of a large, powerful and uniform dipole magnetic field of a flight-qualified and relatively light-weighted system.
-	
-%	To design this with a large acceptance ($\sim 1 m^2 sr$) and strong analysing power ($BL^2 = 0.15 T m^2$) we must make the following considerations:
 
+%	The AMS-02 magnet is a permanent magnet that designed to generating a uniform dipole magnetic field and it is designed to 
+%	get a large acceptance ($\sim 1 m^2 sr$) and strong analysing power ($BL^2 = 0.15 T m^2$) the requirements of a large, 
+%	powerful and uniform dipole magnetic field of a flight-qualified and relatively light-weighted system. To realize a device of this 
+%	type, the main parameters taken into account have been the following:	
+	\footnotesize{The AMS-02 magnet is a \textbf{permanent magnet designed to generating a uniform dipole magnetic field} 	for
+	a flight-qualified and relatively light-weighted system.}
+	
+	\vspace*{0.25cm}
+	
+	\begin{columns}
+		\begin{column}{0.3\textwidth}\end{column}
+		\begin{column}{0.37\textwidth}\centering
+			\includegraphics[width=\textwidth]{MAGNET-Photo-02.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.26\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figure:}\\
+			Photo shows the permanent magnet of AMS-02, namely the same magnet employed in the AMS-01 prototype.}
+		\end{column}
+		\begin{column}{0.06\textwidth}\end{column}
+	\end{columns}
+	\vspace*{0.25cm}
+	
+	\footnotesize{So, the main parameters taken into account to realize this device have been the following:}
+%	To realize a device of this type, the main parameters taken into account have been the following:
+
+	\vspace*{-0.1cm}
 	\begin{itemize}\justifying
-		\small{
-		\item The magnet will be launched into space and hence its weight must be as low as possible.
+		\footnotesize{
+		\item The magnet will be launched into space, hence its weight must be as low as possible.
 		\item To avoid the yaw and pitch caused by the interaction of the magnet with the earth magnetic field, or in other words to 
 		ease the burden of the satellite altitude control system, there should be compensating facilities on the magnet so that the 
 		overall magnetic dipole moment of the magnet is minimum.
 		}
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[label=MAGNET-Des]
+	\frametitle{Magnet}
+	\framesubtitle{design of the magnet structure}
+	\justifying
+	%The commonly known structures of iron-free hollow dipole magnets that minimize the magnet with low leakage flux
+	\vspace*{-0.15cm}	
+	\footnotesize{
+	The magnet is made from 64 high-grade Nd-Fe-B sectors. 
+	Each sector is composed of 100 blocks (size of a block: $5.08 \times 5.08 \times 2.54 \, cm^3$). 
+	%Figure 1.2 shows the arrangement of the field direction of the 64 sectors.
+	This configuration produce a dipole field of $1.5 \, kG$ and a negligible dipole moment\footnotemark[1].
+	In addition, the flux leakage\footnotemark[2] at a distance of $2 \, m$ from the center of the magnet is $3 \, G$.}
+			
+	\begin{columns}
+		\begin{column}{0.33\textwidth}\end{column}
+		\begin{column}{0.34\textwidth}\centering
+			\includegraphics[width=\textwidth]{MAGNET-Struct-05.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.23\textwidth}\justifying
+			\vspace*{0.15cm}
+			
+			\scriptsize{\bluetextbf{Figure:}\\
+			The image shows the arrangement of the field direction of the 64 sectors.}
+			
+			\vspace*{0.15cm}\centering
+			\hyperlink{MAGNET-FieldDistr}{\textbf{\beamerbutton{more on field distribution}}}
+		\end{column}
+		\begin{column}{0.09\textwidth}\end{column}
+	\end{columns}
+	%\vspace*{-0.15cm}	
 	
-	The specific weight of iron is rather large. With an iron-free structure, the effective parts of the magnet consist totally of Nd-Fe-B, which has a specific weight of $7.4 \cdot 10^3 kg/m^3$. This reduces the gross weight of the magnet.}
+	\footnotetext[1]{\justifying{\scriptsize{The geomagnetic field is $0.5 \, G$ on the surface and varies when on orbit. 
+	A strong dipole moment would result in an undesirable force on the space shuttle or the space station.}}}
+	\footnotetext[2]{\justifying{\scriptsize{NASA requires the leakage field to be $< 300 \, G$ so as not to interfere with the life 
+	support system of the astronauts.}}}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Magnet}
-	\framesubtitle{design constraints}
+	\framesubtitle{the magnet and the reference frame of AMS-02}
 	\justifying
 	%The commonly known structures of iron-free hollow dipole magnets that minimize the magnet with low leakage flux
+			
+	\small{The orientation of the almost uniform magnetic field defines the whole reference frame of the AMS-02 
+	experiment.}
 	
-%	The magnet is made of 6400 Nd-Fe-B blocks of sides 5×5×2.5 cm3. The blocks are arrayed in 100 circle shaped 64 elements layers (one layer is depicted in Fig. 2.2), constituting a cylinder of length 800 mm, inner radius r1 = 111.5 cm and outer radius r2 = 129.9 cm. The blocks are arranged to form 64 segments with varying field directions in order to produce a 0.15 T field intensity in the magnet center [6].
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.53\textwidth}
+			\begin{block}{\footnotesize{Reference Frame of AMS-02}}
+				\begin{columns}
+					\begin{column}{0.99\textwidth}			
+						\begin{itemize}\justifying
+							\vspace*{-0.25cm}
+							\footnotesize{
+							\item[$\circ$]	The center is at the center of the magnet. 
+							\item[$\circ$]	The $x$ axis is oriented along the direction of the field lines. 
+							\item[$\circ$]	The $z$ axis is defined by the magnet cylinder symmetry axis, with positive values toward the 
+													top of the instruments.
+							\item[$\circ$]	The $y$ axis completes the Cartesian right-handed tern. 
+							}
+						\end{itemize}
+						\vspace*{0.05cm}
+					\end{column}
+					\begin{column}{0.01\textwidth}\end{column}
+				\end{columns}
+			\end{block}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.44\textwidth}\centering
+			\vspace*{0.25cm}
+			
+			\scriptsize{\bluetextit{Properties of the AMS-02 flight magnet}}			
+						
+			\includegraphics[width=0.85\textwidth]{MAGNET-Struct-04.png}			
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+
+	\vspace*{0.25cm}
+	
+	\small{\textbf{All the curved motion of a charged particle in the AMS-02 magnetic field is contained in the $z y$ 
+	plane.}}	
+	
+%	\vspace*{-0.15cm}
+%	\begin{center}
+%		\includegraphics[height=0.35\paperheight]{MAGNET-Struct-04.png}
+%	\end{center}		
+%	
+%	\vspace*{-0.1cm}
+%	\begin{columns}
+%		\begin{column}{0.02\textwidth}\end{column}
+%		\begin{column}{0.96\textwidth}\centering
+%			\scriptsize{\bluetextbf{Figure} Properties of the AMS-02 flight magnet.}
+%		\end{column}
+%		\begin{column}{0.02\textwidth}\end{column}
+%	\end{columns}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Magnet}
+	\framesubtitle{the superconducting magnet of AMS-02}
+	\justifying
+	
+	\footnotesize{AMS also developed a \bluetextit{Super-Conducting Magnet (SCM)} which was suitable for a three year mission
+	on the ISS as originally planned.}
+			
+	\vspace*{-0.1cm}
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.63\textwidth}\justifying
 
+			\begin{block}{\footnotesize{Something about the SCM:}}\justifying
+				\begin{columns}
+				\begin{column}{0.01\textwidth}\end{column}
+					\begin{column}{0.99\textwidth}\justifying
+						\footnotesize{The SCM was the same volume as the permanent one but its field was stronger 
+						($\sim 8.6 \, kG$ at the center).
+						
+						Using 2500 litres of superfluid He, \textbf{it operated at an extremely low temperature}, 
+						namely $1.8 ^\circ{K}$.
+						
+						Many new technologies (i.e. thermomechanical pumps, cryocoolers, etc.) were specifically 
+						modified for AMS to ensure its functioning, safety and endurance in space.}
+					\end{column}
+					\begin{column}{0.01\textwidth}\end{column}
+				\end{columns}
+			\end{block}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}	
+		\begin{column}{0.35\textwidth}
+			\vspace*{0.15cm}
+
+			\centering	
+			\includegraphics[width=\textwidth]{MAGNET-SupercondMagnet.png}
+			
+			\scriptsize{\bluetextbf{	Schematic view\\
+												of the SCM layout}}
+												
+			\end{column}	
+		%\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.3cm}
+	
+	\footnotesize{
+	The SCM underwent extensive testing that validated its performance and endurance 
+	in simulated space conditions.
+	These tests also confirmed that \textbf{the magnet would lose its superconductivity when the superfluid He boiled off after 
+	approximately three years of operation}, exactly the length of the mission for which it was originally designed
+	(\textit{because of the retirement of the shuttle fleet, there would have been no means of re-supplying AMS with additional 
+	liquid He).}}	
+\end{frame}
+
+\begin{frame}[label=MAGNET-Choice]
+	\frametitle{Magnet}
+	\framesubtitle{why the choice of the permanent magnet?}
+	\justifying
+	\small{The SCM was not used for flight because the lifetime extension of the ISS made the permanent magnet (PM) 
+	with its extended operational capability and promise of higher yield of data, the instrument of choice.}
+	
+	%\vspace*{0.1cm}
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}	
+		\begin{column}{0.54\textwidth}\justifying
+			\vspace*{-0.3cm}
+			\begin{block}{\footnotesize{Improvement for a long duration mission}}\justifying
+				\begin{columns}
+				\begin{column}{0.01\textwidth}\end{column}
+					\begin{column}{0.98\textwidth}\justifying
+						\footnotesize{To offset the lower magnetic field of the PM, \textit{the AMS Collaboration optimized the 
+						geometry of the detector by adding one silicon planes and rearranging the existing silicon planes}, 
+						\textbf{thus greatly increasing the measurement arm}.}
+					\end{column}
+					\begin{column}{0.01\textwidth}\end{column}
+				\end{columns}
+			\end{block}
+			 
+			\vspace*{0.1cm}
+			
+			\small{This recovered the full sensitivity for AMS for the rigidity and for the matter-antimatter separation as was 
+			confirmed with a dedicated beam test.}
+		\end{column}	
+		\begin{column}{0.01\textwidth}\end{column}	
+		\begin{column}{0.43\textwidth}\centering
+			\scriptsize{\bluetextbf{Magnets Comparison}}
+			
+			\vspace*{0.1cm}
+			\includegraphics[width=\textwidth]{MAGNET-Comparition-01.png}
+			
+			\vspace*{0.15cm}
+			\includegraphics[height=0.1\paperheight]{MAGNET-Comparition-03.png}
+			\hspace*{0.5cm}
+			\includegraphics[height=0.1\paperheight]{MAGNET-Comparition-04.png}
+%			
+%			\vspace*{-0.25cm}
+%			\begin{center}
+%				\hyperlink{MAGNET-CompRes}{\textbf{\beamerbutton{comparison of the two rigidity resolutions}}}
+%			\end{center}
+		\end{column}	
+		\begin{column}{0.01\textwidth}\end{column}	
+	\end{columns}
+	
+	\vspace*{0.3cm}	
+	
+	\begin{columns}
+		\begin{column}{0.56\textwidth}\end{column}	
+		\begin{column}{0.43\textwidth}\centering
+			\hyperlink{MAGNET-CompRes}{\textbf{\beamerbutton{comparison of the two rigidity resolutions}}}
+		\end{column}	
+		\begin{column}{0.01\textwidth}\end{column}	
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Magnet}
+	\framesubtitle{why the choice of the permanent magnet?}
+	\justifying
+
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.55\textwidth}\justifying
+			\small{As a side effect of the lever arm extension, the number of CRs per second passing through the tracking volume is 
+			reduced. 
+			
+			\vspace*{0.1cm}
+	
+			This is because longer cylinders, with the same diameter, have narrower angular field-of-views (reduction in acceptance).}
+	
+			\vspace*{-0.05cm}
+			
+			\begin{block}{\footnotesize{CRs yield of the two configurations}}\justifying
+				\begin{columns}
+				\begin{column}{0.01\textwidth}\end{column}
+					\begin{column}{0.98\textwidth}\justifying
+						\footnotesize{However the number of CRs collected in 10 years in the PM Scenario (the worst case in this 
+						scenario) is greater than the number of CRs that could be collected in the best case with the SCM Scenario 
+						(at most 3 years).
+						
+						\vspace*{0.05cm}
+			
+						As an example the number of positrons collected in the PM configuration is expected to be a factor 2 to 6 
+						times greater to the SCM configuration, depending on the energy.}
+					\end{column}
+					\begin{column}{0.01\textwidth}\end{column}
+				\end{columns}
+			\end{block}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}		
+		\begin{column}{0.42\textwidth}\centering
+			\hspace*{0.2cm}\scriptsize{\bluetextbf{The Expected Performances}}
+			
+			\includegraphics[width=0.85\textwidth]{MAGNET-Comparition-06.png}
+			
+			\vspace*{0.1cm}
+			\begin{columns}
+				\begin{column}{0.04\textwidth}\end{column}
+				\begin{column}{0.95\textwidth}\justifying
+					\scriptsize{\bluetextbf{Figure:} The expected positron fraction in the two AMS-02 configurations, considering a
+					particular model of annihilating Dark Matter.}
+				\end{column}
+				\begin{column}{0.01\textwidth}\end{column}
+			\end{columns}
+			
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	
+	
+\end{frame}
 \subsubsection{Silicon Tracker}
 
 
@@ -1653,28 +1939,28 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\begin{thebibliography}{99}
 	\setbeamertemplate{bibliography item}[text]
 	\scriptsize{
-	\bibitem{Ting} 
-	S. Ting, ``\textit{The Alpha Magnetic Spectrometer on the International Space Station}'' Nuclear Physics B (Proc. Suppl.) 
-	243-244 (2013) 12–24
+	\bibitem{AMSCollab}
+	AMS Collaboration, ``\textit{AMS on ISS - Construction of a particle physics detector on the International Space Station}'' AMS 
+	Internal Note.	
+	
+	\bibitem{AMS-website}
+	AMS Collaboration, ``\textit{AMS-02 - The Alpha Magnetic Spectrometer Experiment}'' \url{http://www.ams02.org/}
+	
+	\bibitem{Duranti}
+	M. Duranti, ``\textit{Measurement of the Atmospheric Muon Flux on Ground with the AMS-02 Detector}'' PhD thesis, University 
+	of Perugia	(2011).
 	
 	\bibitem{Kounine} 
 	A. Kounine, ``\textit{THE ALPHA MAGNETIC SPECTROMETER ON THE INTERNATIONAL SPACE STATION}'' Int. J. Mod. Phys. E, 
 	21, 1230005 (2012).
 	
-	\bibitem{AMSCollab}
-	AMS Collaboration, ``\textit{AMS on ISS - Construction of a particle physics detector on the International Space Station}'' AMS 
-	Internal Note.
-	
-	\bibitem{Duranti}
-	M. Duranti, ``\textit{Measurement of the Atmospheric Muon Flux on Ground with the AMS-02 Detector}'' PhD thesis, University 
-	of Perugia	(2011)
+	\bibitem{Ting} 
+	S. Ting, ``\textit{The Alpha Magnetic Spectrometer on the International Space Station}'' Nuclear Physics B (Proc. Suppl.) 
+	243-244 (2013) 12–24.
 		
 	\bibitem{Vagelli}
 	V. Vagelli, ``\textit{Measurement of the cosmic $e^+ + e^-$ Flux from 0.5 GeV to 1 TeV with the Alpha Magnetic 
 	Spectrometer (AMS-02) on the International Space Station}'' PhD thesis, Karlsruher Institut f\"{u}r Technologie (2014).
-	
-	\bibitem{AMS-website}
-	AMS Collaboration, ``\textit{AMS-02 - The Alpha Magnetic Spectrometer Experiment}'' \url{http://www.ams02.org/}
 	}
 
 	\framebreak
@@ -2233,4 +2519,83 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\hyperlink{ToF-MagneticField}{\textbf{\beamerbutton{return to the presentation}}}
 \end{frame}
 
+\begin{frame}[label=MAGNET-FieldDistr,noframenumbering]
+	\frametitle{Magnet}
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.65\textwidth}\justifying
+			\scriptsize{The magic ring is a Hollow Cylindrical Flux Source (HCFS). An HCFS is a cylindrical permanent magnet shell with 
+			its magnetization vector constant in magnitude and oriented according to the formula:}
+			
+			\vspace*{-0.05cm}\centering$\alpha = 2\phi + \pi/2$
+
+			\justifying\vspace*{0.15cm}
+			\scriptsize{where $\phi$ is the angular cylindrical coordinate. Such a distribution gives an interior field of:}
+
+			\vspace*{0.15cm}\centering$B = B_r In(r_2/r_1)$
+
+			\vspace*{0.15cm}\justifying
+			\scriptsize{where $B_r$ is the residual magnetic flux density of the ring and $r_1$ and $r_2$ are its inner and outer 			
+			radius respectively.
+			
+			\vspace*{0.15cm}
+	
+			In practice, it is not possible to make it vary continuously, so its value is made to change abruptly by 
+			$4 \pi / N$ between adjacent wedge-shaped sections of equal size and uniform magnetization, $N$ is the number of such 
+			segments into which the ring is divided.
+	
+			\vspace*{0.15cm}			
+			
+			The field suffers surprisingly little from the approximation by segmentation. For example, if the ring is divided into 16 
+			segments, it still produces a magnetic field of over 97\% of that produced by a continuous ring.}
+	
+			\vspace*{0.4cm}
+			\hyperlink{MAGNET-Des}{\textbf{\beamerbutton{back to the previous slide}}}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.32\textwidth}\centering
+			\vspace*{-0.15cm}
+			
+			\includegraphics[width=0.85\textwidth]{MAGNET-FiledOr-02.png}
+			
+			\justifying
+			\tiny{\bluetextbf{Figure:} Magnetic field distribution at a cross-section of the center of the magnet.}
+
+			\vspace*{0.15cm}\centering
+			\includegraphics[width=0.85\textwidth]{MAGNET-FiledOr-03.png}
+			
+			\justifying
+			\tiny{\bluetextbf{Figure:} Field distribution at the cross-section of the center of a magic ring with 8 segments.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=MAGNET-CompRes,noframenumbering]
+	\frametitle{Magnet}
+	\framesubtitle{comparison of the two rigidity resolutions}
+	
+	\vspace*{0.15cm}
+	\begin{columns}
+		\begin{column}{0.11\textwidth}\end{column}
+		\begin{column}{0.47\textwidth}
+			\includegraphics[width=\textwidth]{MAGNET-Comparition-05.png}
+		\end{column}
+		%\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.35\textwidth}
+			\justifying
+			\scriptsize{\bluetextbf{Figure:}\\
+			The rigidity resolution for the two AMS-02 magnetic designs. 
+			The green line is the difference between the blue (PM) and red (SCM) resolutions. 
+			At high energies the PM and SCM accuracies are equivalent; at low energies the difference in accuracy is only 10\%.}
+			
+		\end{column}
+		\begin{column}{0.07\textwidth}\end{column}
+	\end{columns}
+	\vspace*{-0.15cm}
+
+	\hfill
+	\hyperlink{MAGNET-Choice}{\textbf{\beamerbutton{back to the previous slide}}}
+\end{frame}
 \end{document}
