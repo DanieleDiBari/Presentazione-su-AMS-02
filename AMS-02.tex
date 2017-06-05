@@ -23,6 +23,7 @@
 	{./Immagini/ToF/}
 	{./Immagini/Magnetic_Spectrometer/}
 	{./Immagini/Magnetic_Spectrometer/Magnet/}
+	{./Immagini/Magnetic_Spectrometer/Tracker/}
 }
 
 % impostazioni base delle slide - tema, colori, caratteri, ... (deic.uab.es/~iblanes/beamer_gallery/)
@@ -71,6 +72,9 @@
 % colors
 \definecolor{itemred}{RGB}{163,0,0}
 \definecolor{itemblue}{RGB}{52,57,176}
+\definecolor{notegrey}{RGB}{90,90,90}
+\definecolor{titlebgd_grey}{RGB}{242,242,242}
+\definecolor{titleframe_red}{RGB}{204,0,0}
 
 % COMANDI
 % Formato testo generico in titolpage
@@ -143,7 +147,7 @@
 	\usebackgroundtemplate{\includegraphics[height=\paperheight,keepaspectratio]{on_ISS-08_cutMIDDLEUP-3088.jpg}}	
 	% 	possibili impostazioni per l'img: width=\paperwidth  --  height=\paperheight  --  keepaspectratio
 
-\begin{frame}
+\begin{frame}\pdfbookmark[2]{Title}{Title}
 	\titlepage
 \end{frame}
 
@@ -165,7 +169,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 
 \usebackgroundtemplate{}
 
-\begin{frame}
+\begin{frame}[allowframebreaks]\pdfbookmark[2]{Contents}{Contents}
 \frametitle{Table of Contents}
 \tableofcontents
 \end{frame}
@@ -370,7 +374,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 %	\end{center}
 %\end{frame}
 
-\subsection{of a space-borne experiment}
+\subsection{a space-borne experiment}
 \begin{frame}
 	\frametitle{Technical Requirement} 
 	\framesubtitle{why a particle detector in the space?}
@@ -438,7 +442,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 %	\end{itemize}
 %\end{frame}
 
-\subsection{the protype (AMS-01)}
+\section{The protype (AMS-01)}
 \begin{frame}
 	\frametitle{AMS-01} 
 	\framesubtitle{The protype of AMS-02}
@@ -479,29 +483,35 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\end{itemize}
 \end{frame}
 
-\section{The subdetectors of AMS-02}
+\section{Subdetectors of AMS-02}
 \begin{frame}[label=AMS-apparatus_list]
 	\frametitle{The AMS-02's subdetectors}
 	\framesubtitle{from the top to the bottom}	
 	\begin{itemize}
 		\justifying
-		\item	\textitem{TRD}{Trasition Radiation Detector}, identifies electrons and positrons among other CRs.
-		\item	\textitem{ToF}{Time of Flight}, warns the sub-detectors of incoming CRs.
-		\item	\bluetextbf{Magnetic Spectrometer}, detects the particle charge sign, separating matter from antimatter. Main 
-					components:
+		\item	\hyperlink{TRD-Det}{\textitem{TRD}{Trasition Radiation Detector}}, 
+					identifies electrons and positrons among other CRs.
+		\item	\hyperlink{ToF-Det}{\textitem{ToF}{Time of Flight}}, 
+					warns the sub-detectors of incoming CRs.
+		\item	\hyperlink{SM-Det}{\bluetextbf{Magnetic Spectrometer}}, 
+					detects the particle charge sign, separating matter from antimatter. Main components:
 								\begin{itemize}
-									\item[$\circ$]	\textcolor{itemblue}{Magnet}, bends in opposite directions charged particles/
-															antiparticles.
-									\item[$\circ$]	\textcolor{itemblue}{Silicon Tracker}, direct measurement of the trajectory deflection.
+									\item[$\circ$]	\hyperlink{MAG-Det}{\textcolor{itemblue}{Magnet}}, 
+															bends in opposite directions charged particles/antiparticles.
+									\item[$\circ$]	\hyperlink{ST-Det}{\textcolor{itemblue}{Silicon Tracker}}, 
+															direct measurement of the trajectory deflection.
 								\end{itemize}
-		\item	\textitem{RICH}{Ring-Imaging CHerenkov detector}, measures with high precision the velocity of CRs.
-		\item	\textitem{ECAL}{Electromagnetic CALorimeter}, measures energy of incoming electrons, positrons and $\gamma$-rays.
+		\item	\hyperlink{TRD-Det}{\textitem{RICH}{Ring-Imaging CHerenkov detector}}, 
+					measures with high precision the velocity of CRs.
+		\item	\hyperlink{TRD-Det}{\textitem{ECAL}{Electromagnetic CALorimeter}}, 
+					measures energy of incoming electrons, positrons and $\gamma$-rays.
 	\end{itemize}
 	\hfill \hyperlink{AMS-apparatus_img}{\textbf{\beamerbutton{link to AMS apparatus scheme}}}
 \end{frame}
 
 \subsection{TRD}
-\begin{frame}{TRD - Transition Radiation Detector}%{Particle ID \& 3D tracking}
+\begin{frame}[label=TRD-Det]
+	\frametitle{TRD - Transition Radiation Detector}%{Particle ID \& 3D tracking}
 	\vspace{-0.55cm}
 	\begin{center}
 		\includegraphics[height=0.35\paperheight]{TRD-Photo-05.jpeg}
@@ -510,10 +520,10 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\begin{block}{\small{The main features of TRD are:}}
 		%\vspace{-0.25cm}
 		\begin{itemize}\small{
-			\item[$\circ$] \textbf{to discriminate} between  $e^+$ and $p$ whit a proton rejection of $10^{-2} \div 10^{-3}$ 
+			\item[$\circ$] \textbf{Discriminate between  $e^+$ and $p$}, whit a proton rejection of $10^{-2} \div 10^{-3}$ 
 						in the energy range between $10$ and $300 GeV$.$^1$
 						
-			\item[$\circ$] \textbf{to identify} light nuclei by measurement of the charge $|Z|$.
+			\item[$\circ$] \textbf{Identify light nuclei}, by measurement of the charge $|Z|$.
 		}\end{itemize}
 %		\vspace{-0.55cm}
 %		\begin{center}
@@ -1101,7 +1111,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \end{frame}
 
 \subsection{ToF}
-\begin{frame}
+\begin{frame}[label=ToF-Det]
 	\frametitle{ToF - Time of Flight}
 	\justifying
 
@@ -1551,13 +1561,14 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \end{frame}
 
 \subsection{Spectrometer}
-\begin{frame}
+\begin{frame}[label=SM-Det]
 	\frametitle{Magnetic Spectrometer}
 	
 	\begin{columns}
 		\begin{column}{0.01\textwidth}\end{column}
 		\begin{column}{0.66\textwidth}
 			\justifying
+			\vspace*{-0.1cm}
 			
 			\small{The Magnetic Spectrometer (MS) is \textbf{the heart of the AMS experiment}.}
 			
@@ -1574,9 +1585,9 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 					\begin{column}{0.99\textwidth}
 						\vspace*{-0.25cm}
 						\begin{itemize}\justifying
-							\item	\footnotesize{The \bluetextit{Magnet}, which produces the magnetic field.}
-							\item	\footnotesize{The \bluetextit{Silicon Tracker}, that reconstruct the tracks of charged 
-										particles and measure, with an excellent resolution, the magnitude of their charges.}
+							\item	\footnotesize{The \hyperlink{MAG-Det}{\bluetextit{Magnet}}, which produces the magnetic field.}
+							\item	\footnotesize{The \hyperlink{ST-Det}{\bluetextit{Silicon Tracker}}, that reconstruct the tracks of 
+										charged particles and measure, with an excellent resolution, the magnitude of their charges.}
 						\end{itemize}
 					\end{column}
 					\begin{column}{0.01\textwidth}\end{column}
@@ -1586,13 +1597,13 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 		\begin{column}{0.02\textwidth}\end{column}	
 		\begin{column}{0.3\textwidth}
 			\centering	
-			\includegraphics[height=0.555\paperheight]{MS-Magnet_Deflection-02.png}
-			
 			\scriptsize{\bluetextbf{Schematic picture of MS}}
+						
+			\includegraphics[height=0.555\paperheight]{MS-Magnet_Deflection-02.png}
 		\end{column}	
 		\begin{column}{0.01\textwidth}\end{column}
 	\end{columns}
-	\vspace*{0.25cm}
+	\vspace*{0.15cm}
 	\justifying
 			\scriptsize{In the \bluetextit{figure on the right} is shown a schematic representation of a charged particle and its 
 			antiparticle that, with the same energy, pass through the MS.
@@ -1600,8 +1611,8 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			the same rigidity $R = p / |Z|$), 	but in opposite directions due to the different sign of their charges.}
 \end{frame}
 			
-\subsubsection{Magnet}
-\begin{frame}
+\subsubsection{Magnet}%\pdfbookmark[4]{Magnet}{Magnet}
+\begin{frame}[label=MAG-Det]
 	\frametitle{Magnet}
 	\framesubtitle{the permanent magnet of AMS-02}
 	\justifying
@@ -1798,6 +1809,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	liquid He).}}	
 \end{frame}
 
+
 \begin{frame}[label=MAGNET-Choice]
 	\frametitle{Magnet}
 	\framesubtitle{why the choice of the permanent magnet?}
@@ -1805,19 +1817,21 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\small{The SCM was not used for flight because the lifetime extension of the ISS made the permanent magnet (PM) 
 	with its extended operational capability and promise of higher yield of data, the instrument of choice.}
 	
-	%\vspace*{0.1cm}
-	
+	\vspace*{0.15cm}
+
 	\begin{columns}
 		\begin{column}{0.01\textwidth}\end{column}	
-		\begin{column}{0.54\textwidth}\justifying
-			\vspace*{-0.3cm}
-			\begin{block}{\footnotesize{Improvement for a long duration mission}}\justifying
+		\begin{column}{0.53\textwidth}\justifying
+			\vspace*{-0.1cm}
+			\begin{block}%{\footnotesize{Improvement for a long duration mission}}
+			{\footnotesize{Improvement for a long-term experiment with high rigidity resolution:}}\justifying
 				\begin{columns}
 				\begin{column}{0.01\textwidth}\end{column}
 					\begin{column}{0.98\textwidth}\justifying
 						\footnotesize{To offset the lower magnetic field of the PM, \textit{the AMS Collaboration optimized the 
 						geometry of the detector by adding one silicon planes and rearranging the existing silicon planes}, 
-						\textbf{thus greatly increasing the measurement arm}.}
+						\textbf{thus greatly increasing the measurement arm} 
+						(specifically: $l \simeq 0.8 \, m \: \div \: L \simeq 3 \, m$).}
 					\end{column}
 					\begin{column}{0.01\textwidth}\end{column}
 				\end{columns}
@@ -1827,38 +1841,33 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			
 			\small{This recovered the full sensitivity for AMS for the rigidity and for the matter-antimatter separation as was 
 			confirmed with a dedicated beam test.}
-		\end{column}	
-		\begin{column}{0.01\textwidth}\end{column}	
-		\begin{column}{0.43\textwidth}\centering
-			\scriptsize{\bluetextbf{Magnets Comparison}}
 			
-			\vspace*{0.1cm}
+		\end{column}	
+		\begin{column}{0.02\textwidth}\end{column}	
+		\begin{column}{0.43\textwidth}\centering
+			\scriptsize{\bluetextbf{Comparison of the Two Scenarios}}
+			
+			\vspace*{0.05cm}
 			\includegraphics[width=\textwidth]{MAGNET-Comparition-01.png}
 			
-			\vspace*{0.15cm}
+			\vspace*{0.15cm}\justifying
 			\includegraphics[height=0.1\paperheight]{MAGNET-Comparition-03.png}
-			\hspace*{0.5cm}
+			\hspace*{0.4cm}
 			\includegraphics[height=0.1\paperheight]{MAGNET-Comparition-04.png}
-%			
-%			\vspace*{-0.25cm}
-%			\begin{center}
-%				\hyperlink{MAGNET-CompRes}{\textbf{\beamerbutton{comparison of the two rigidity resolutions}}}
-%			\end{center}
-		\end{column}	
-		\begin{column}{0.01\textwidth}\end{column}	
-	\end{columns}
-	
-	\vspace*{0.3cm}	
-	
-	\begin{columns}
-		\begin{column}{0.56\textwidth}\end{column}	
-		\begin{column}{0.43\textwidth}\centering
+			
+			\vspace*{0.2cm}
+			
+			\centering
 			\hyperlink{MAGNET-CompRes}{\textbf{\beamerbutton{comparison of the two rigidity resolutions}}}
 		\end{column}	
 		\begin{column}{0.01\textwidth}\end{column}	
 	\end{columns}
 	
+%	\vspace*{0.5cm}
+%	\hspace*{7.5cm}\hyperlink{MAGNET-CompRes}{\textbf{\beamerbutton{comparison of the two rigidity resolutions}}}
+%	
 \end{frame}
+
 
 \begin{frame}
 	\frametitle{Magnet}
@@ -1873,7 +1882,8 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			
 			\vspace*{0.1cm}
 	
-			This is because longer cylinders, with the same diameter, have narrower angular field-of-views (reduction in acceptance).}
+			This is because longer cylinders, with the same diameter, have narrower angular field-of-views (\textbf{reduction in 
+			acceptance}).}
 	
 			\vspace*{-0.05cm}
 			
@@ -1887,8 +1897,8 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 						
 						\vspace*{0.05cm}
 			
-						As an example the number of positrons collected in the PM configuration is expected to be a factor 2 to 6 
-						times greater to the SCM configuration, depending on the energy.}
+						\textit{As an example the number of positrons collected in the PM configuration is expected to be a factor 2 to 6 
+						times greater to the SCM configuration, depending on the energy.}}
 					\end{column}
 					\begin{column}{0.01\textwidth}\end{column}
 				\end{columns}
@@ -1913,12 +1923,315 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 		\end{column}
 		\begin{column}{0.01\textwidth}\end{column}
 	\end{columns}
+\end{frame}
+
+\subsubsection{Silicon Tracker}\pdfbookmark[4]{Silicon Tracker}{Silicon Tracker}
+
+\begin{frame}[label=ST-Det]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{physical goals}
 	
+	\vspace{-0.2cm}
+	\begin{center}
+		\includegraphics[height=0.32\paperheight]{TRACKER-Photo-01.png}
+	\end{center}
+	\vspace{-0.25cm}
+
+	\begin{block}{\small{The physical aims of the Silicon Tracker are:}}
+		\vspace*{-0.25cm}
+		
+		\begin{columns}
+			\begin{column}{0.99\textwidth}
+				\begin{itemize}\justifying\small{
+					\item	\textbf{measure the position of charged particles}, with a precision of few tens of 
+								microns, in order to reconstruct their trajectories inside the AMS detector for the determination of:
+								\vspace*{-0.15cm}
+								
+								\begin{itemize}\justifying
+									\item[$\circ$] 	\textit{rigidity,} $R = p / |Z|$; 
+									\item[$\circ$]	\textit{sign of the charge,} once that is determined with the ToF if they are
+															going upward or downward.
+								\end{itemize}
+								\vspace*{-0.1cm}
+																
+					\item \textbf{measure the magnitude of the charge}, $|Z|$.
+				}\end{itemize}
+			\end{column}
+			\begin{column}{0.01\textwidth}\end{column}
+		\end{columns}
+		%\vspace{-0.25cm}
+		
+%		\vspace{-0.55cm}
+%		\begin{center}
+%			\includegraphics[height=0.35\paperheight]{TRD-Photo-05.jpeg}
+%		\end{center}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{basic element of the tracking system}
+	\justifying
+	\small{The basic elements of the Silicon Tracker are the \textbf{double-sided microstrip sensors}, 
+	size:  $41.360 \times 72.045 \times 0.300 \, mm^3$. 
+	%Its size is $41.360 \times 72.045 \times 0.300 \, mm^3$.		
+	The thickness of the silicon ($300 \, \mu m$), as well as the choice of a double-side detector, is made to 
+	\textit{minimize the amount of material along the particles path in order to reduce the multiple scattering}.}
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.57\textwidth}\justifying
+			\begin{block}{\footnotesize{Dimensions}}\justifying
+				\begin{columns}
+				\begin{column}{0.01\textwidth}\end{column}
+					\begin{column}{0.98\textwidth}\justifying
+						\footnotesize{On each face of the sensor, metallic strip implants run in perpendicular directions, providing a 
+						\textbf{2D measurement for each sampling}. In particular:}
+						\vspace*{-0.05cm}
+						\begin{itemize}\justifying{\footnotesize{
+							\item[$\triangleright$]	on the \textbf{junction side}, also called $p$-side or S-side, the $p^+$ strips 
+								have implantation and readout pitches of 27.5 and $110 \, \mu m$;
+								\vspace*{-0.05cm}
+							\item[$\triangleright$]	on the \textbf{ohmic side}, also called $n$-side or K-side, the $n^+$ strips have 
+								implantation and readout pitches of 104 and $208 \, \mu m$. 
+						}}\end{itemize}
+					\end{column}
+					\begin{column}{0.01\textwidth}\end{column}
+				\end{columns}
+			\end{block}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}		
+		\begin{column}{0.4\textwidth}\centering
+			%\hspace*{0.2cm}\scriptsize{\bluetextbf{Anus}}
+			
+			\includegraphics[width=0.85\textwidth]{TRACKER-Sensor-04.png}
+			
+			\vspace*{0.1cm}
+			\begin{columns}
+				\begin{column}{0.04\textwidth}\end{column}
+				\begin{column}{0.92\textwidth}\justifying
+					\scriptsize{\bluetextbf{Figure:} Schematic view of a double-sided microstrip detector.}
+					
+					\hyperlink{MAGNET-CompRes}{\textbf{\beamerbutton{more}}}
+				\end{column}
+				\begin{column}{0.04\textwidth}\end{column}
+			\end{columns}
+			
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the problem of the double-sided strip detectors}
+	\justifying
+	\vspace*{-0.05cm}	
+
+	\small{If one simply tries to subdivide the contacts on both sides of a silicon detector, the presence of a 
+				positive charge at the $\text{Si} - \text{SiO}_2$ interface induces an \textit{electron accumulation layer in the 
+				$n$-type silicon substrate} (see fig. 1).
+				This $n$-type channel, which cannot be depleted by any reasonable bias voltage applied across the wafer, 
+				dramatically \textit{lowers the resistance between $n^+$ strips, making the signal charge to spread 
+				over many electrodes} (\textbf{no position measurement possible}).}
+	\vspace*{-0.3cm}	
+	
+	\begin{columns}
+		\begin{column}{0.015\textwidth}\end{column}
+		\begin{column}{0.425\textwidth}
+			\begin{figure}
+				\centering				
+				\includegraphics[height=0.2\paperheight]{TRACKER-DSideprom-01.png}
+												
+				\scriptsize{\bluetextbf{Figure 1:} Illustration of the problem.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.425\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[height=0.2\paperheight]{TRACKER-DSideprom-02.png}
+												
+				\scriptsize{\bluetextbf{Figure 2:} Example of this solution.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.015\textwidth}\end{column}
+	\end{columns}
+	\vspace*{-0.05cm}	
+
+	\begin{block}{\footnotesize{Solution to the problem - \textit{$p^+$ blocking strips}}}\justifying
+		\begin{columns}
+			\begin{column}{0.01\textwidth}\end{column}
+			\begin{column}{0.98\textwidth}\justifying
+				\footnotesize{To solve this problem, on the ohmic side, \textit{$p^+$ blocking strips between every two $n^+$
+				strips are inserted} (see fig. 2). 
+				All $p^+$ blocking strips are left floating; their only function is to interrupt the conducting channel. 
+				Thus, \textbf{the interstrip resistance is greatly increased.}}
+%				when the applied reversed bias voltage approaches the full depletion voltage
+			\end{column}
+			\begin{column}{0.01\textwidth}\end{column}
+		\end{columns}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{double-sided strip detector biassing}
+	\justifying
+	
+	\small{The microstrip detectors operate at \textbf{full depletion by a punch-through technique} that permit to ground 
+	all the $p^+$ strips and bias, at $+80 \, V$, the $n^+$ without direct contacts to each strip.}
+
+	\begin{center}
+		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-01.png}	
+		\hspace*{0.05cm}
+		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-02.png}
+		\hspace*{0.05cm}	
+		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-03.png}	
+	\end{center}
+	\scriptsize{\bluetextbf{Figures (}\bluetextit{$p^+$ strip punch-through biassing}\bluetextbf{).} 
+			The three diagrams show: 
+			(\textbf{left}) depletion zones before merging; 
+			(\textbf{center}) reach punch-through voltage $V_2$, depletion zones merge; 
+			(\textbf{right}) depletion zones after merging - full depletion not yet reached.}
+	\vspace*{0.2cm}
+	
+	\small{Indeed, the simplest way to bias the strips could be using the preamplifier readout channels,
+	but this solution has two drawbacks:}
+	\vspace*{-0.2cm}
+	
+	\begin{itemize}\justifying\small{
+		\item[$\circ$]	only the strips connected to the readout electronics are biased, forbidding the use of intermediate strips; 
+		\vspace*{-0.15cm}
+		
+		\item[$\circ$]	channels with too high a leakage current may saturate the amplifier.
+	}\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{double-sided strip detector with integrated biassing structures and coupling capacitors.}
+	\justifying
+	
+	\small{Capacitively coupled readout (right) has the obvious advantage of shielding the electronics from dark current, 
+	which with direct coupling (left) can lead to pedestal shifts, a reduction of the dynamic range, and may
+	even drive the electronics into saturation.}
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.44\textwidth}
+			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling.png}		
+		\end{column}
+		%\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.45\textwidth}
+			\justifying
+			\small{Direct and capacitive coupling of electronics to the detector. With direct coupling (left) the detector reverse bias current $I_r$ has to be absorbed by the electronics. With capacitive
+coupling (right), only the AC part of the detector current reaches the electronics, while
+the DC part goes into a bias circuit, here shown as a simple resistor}
+		\end{column}
+		%\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{capacitive coupling}
+	\justifying
+%The ionization loss of singly charged particles traversing the fully depleted, reverse-biased
+%$300 \pm 10 \, \mu m$ thick sensor is described by a Landau distribution. 
+%The peak energy loss of a singlycharged, MIP at normal incidence produces 22,000 electron-hole pairs. 
+%The opposite sign $+ / -$ charge carriers drift rapidly ($10 \div 25 \,  ns$) in the electric field to the two surfaces ($p / n$)
+%where the accumulated charge on the metalized strips ($p^+ / n^+$) is fed to the front-end electronics. 
+%The position of the particle is determined by the relative signal levels observed at the readout strip positions.
+%At the single sensor level, the position resolution depends on the sampling pitch and the signal-to-noise
+%performance.
+
+	\small{The analog readout and the capacitative coupling (CC) between the implanted strips allow to apply a center-of-gravity 
+	technique to achieve a position measurement resolution, for $Z = 1$ particles, of $10 \, \mu m$ for $p$-side and 
+	$30 \, \mu m$ for $n$-side.
+	
+	\vspace*{0.1cm}
+	Thus, the side used to measure the $y$ coordinate in the bending plane ($yz$) of the particle trajectory is the $p$-side.}
+
+	\vspace*{0.2cm}
+	\begin{columns}
+		\begin{column}{0.06\textwidth}\end{column}
+		\begin{column}{0.55\textwidth}\centering
+			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling-03.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.33\textwidth}\justifying
+			\scriptsize{\textitem{Figure}{example of CC}\\
+			The scheme shows a detector with two intermediate strips. 
+			Only every 3rd strip is connected to an electronics channel. 
+			The charge from the intermediate strips is capacitive coupled to the neighbour strips.}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{double-sided strip detector}
+	\justifying
+	
+	\small{Example of a detector with strip pith of $25 \, \mu m$ and analogue readout. The position resolution, 
+	$\sigma \approx pitch/SNR$, is plotted as a function of the $SNR$:}
+	
+	\begin{itemize}\small{\justifying
+		\item	\textbf{Top curve}: every 2nd strip is connected, one intermediate strip.
+		\item	\textbf{Bottom curve}: every strip is connected to the readout electronics.
+	}\end{itemize}
+		
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{TRK-CapacitiveCoupling-05.png}
+	\end{center}
 	
 \end{frame}
-\subsubsection{Silicon Tracker}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{double-sided strip detector}
+	\justifying
+	\footnotesize{The AMS microstrip detector results from the R\&D realized from the 1980's until the 1990's 
+	to create first the ALEPH detector design, then the L3 SDM detector.}
+	\vspace*{0.15cm}
+
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}\centering
+			\includegraphics[width=0.9\textwidth]{TRACKER-AMS01vs02.png}
+			
+			%\includegraphics[width=\textwidth]{TRACKER-AMS01vs02-nside.png}
+		\end{column}
+		\begin{column}{0.5\textwidth}\centering
+			\includegraphics[width=0.7\textwidth]{TRACKER-SensorGeom.png}
+		\end{column}
+	\end{columns}
+	
+	\vspace*{0.15cm}
+
+	\footnotesize{For AMS-02, the detector design was upgraded to decrease as much as possible the noise transmitted to 
+	the readout channel. Indeed, the long silicon modules of AMS-02 (up to 15 double-sided silicon sensors) are not common
+	in particle physics experiments, due to noise limitations. This kind of configuration introduces effects usually neglected for
+	smaller modules.}
+\end{frame}
+
+\begin{frame}
+\justifying
+\small{
+The AMS-02 tracker contains 2264, $41.360 \times 72.045 \times 0.300 \, mm^3$, double-sided microstrip sensors obtained from n-type, high resistivity ($> 6\,k\Omega$) circular silicon wafers with $<1 \, 1\, 1>$ lattice orientation. 
+The sensors are biased via the punchthrough technique. 
+The $14 \, \mu m$ wide p-side (junction) strips have implantation and readout pitches of 27.5 and $110 \, \mu m$; the
+$15 \, \mu m$ wide n-side (ohmic) strips have implantation and readout pitches of 52 and $208 \, \mu m$. 
+The average values of the important noise performance parameters, based on the measurements of
+$\sim 1500$ AMS-02 sensors, are reported in Table 1.
+}
+\end{frame}
 
 
+\section{Others sub-system of AMS-02}
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
 	\begin{itemize}
 		\item	\textitem{ACC}{Anti-Coincidence Counter}, rejects CRs traversing the magnet walls.
@@ -2016,6 +2329,51 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\vspace{0.25cm}
 	\hspace{-0.7cm}\small{\bluetextbf{$\triangleright$ Silicon Tracker:}}
 	
+	\scriptsize{
+	\bibitem{Alcaraz}
+	J. Alcaraz et al., ``\textit{The alpha magnetic spectrometer silicon tracker: Performance results with protons and helium
+	nuclei}'' Nuclear Instruments and Methods in Physics Research A 593 (2008) 376-398.
+
+	\bibitem{Ambrosi-01}
+	G. Ambrosi et al., ``\textit{AMS-02 Track reconstruction and rigidity measurement}'' 33rd International Cosmic Ray
+	Conference, Rio de Janeiro (2013).
+	
+	\bibitem{Ambrosi-02}
+	G. Ambrosi et al., ``\textit{Nuclear Charge Measurement With the AMS-02 Silicon Tracker}'' 33rd International Cosmic Ray
+	Conference, Rio de Janeiro (2013).
+
+	\bibitem{Ambrosi-03}
+	G. Ambrosi et al., ``\textit{In-flight operations and status of the AMS-02 silicon tracker}'' PoS (ICRC2015) 690.
+	
+	\bibitem{Ambrosi-04}
+	G. Ambrosi et al., ``\textit{Nuclei Charge measurement with the AMS-02 Silicon Tracker}'' PoS (ICRC2015) 429.	
+
+	\bibitem{Azzarello}
+	P. Azzarello, ``\textit{Tests And Production Of The AMS-02 Silicon Tracker Detectors}'' PhD thesis, University of Geneva 
+	(2004).
+	
+	\bibitem{Batignani}
+	G. Batignani et al., ``\textit{DOUBLE-SIDED READOUT SILICON STRIP DETECTORS FOR THE ALEPH MINIVERTEX}'' Nuclear 
+	Instruments and Methods in Physics Research A 277 (1989) 147-153.
+	
+	\bibitem{Lutz}
+	G. Lutz, ``\textit{Semiconductor Radiation Detectors}'' Springer 1st ed. (1999).
+
+	\bibitem{Haas}
+	D. Haas, ``\textit{The Silicon Tracker of AMS02}'' Nuclear Instruments and Methods in Physics Research A 530 (2004) 
+	173-177.
+	
+	\bibitem{Peisert}
+	A. Peisert, ``\textit{Silicon microstrip detectors}'' Instrumentation in High Energy Physics (1992) 1-79.
+	
+	\bibitem{Pohl}
+	M. Pohl, ``\textit{AMS tracking in-orbit performance}'' PoS (VERTEX2015) 022
+
+	\bibitem{Zuccon}
+	P. Zuccon, ``\textit{The AMS silicon tracker: Construction and performance}'' Nuclear Instruments and Methods in Physics 
+	Research A 596 (2008) 74-78.
+	}
+	
 	\end{thebibliography}
 \end{frame}
 
@@ -2032,11 +2390,27 @@ AMS successfully confirmed the possibility of operating a particle physics detec
     		\usebeamerfont{title in head/foot}\insertshortinstitute
  		 \end{beamercolorbox}%
  		 \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.5ex,dp=1ex,right,rightskip=4ex]{date in head/foot}%
- 		 	\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{0.3cm}(insights)
+ 		 	\usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{0.25cm}(deepenings)
  		 \end{beamercolorbox}
  		 }%
  	\vskip0pt%
 }
+
+\section*{Appendix}\pdfbookmark[2]{Appendix}{Append}
+\begin{frame}[noframenumbering]
+	\vspace*{1cm}
+	\hbox{
+		\begin{beamercolorbox}[wd=.23\textwidth]{white}\end{beamercolorbox}%
+  		\begin{beamercolorbox}
+  		[wd=.54\textwidth,ht=.115\paperheight,dp=0.2cm,center,rounded=true]{institute in head/foot}%
+   			\centering
+   			\textcolor{titleframe_red}{\LARGE{\textbf{Appendix}}}
+   			
+   			\vspace*{0.05cm}
+			\textcolor{titleframe_red}{\large{\textit{deepenings cited in the presentation}}}			
+  		\end{beamercolorbox}%
+ 	}
+\end{frame}
 
 %% POSSIBILI SLIDE SULLA TERIA DELLA RADIAZIONE DI TRANSIZIONE
 \begin{frame}<presentation:0>[label=TR-details,noframenumbering]
@@ -2597,5 +2971,54 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 
 	\hfill
 	\hyperlink{MAGNET-Choice}{\textbf{\beamerbutton{back to the previous slide}}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{more about capacitive coupling of AMS}
+	\justifying
+	
+	\scriptsize{
+	In the case of the AMS detector, on the $p$-side, since the implant pitch is $27.5 \, \mu m$ while the readout pitch is  $110 \, \mu m$, between the 2 readout strips there are 3 intermediate strips separate. 
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.48\textwidth}\justifying
+			\scriptsize{In such case (see figure), the coupling of the center strip with the closest readout strip $C_l = C_r \approx C_i / 2$ while for strips 2 and 4, the couplings are $C_l \approx C_i$ and $C_r \approx C_i / 3$. Under the condition of an analogue readout, it is then possible, by interpolation, to more precisely locate the passage of the crossing particle.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.49\textwidth}\centering
+			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling-02.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	
+%	\begin{center}
+%		\includegraphics[height=0.25\paperheight]{TRK-CapacitiveCoupling-02.png}
+%	\end{center}
+	Taking into account the signals collected by the two amplifiers, it is thus possible to evaluate the original signal position, by computation of the center of gravity ($cog$): If $Q$ is the charge deposited on strip n, we define as $Q_l$ and $Q_r$ the charges transmitted to the left and right readout channels, respectively. Using the relation:
+	\begin{equation*}
+		\frac{Q_l}{C_l} = \frac{Q_r}{C_r}
+	\end{equation*}
+where $C_l$ and $C_r$ correspond to the capacitance between the intermediate strip n and the left (right) readout strip respectively. The center of gravity is then expressed as:
+	\begin{equation*}
+		cog \approx \frac{Q_l x_l + Q_r x_r}{Q_l x_l + Q_r x_r} = \frac{Q_l x_l + Q_r (x_l + 1)}{Q} = x_l + \frac{Q_r}{Q}
+	\end{equation*}
+}
+%	\begin{block}{\footnotesize{Something about the center-of-gravity technique}}\justifying
+%		\begin{columns}
+%			\begin{column}{0.01\textwidth}\end{column}
+%			\begin{column}{0.98\textwidth}\justifying
+%				\footnotesize{In the case of the AMS detector, on the $p$-side, since the implant pitch is $27.5 \, \mu m$ while the 
+%				readout pitch is $110 \, \mu m$, between the 2 readout strips there are 3 intermediate strips separate. 
+%				In such case (see figure), the coupling of the center strip with the closest readout strip $C_l = C_r \approx C_i / 2$ 
+%				while for strips 2 and 4, the couplings are $C_l \approx C_i$ and $C_r \approx C_i / 3$.
+%				Under the condition of an analogue readout, it is then possible, by interpolation, to more precisely locate the passage 
+%				of the crossing particle.}
+%%				when the applied reversed bias voltage approaches the full depletion voltage
+%			\end{column}
+%			\begin{column}{0.01\textwidth}\end{column}
+%		\end{columns}
+%	\end{block}
 \end{frame}
 \end{document}
