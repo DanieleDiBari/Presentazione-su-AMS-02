@@ -24,6 +24,7 @@
 	{./Immagini/Magnetic_Spectrometer/}
 	{./Immagini/Magnetic_Spectrometer/Magnet/}
 	{./Immagini/Magnetic_Spectrometer/Tracker/}
+	{./Immagini/Magnetic_Spectrometer/Tracker/Ladder_Fabrication/}
 }
 
 % impostazioni base delle slide - tema, colori, caratteri, ... (deic.uab.es/~iblanes/beamer_gallery/)
@@ -2101,7 +2102,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\begin{columns}
 		\begin{column}{0.06\textwidth}\end{column}
 		\begin{column}{0.55\textwidth}\centering
-			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling-03.png}
+			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling-03b.png}
 		\end{column}
 		\begin{column}{0.01\textwidth}\end{column}
 		\begin{column}{0.33\textwidth}\justifying
@@ -2209,7 +2210,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			The energy deposit is read out, for each ladder, by 1024 readout channels: 640 on the $p$-side, 384 on the $n$-side. 
 			The readout electronics is placed directly on the front end board at the end of the ladder. 
 			The number of ladder composing the AMS tracking system is 192, for a total of $\sim 200,000$ readout channels and a 
-			total active area of $6.74 m^2$.}
+			total active area of $6.74 m^2$.	}
 	
 			\vspace*{0.3cm}
 			\centering
@@ -2231,55 +2232,158 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\vspace*{0.1cm}
 \end{frame}
 
-\begin{frame}[label=TRK-Ladder1]
+\begin{frame}
 	\frametitle{Silicon Tracker}
-	\framesubtitle{the structure of a ladder}
+	\framesubtitle{ladder fabrication}
+	
+	\begin{block}{\footnotesize{Goals of the ladder fabrication}}
+		\begin{columns}
+			\begin{column}{0.01\textwidth}\end{column}
+			\begin{column}{0.98\textwidth}\justifying
+				\footnotesize{The principal goals of the ladder fabrication are to guarantee the required precision for the relative 
+				alignment of the silicon sensors ($< 5 \, \mu m$), and minimize the degradation of the electrical performance due to 
+				handling and ultra-sonic bonding. 
+				The alignment precision is provided by the mechanical precision of the jigs ($1 - 2 \, \mu m$) and the precision of the 
+				sensor cut.}
+			\end{column}
+			\begin{column}{0.01\textwidth}\end{column}
+		\end{columns}
+	\end{block}
+	
+	
+	During fabrication the sensor positions on a ladder are recorded with a 3D semi-automatic measuring machine. 
+	The results for the sensor alignment for 125 (of 192) AMS-02 ladders are shown in Figure 2.60. A particular effort has been 
+	made to maintain the low noise by passivation of the silicon and by optimization of the ladder assembly procedure.
+\end{frame}
+
+%\begin{frame}[label=TRK-Ladder1]
+%	\frametitle{Silicon Tracker}
+%	\framesubtitle{the structure of a ladder}
+%	\justifying
+%	
+%	\small{The array of sensor that compound a ladder are glued on a Upilex cable and mounted on an Airex support (\textit{Ladder Reinforcement}) that confers
+%	the mechanical}
+%	
+%	%\vspace*{0.1cm}
+%	
+%	\begin{columns}
+%		\begin{column}{0.01\textwidth}\end{column}
+%		\begin{column}{0.49\textwidth}\justifying
+%			\small{stability to the module.
+%			
+%			The ladder is protected from the light 
+%			(source of noise in the silicon substrate) 
+%			and from the electromagnetic interferences by a Upilex metallized foil (\hyperlink{TRK-Upilex}{\bluetextit{link 1}}).
+%			
+%			\vspace*{0.1cm}
+%
+%			The Upilex foil is separated from the silicon sensor surface by an Airex structure (\textit{Shield Support}).
+%			
+%			\vspace*{0.2cm}
+%			
+%			In order to maximize the layer acceptance and to minimize the number of readout channels the front end 
+%			electronics is placed on the ladder end for both sensor sides
+%			(the bonding schemes of the sensors are shown in the next slide).}
+%		\end{column}
+%		\begin{column}{0.01\textwidth}\end{column}
+%		\begin{column}{0.48\textwidth}\centering
+%			\footnotesize{	\bluetextit{Exploded view of a ladder}}
+%			\vspace*{0.1cm}		
+%											
+%			\includegraphics[width=\textwidth]{TRACKER-Ladder-01bis.png}
+%		\end{column}
+%		\begin{column}{0.01\textwidth}\end{column}
+%	\end{columns}
+	
+%	\vspace*{0.1cm}
+%
+%	\begin{columns}
+%		\begin{column}{0.51\textwidth}	\end{column}
+%		\begin{column}{0.48\textwidth}\centering			
+%			\footnotesize{\bluetextbf{(}\bluetextit{Exploded view of a ladder}\bluetextbf{)}}
+%		\end{column}
+%		\begin{column}{0.01\textwidth}\end{column}
+%	\end{columns}	
+%\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the structure of a ladder I}
 	\justifying
-	
-	\small{The array of sensor that compound a ladder are glued on a Upilex cable and mounted on an Airex support that confers
-	the mechanical stability to the module. }
-	
-	\vspace*{0.1cm}
-	
+
 	\begin{columns}
 		\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.49\textwidth}\justifying
-			\small{The ladder is protected from the light 
-			(source of noise in the silicon substrate) 
-			and from the electromagnetic interferences by a Upilex metallized foil (\hyperlink{TRK-Upilex}{\bluetextit{link 1}}).
+		\begin{column}{0.52\textwidth}\justifying
+			\small{A metallized UF (Upilex Film $50 \, \mu m$ thick), glued directly to the silicon sensors, serves as a routing 
+			cable to bring the $n$-side signals to the $n$-side front end hybrid, which is located at the ladder end closest to 
+			the magnet wall. 
+			A second short UF join the $p$-side strips to their hybrid. 
 			
 			\vspace*{0.1cm}
 
-			The Upilex foil is separated from the silicon sensor surface by an Airex structure.
+			The flexibility of these UFs allows the hybrids to be placed back-to-back, perpendicular to the detection plane, 
+			thus minimizing the material in the sensitive region of the tracker and maximizing the active area within the 
+			magnet bore. 
 			
-			\vspace*{0.2cm}
+			\vspace*{0.1cm}
+
+			Finally, an electromagnetic shield in the form of a doubly-metallized UF surrounds each ladder.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.45\textwidth}\centering
+			\footnotesize{	\bluetextit{Exploded view of a ladder}}
+			\vspace*{0.1cm}		
+											
+			\includegraphics[width=\textwidth]{TRACKER-Ladder-01bis.png}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} The figure shows the principal elements of the silicon ladder and the main 
+			components of the readout hybrids.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Ladder1]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the structure of a ladder II}
+	\justifying
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.52\textwidth}\justifying
+			\small{The silicon sensors of each ladder are supported by a reinforcement of $5 \, mm$ thick Airex foam that is 
+			glued to the $n$-side UF. 
+			
+			\vspace*{0.1cm}
+
+			The exposed surface of the foam is covered with a $100 \, \mu m$ thick layer of carbon fibre.
+%			Small $5 \, mm^3$ aluminium support feet are glued to the carbon fibre surface; the exact number depends on
+%			the ladder length. 
+			
+			\vspace*{0.1cm}
+
+			The feet contain screw fixation holes which are used to attach the ladder to its tracker plane.
+			
+			\vspace*{0.1cm}
 			
 			In order to maximize the layer acceptance and to minimize the number of readout channels the front end 
 			electronics is placed on the ladder end for both sensor sides
 			(the bonding schemes of the sensors are shown in the next slide).}
 		\end{column}
 		\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.48\textwidth}
-%		\vspace*{0.1cm}		
-%		
-%		\scriptsize{\bluetextbf{Figure:}\\
-%						\bluetextit{Exploded view of a ladder}}
-%		\vspace*{-0.6cm}
-%											
+		\begin{column}{0.45\textwidth}\centering
+			\footnotesize{	\bluetextit{Exploded view of a ladder}}
+			\vspace*{0.1cm}		
+											
 			\includegraphics[width=\textwidth]{TRACKER-Ladder-01bis.png}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} The figure shows the principal elements of the silicon ladder and the main 
+			components of the readout hybrids.}
 		\end{column}
 		\begin{column}{0.01\textwidth}\end{column}
 	\end{columns}
-	
-	\vspace*{0.1cm}
-
-	\begin{columns}
-		\begin{column}{0.51\textwidth}	\end{column}
-		\begin{column}{0.48\textwidth}\centering			
-			\footnotesize{\bluetextbf{(}\bluetextit{Exploded view of a ladder}\bluetextbf{)}}
-		\end{column}
-		\begin{column}{0.01\textwidth}\end{column}
-	\end{columns}	
 \end{frame}
 
 \begin{frame}[label=TRK-BondSchem]
@@ -2305,7 +2409,6 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\vspace*{0.2cm}
 	\hfill\hyperlink{TRK-BondSchem-nside}{\textbf{\beamerbutton{more details on $n$-side bonding scheme}}}
 \end{frame}
-
 
 \begin{frame}
 	\frametitle{Silicon Tracker}
@@ -3551,30 +3654,152 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
  	\hyperlink{TRK-CCandPR}{\textbf{\beamerbutton{return to the presentation}}}
 \end{frame}
 
-\begin{frame}[label=TRK-Upilex,noframenumbering]
+%\begin{frame}[label=TRK-Upilex,noframenumbering]
+%	\frametitle{Silicon Tracker}
+%	\framesubtitle{upilex wrapping}
+%	\vspace*{-0.45cm}
+%
+%	\begin{columns}
+%		\begin{column}{0.02\textwidth}\end{column}
+%		\begin{column}{0.46\textwidth}
+%			\begin{figure}
+%				\centering		
+%				\small{\bluetextit{Airex spacer gluing}}
+%				\vspace*{0.1cm}
+%
+%				\includegraphics[height=0.485\paperheight]{TRACKER-Ladder-06.png}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.04\textwidth}\end{column}
+%		\begin{column}{0.46\textwidth}
+%			\begin{figure}
+%				\centering
+%				\small{\bluetextit{Upilex wrapping}}
+%				\vspace*{0.1cm}
+%				
+%				\includegraphics[height=0.485\paperheight]{TRACKER-Ladder-05.png}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.02\textwidth}\end{column}
+%	\end{columns}
+%	
+%	\vspace*{-0.3cm}
+%	
+%	\begin{columns}[t]
+%		\begin{column}{0.02\textwidth}\end{column}
+%		\begin{column}{0.46\textwidth}
+%			\begin{figure}\justifying
+%				\scriptsize{\bluetextbf{Figure 1:}
+%				Once that the glue (Araldite 2011) is dispensed on the spacer surface,
+%				%in similar way as for the ladder reinforcement, 
+%				the spacer is aligned with a plexiglas guide.
+%				A plexiglas lid is then laid on the spacer surface.
+%				}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.04\textwidth}\end{column}
+%		\begin{column}{0.46\textwidth}
+%			\begin{figure}\justifying									
+%				\scriptsize{\bluetextbf{Figure 2:} 
+%				The Upilex foil, then the ladder are placed on a table. 
+%				The foil is bent over the ladder with pushers.
+%				The shielding is closed with rosin-free solder.}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.02\textwidth}\end{column}
+%	\end{columns}
+%	
+%	\vspace*{0.1cm}
+%	\hfill
+%	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{back to the previous slide}}}
+%\end{frame}
+
+\begin{frame}[label=TRK-BondSchem-nside,noframenumbering]
 	\frametitle{Silicon Tracker}
-	\framesubtitle{upilex wrapping}
+	\framesubtitle{bonding scheme of the readout strips}
+	
+	\vspace*{0.5cm}
+
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{TRACKER-BondingScheme-nside.png}
+	\end{center}
+
+	\vspace*{-0.2cm}
+
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}\centering
+			\small{\bluetextbf{Figure:} Signal routing for the K5 design - a ladder with 12 sensors\footnotemark[1].}		
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{1.2cm}
+	\hfill
+	\hyperlink{TRK-BondSchem}{\textbf{\beamerbutton{back to the previous slide}}}
+	
+	\footnotetext[1]{The x coordinate is reconstructed with a multiplicity that can be solved only from the complete track knowledge.}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab01,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{6.75cm}
+	\hyperlink{TRK-Fab02}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.98\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.52\paperheight]{TRACKER-LadFabrication-01.png}
+				\hspace*{0.5cm}
+				\includegraphics[height=0.52\paperheight]{TRACKER-LadFabrication-01b.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.98\textwidth}
+			\begin{figure}\centering
+				\scriptsize{\bluetextbf{Figures 1 and 2:}
+				Sensor positioning. The detectors are longitudinally aligned with two pins, and transversely with one pin.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab02,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab01}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab03}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
 	\vspace*{-0.45cm}
 
 	\begin{columns}
 		\begin{column}{0.02\textwidth}\end{column}
 		\begin{column}{0.46\textwidth}
 			\begin{figure}
-				\centering		
-				\small{\bluetextit{Airex spacer gluing}}
-				\vspace*{0.1cm}
-
-				\includegraphics[height=0.485\paperheight]{TRACKER-Ladder-06.png}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-02.png}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.04\textwidth}\end{column}
 		\begin{column}{0.46\textwidth}
 			\begin{figure}
-				\centering
-				\small{\bluetextit{Upilex wrapping}}
-				\vspace*{0.1cm}
-				
-				\includegraphics[height=0.485\paperheight]{TRACKER-Ladder-05.png}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-03.png}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.02\textwidth}\end{column}
@@ -3586,18 +3811,559 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 		\begin{column}{0.02\textwidth}\end{column}
 		\begin{column}{0.46\textwidth}
 			\begin{figure}\justifying
-				\scriptsize{\bluetextbf{Figure 1:}
-				Once that the glue (Araldite 2011) is dispensed on the spacer surface,
-				%in similar way as for the ladder reinforcement, 
-				the spacer is aligned with a plexiglas guide.
-				A plexiglas lid is then laid on the spacer surface.
-				}
+				\scriptsize{\bluetextbf{Figure 3:}
+				Jigs used to glue the long Upilex.}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.04\textwidth}\end{column}
 		\begin{column}{0.46\textwidth}
 			\begin{figure}\justifying									
-				\scriptsize{\bluetextbf{Figure 2:} 
+				\scriptsize{\bluetextbf{Figure 4:} 
+				Upilex on jig.
+				The glass plates used to flatten the Upilex are visible.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-04.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-05.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 5:}
+				Upilex ready for glue deposition.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 6:} 
+				After glue deposition, the transfer jig is placed on the silicon jig.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab03,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab02}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab04}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.52\paperheight]{TRACKER-LadFabrication-07.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.52\paperheight]{TRACKER-LadFabrication-08.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 7:}
+				The glue is spread with a spatula, the glue thickness will be close to $80 \, \mu m$.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 8:} 
+				The Airex surface of the reinforcement is laid on the glue film.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab04,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab03}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab05}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.35\paperheight]{TRACKER-LadFabrication-09b.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.35\paperheight]{TRACKER-LadFabrication-10b.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 9:}
+				Alignment bars are inserted, to guide the reinforcement application.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 10:} 
+				The last bar is fixed with screws.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.18\paperheight]{TRACKER-LadFabrication-11b.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.8\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 11:} 
+				Lead blocks on glass plates are placed on the reinforcement.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.1\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab05,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab04}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab06}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.4cm}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.18\paperheight]{TRACKER-LadFabrication-12.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.06\textwidth}\end{column}
+		\begin{column}{0.88\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 12:} 
+				Ladder on the K-side bonding jig. The ladder is aligned with help of pins and an alignment tool (on the left). 
+				The ladder is fixed with clamps, and the hybrid is screwed on the extension (on the right).}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.06\textwidth}\end{column}
+	\end{columns}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-13.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-14.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 13:}
+				Blue tape is used to protect the bonding pads, in case the glue flows over them.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 14:} 
+				Last step of K-hybrid gluing: the presser is screwed.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab06,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab05}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab07}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-15.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-16.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 15:}
+				K6 Upilex with protection tape on the bonding pads.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 16:} 
+				K6 Upilex on gluing jig. The metallized surface is facing down.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-17.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-18.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 17:}
+				Presser used to flatten hybrid.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 18:} 
+				Gluing jig screwed on the S-extension.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab07,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab06}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab08}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.45cm}
+	
+	\begin{columns}
+		\begin{column}{0.2\textwidth}\end{column}
+		\begin{column}{0.6\textwidth}
+			\begin{figure}
+				\includegraphics[width=\textwidth]{TRACKER-LadFabrication-18b.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.2\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.4cm}
+	
+	\begin{columns}
+		\begin{column}{0.2\textwidth}\end{column}
+		\begin{column}{0.6\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.27\paperheight]{TRACKER-LadFabrication-18bbb.png}
+				\hfill
+				\includegraphics[height=0.27\paperheight]{TRACKER-LadFabrication-18bb.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.2\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.8\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 19:} 
+				To connect electrically all the sensors in a ladder, all the strips on the $p$-side are daisy-chained with a 25 um Al wire through ultrasonic bondings.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.1\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[label=TRK-Fab08,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab07}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab09}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	%\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.48\textwidth}
+			\centering
+			\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-19.png}
+			
+			\vspace*{0.13cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure 20:}
+			Airex spacer glued on S-hybrid. The left and right edges are machined to be compatible with the S-box.}
+			
+			\vspace*{0.4cm}
+
+			\centering
+			\includegraphics[height=0.25\paperheight]{TRACKER-LadFabrication-20.png}
+			
+			\vspace*{0.13cm}
+
+			\justifying									
+			\scriptsize{\bluetextbf{Figure 21:} 
+			Airex spacer glued on the K-hybrid.}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.44\textwidth}
+			\centering
+			\includegraphics[height=0.48\paperheight]{TRACKER-LadFabrication-21.png}
+		
+			\vspace*{0.15cm}
+
+			\justifying
+			\scriptsize{\bluetextbf{Figure 22:} 
+			Thermal grease is dispensed between both hybrids, at the VAs location. 
+			The aim is to exhaust the heat produced by the VAs to the thermal bars to which is connected
+			the K-hybrid box.}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+	
+\begin{frame}[label=TRK-Fab09,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab08}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab10}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.23\paperheight]{TRACKER-LadFabrication-22.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}
+		\begin{column}{0.09\textwidth}\end{column}
+		\begin{column}{0.82\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 23:} 
+				Feet gluing jig: the feet are screwed on the jig. Feet at the $\leftrightarrow$ position are rotated by $90^\circ$. 
+				The jig is then laid into the glue dispensing machine.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.09\textwidth}\end{column}
+	\end{columns}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.23\paperheight]{TRACKER-LadFabrication-23.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.23\paperheight]{TRACKER-LadFabrication-24.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 24:}
+				Base jig: the ladder is aligned with Delrin pins and fixed with vacuum.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 25:} 
+				Once the glue is dispensed on the feet, the feet gluing jig is inserted onto the base jig.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}[label=TRK-Fab10,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder fabrication  
+	\hspace*{5.5cm}
+	\hyperlink{TRK-Fab09}{\textbf{\beamerbutton{previous}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Fab11}{\textbf{\beamerbutton{next}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.51\paperheight]{TRACKER-LadFabrication-25.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.51\paperheight]{TRACKER-LadFabrication-26.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 26:}
+				Airex spacer gluing. Once that the glue (Araldite 2011) is dispensed on the spacer surface,
+				in similar way as for the ladder reinforcement, 
+				the spacer is aligned with a plexiglas guide.
+				A plexiglas lid is then laid on the spacer surface.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 27:} 
 				The Upilex foil, then the ladder are placed on a table. 
 				The foil is bent over the ladder with pushers.
 				The shielding is closed with rosin-free solder.}
@@ -3605,26 +4371,65 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 		\end{column}
 		\begin{column}{0.02\textwidth}\end{column}
 	\end{columns}
-	
-	\vspace*{0.1cm}
-	\hfill
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{back to the previous slide}}}
 \end{frame}
 
-\begin{frame}[label=TRK-BondSchem-side,noframenumbering]
+\begin{frame}[label=TRK-Fab11,noframenumbering]
 	\frametitle{Silicon Tracker}
-	\framesubtitle{bonding scheme of the readout strips}
+	\framesubtitle{ladder fabrication  
+	\hspace*{6.25cm}
+	\hyperlink{TRK-Fab10}{\textbf{\beamerbutton{previous}}}
+	\textcolor{itemblue}{$\parallel$}
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
 	
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{TRACKER-BondingScheme-nside.png}
-	\end{center}
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.23\paperheight]{TRACKER-LadFabrication-27.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.35cm}
 	
 	\begin{columns}
-		\begin{column}{0.1\textwidth}\end{column}
-		\begin{column}{0.8\textwidth}\centering
-			\scriptsize{\bluetextbf{Figure:} Signal routing for the K5 design - a ladder with 12 sensors.}		
+		\begin{column}{0.09\textwidth}\end{column}
+		\begin{column}{0.82\textwidth}
+			\begin{figure}\centering									
+				\scriptsize{\bluetextbf{Figure 28:} 
+				Two ladders ready to be mounted on a support plane.}
+			\end{figure}
 		\end{column}
-		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.09\textwidth}\end{column}
+	\end{columns}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}
+			\begin{figure}
+				\includegraphics[height=0.34\paperheight]{TRACKER-LadFabrication-28.png}
+				\hspace*{0.5cm}			
+				\includegraphics[height=0.34\paperheight]{TRACKER-LadFabrication-29.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.35cm}
+	
+	\begin{columns}
+		\begin{column}{0.09\textwidth}\end{column}
+		\begin{column}{0.82\textwidth}
+			\begin{figure}\centering									
+				\scriptsize{\bluetextbf{Figures 29 and 30:} 
+				Tracker layer 2 equipped with its 24 ladders.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.09\textwidth}\end{column}
 	\end{columns}
 \end{frame}
+
 \end{document}
