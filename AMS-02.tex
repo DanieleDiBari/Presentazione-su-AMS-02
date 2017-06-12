@@ -51,9 +51,9 @@
 	\shadowcolor{white!30!black}
 	\vspace{-0.5cm}	
 	
-    \shadowtext{\textcolor{white}{\textbf{\footnotesize{The Alpha Magnetic Spectrometer}}}}
+    \shadowtext{\textcolor{white}{\textbf{\footnotesize{Alpha Magnetic Spectrometer}}}}
    
-    \vspace{0.15cm}  	
+    \vspace{0.2cm}  	
     
    	\shadowtext{\textcolor{white}{\textbf{\LARGE \inserttitle}}}\par
       
@@ -1968,7 +1968,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\end{block}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=TRK-DsidedDet]
 	\frametitle{Silicon Tracker}
 	\framesubtitle{basic element of the tracking system}
 	\justifying
@@ -2011,8 +2011,6 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 				\begin{column}{0.04\textwidth}\end{column}
 				\begin{column}{0.92\textwidth}\justifying
 					\scriptsize{\bluetextbf{Figure:} Schematic view of a double-sided microstrip detector.}
-					
-					\hyperlink{MAGNET-CompRes}{\textbf{\beamerbutton{more}}}
 				\end{column}
 				\begin{column}{0.04\textwidth}\end{column}
 			\end{columns}
@@ -2020,11 +2018,16 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 		\end{column}
 		\begin{column}{0.01\textwidth}\end{column}
 	\end{columns}
+	
+	\vspace*{0.5cm}
+	\hfill\hyperlink{TRK-CCreadout}{\textbf{\beamerbutton{readout implementation}}}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=TRK-DsidedProblem]
 	\frametitle{Silicon Tracker}
-	\framesubtitle{the problem of the double-sided strip detectors}
+	\framesubtitle{the problem of the double-sided strip detectors 
+	\hspace*{2.8cm}
+	\hyperlink{TRK-nstrip}{\textbf{\beamerbutton{the AMS-02's solution}}}}
 	\justifying
 	\vspace*{-0.05cm}	
 
@@ -2074,69 +2077,9 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\end{block}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=TRK-CCandPR]
 	\frametitle{Silicon Tracker}
-	\framesubtitle{double-sided strip detector biassing}
-	\justifying
-	
-	\small{The microstrip detectors operate at \textbf{full depletion by a punch-through technique} that permit to ground 
-	all the $p^+$ strips and bias, at $+80 \, V$, the $n^+$ without direct contacts to each strip.}
-
-	\begin{center}
-		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-01.png}	
-		\hspace*{0.05cm}
-		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-02.png}
-		\hspace*{0.05cm}	
-		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-03.png}	
-	\end{center}
-	\scriptsize{\bluetextbf{Figures (}\bluetextit{$p^+$ strip punch-through biassing}\bluetextbf{).} 
-			The three diagrams show: 
-			(\textbf{left}) depletion zones before merging; 
-			(\textbf{center}) reach punch-through voltage $V_2$, depletion zones merge; 
-			(\textbf{right}) depletion zones after merging - full depletion not yet reached.}
-	\vspace*{0.2cm}
-	
-	\small{Indeed, the simplest way to bias the strips could be using the preamplifier readout channels,
-	but this solution has two drawbacks:}
-	\vspace*{-0.2cm}
-	
-	\begin{itemize}\justifying\small{
-		\item[$\circ$]	only the strips connected to the readout electronics are biased, forbidding the use of intermediate strips; 
-		\vspace*{-0.15cm}
-		
-		\item[$\circ$]	channels with too high a leakage current may saturate the amplifier.
-	}\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Silicon Tracker}
-	\framesubtitle{double-sided strip detector with integrated biassing structures and coupling capacitors.}
-	\justifying
-	
-	\small{Capacitively coupled readout (right) has the obvious advantage of shielding the electronics from dark current, 
-	which with direct coupling (left) can lead to pedestal shifts, a reduction of the dynamic range, and may
-	even drive the electronics into saturation.}
-	
-	\begin{columns}
-		\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.44\textwidth}
-			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling.png}		
-		\end{column}
-		%\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.45\textwidth}
-			\justifying
-			\small{Direct and capacitive coupling of electronics to the detector. With direct coupling (left) the detector reverse bias current $I_r$ has to be absorbed by the electronics. With capacitive
-coupling (right), only the AC part of the detector current reaches the electronics, while
-the DC part goes into a bias circuit, here shown as a simple resistor}
-		\end{column}
-		%\begin{column}{0.01\textwidth}\end{column}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Silicon Tracker}
-	\framesubtitle{capacitive coupling}
+	\framesubtitle{capacitive coupling and position resolution}
 	\justifying
 %The ionization loss of singly charged particles traversing the fully depleted, reverse-biased
 %$300 \pm 10 \, \mu m$ thick sensor is described by a Landau distribution. 
@@ -2163,9 +2106,13 @@ the DC part goes into a bias circuit, here shown as a simple resistor}
 		\begin{column}{0.01\textwidth}\end{column}
 		\begin{column}{0.33\textwidth}\justifying
 			\scriptsize{\textitem{Figure}{example of CC}\\
-			The scheme shows a detector with two intermediate strips. 
-			Only every 3rd strip is connected to an electronics channel. 
+			The scheme shows an example of a detector with two intermediate strips. 
+			Only every $3^{rd}$ strip is connected to an electronics channel. 
 			The charge from the intermediate strips is capacitive coupled to the neighbour strips.}
+			
+			\centering
+			\vspace*{0.1cm}
+			\hyperlink{TRK-PR_prob}{\textbf{\beamerbutton{more on the position resolution}}}
 		\end{column}
 		\begin{column}{0.05\textwidth}\end{column}
 	\end{columns}
@@ -2173,49 +2120,302 @@ the DC part goes into a bias circuit, here shown as a simple resistor}
 
 \begin{frame}
 	\frametitle{Silicon Tracker}
-	\framesubtitle{double-sided strip detector}
+	\framesubtitle{double-sided strip detector biassing}
 	\justifying
 	
-	\small{Example of a detector with strip pith of $25 \, \mu m$ and analogue readout. The position resolution, 
-	$\sigma \approx pitch/SNR$, is plotted as a function of the $SNR$:}
+	\vspace*{-0.05cm}	
 	
-	\begin{itemize}\small{\justifying
-		\item	\textbf{Top curve}: every 2nd strip is connected, one intermediate strip.
-		\item	\textbf{Bottom curve}: every strip is connected to the readout electronics.
-	}\end{itemize}
-		
+	\small{The microstrip detectors operate at \textbf{full depletion by punch-through techniques} that permit to ground 
+	all the $p^+$ strips and bias, at $+80 \, V$, the $n^+$ without direct contacts to each strip.}
+
+	\vspace*{-0.05cm}	
+
 	\begin{center}
-		\includegraphics[width=0.5\textwidth]{TRK-CapacitiveCoupling-05.png}
+		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-01.png}	
+		\hspace*{0.05cm}
+		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-02.png}
+		\hspace*{0.05cm}	
+		\includegraphics[width=0.32\textwidth]{TRK-PunchThrough-03.png}	
 	\end{center}
+	\scriptsize{\bluetextbf{Figures (}\bluetextit{$p^+$ strip punch-through biassing}\bluetextbf{).} 
+			The three diagrams show: 
+			(\textbf{left}) depletion zones before merging; 
+			(\textbf{center}) reach punch-through voltage $V_2$, depletion zones merge; 
+			(\textbf{right}) depletion zones after merging - full depletion not yet reached.
+			N.B. The $n^+$ strips have a different, slightly more complex, biassing: 
+			the FOXFET biassing (\textit{Field OXide Field Effect Transistor}).}
+	\vspace*{0.1cm}
 	
+	\small{Indeed, the simplest way to bias the strips could be using the preamplifier readout channels,
+	but this solution has two drawbacks:}
+	\vspace*{-0.2cm}
+	
+	\begin{itemize}\justifying\small{
+		\item[$\circ$]	only the strips connected to the readout electronics are biased, forbidding the use of intermediate strips; 
+		\vspace*{-0.15cm}
+		
+		\item[$\circ$]	channels with too high a leakage current may saturate the amplifier.
+	}\end{itemize}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Silicon Tracker}
-	\framesubtitle{double-sided strip detector}
+	\framesubtitle{improvement of the AMS-02 microstrip detectors}
 	\justifying
-	\footnotesize{The AMS microstrip detector results from the R\&D realized from the 1980's until the 1990's 
-	to create first the ALEPH detector design, then the L3 SDM detector.}
+	\small{The AMS-01 microstrip detector results from the R\&D realized from the 1980's until the 1990's 
+	to create first the ALEPH detector design, then the L3 detector.}
 	\vspace*{0.15cm}
-
 	
 	\begin{columns}
-		\begin{column}{0.5\textwidth}\centering
-			\includegraphics[width=0.9\textwidth]{TRACKER-AMS01vs02.png}
-			
+		\begin{column}{\textwidth}\centering
+			\includegraphics[height=0.49\paperheight]{TRACKER-SensorGeom.png}
+			\hspace*{0.5cm}
 			%\includegraphics[width=\textwidth]{TRACKER-AMS01vs02-nside.png}
-		\end{column}
-		\begin{column}{0.5\textwidth}\centering
-			\includegraphics[width=0.7\textwidth]{TRACKER-SensorGeom.png}
+			\includegraphics[height=0.49\paperheight]{TRACKER-AMS01vs02.png}
 		\end{column}
 	\end{columns}
 	
 	\vspace*{0.15cm}
 
-	\footnotesize{For AMS-02, the detector design was upgraded to decrease as much as possible the noise transmitted to 
-	the readout channel. Indeed, the long silicon modules of AMS-02 (up to 15 double-sided silicon sensors) are not common
-	in particle physics experiments, due to noise limitations. This kind of configuration introduces effects usually neglected for
-	smaller modules.}
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.98\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} For AMS-02, the detector design was upgraded to decrease as much as possible the
+			noise transmitted to the readout channel. 
+			Indeed, the long silicon modules of AMS (up to 15 miscrostrip detectors) are not common in particle physics
+			experiments, due to noise limitations. This kind of configuration introduces effects usually neglected for 	smaller modules.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ladder: the basic readout element}
+	\justifying
+	
+	\vspace*{-0.1cm}
+
+	\small{The basic readout element of the Silicon Tracker is called ``\textit{ladder}'', the figures below show the two side of a 
+	15 sensors ladder being assembled.}
+	
+	\vspace*{0.2cm}
+
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.65\textwidth}\justifying
+			\small{Each ladder consists of 7 to 15 wire-bonded sensors (double-sided microstrip detectors). 
+			
+			The energy deposit is read out, for each ladder, by 1024 readout channels: 640 on the $p$-side, 384 on the $n$-side. 
+			The readout electronics is placed directly on the front end board at the end of the ladder. 
+			The number of ladder composing the AMS tracking system is 192, for a total of $\sim 200,000$ readout channels and a 
+			total active area of $6.74 m^2$.}
+	
+			\vspace*{0.3cm}
+			\centering
+			\includegraphics[width=0.95\textwidth]{TRACKER-Photo_Ladder-01.png}\\
+			\bluetextbf{(}\bluetextit{Ohmic side}\bluetextbf{)}			
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.32\textwidth}\centering
+			\includegraphics[width=\textwidth]{TRACKER-Photo_Ladder-02.png}\\
+			\footnotesize{\bluetextbf{(}\bluetextit{Junction side}\bluetextbf{)}}
+%			
+%			\includegraphics[width=\textwidth]{TRACKER-Photo_Ladder-04.png}
+%			
+%			\includegraphics[width=\textwidth]{TRACKER-Photo_Ladder-05.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}	
+	
+	\vspace*{0.1cm}
+\end{frame}
+
+\begin{frame}[label=TRK-Ladder1]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the structure of a ladder}
+	\justifying
+	
+	\small{The array of sensor that compound a ladder are glued on a Upilex cable and mounted on an Airex support that confers
+	the mechanical stability to the module. }
+	
+	\vspace*{0.1cm}
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.49\textwidth}\justifying
+			\small{The ladder is protected from the light 
+			(source of noise in the silicon substrate) 
+			and from the electromagnetic interferences by a Upilex metallized foil (\hyperlink{TRK-Upilex}{\bluetextit{link 1}}).
+			
+			\vspace*{0.1cm}
+
+			The Upilex foil is separated from the silicon sensor surface by an Airex structure.
+			
+			\vspace*{0.2cm}
+			
+			In order to maximize the layer acceptance and to minimize the number of readout channels the front end 
+			electronics is placed on the ladder end for both sensor sides
+			(the bonding schemes of the sensors are shown in the next slide).}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.48\textwidth}
+%		\vspace*{0.1cm}		
+%		
+%		\scriptsize{\bluetextbf{Figure:}\\
+%						\bluetextit{Exploded view of a ladder}}
+%		\vspace*{-0.6cm}
+%											
+			\includegraphics[width=\textwidth]{TRACKER-Ladder-01bis.png}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.1cm}
+
+	\begin{columns}
+		\begin{column}{0.51\textwidth}	\end{column}
+		\begin{column}{0.48\textwidth}\centering			
+			\footnotesize{\bluetextbf{(}\bluetextit{Exploded view of a ladder}\bluetextbf{)}}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}	
+\end{frame}
+
+\begin{frame}[label=TRK-BondSchem]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{bonding scheme of the readout strips}
+	
+	\vspace*{-0.1cm}
+	
+	\begin{center}
+		\includegraphics[height=0.55\paperheight]{TRACKER-BondingScheme.png}
+	\end{center}
+	
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} The two pictures show the bonding scheme of the readout strips. 
+			In order to decrease the numbers of readout channels: on the $p$-side (top) only one strip, every two, is read;
+			on the $n$-side (bottom) the even sensors are coupled each other, likewise the odd ones.}		
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.2cm}
+	\hfill\hyperlink{TRK-BondSchem-nside}{\textbf{\beamerbutton{more details on $n$-side bonding scheme}}}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the structure of the AMS-02 tracker}
+	\justifying
+	
+	The 640 $p^+$ readout strips of each sensor of the same ladder are bonded to a short Upilex cable which brings the signal to
+	the front end electronics hosted on PCBs (hybrids, see Fig. 2.9). 
+	The flexibility of the cable allows to place the electronics of the inner layers at an angle of $90^\circ$ with respect to the 
+	tracker plane, allowing to maximize the active area within the magnet bore. 
+	
+	To bring the $n^+$ readout strips signal to the electronics on the ladder edge, every i-th $n^+$ strip (for a total of 192) of
+	even (odd) sensors is bonded on the same i-th channel of a long Upilex cable.
+	
+	The $x$ coordinate is thus reconstructed with a multiplicity that can be solved only from the complete track knowledge.
+
+	All the 1024 (640 + 384) readout channels of a single ladder are AC coupled with 16 (10 + 6) high dynamic range Voltage
+	Amplifiers (VA) trough $700 \, pF$ capacitors.
+	
+	The capacitors permit to suppress the high frequency components of the leakage current allowing a very low power 
+	consumption of less than $1 \, mW$ per channel.
+	The signal passes trough a semi-Gaussian CR-RC shaper with a $\approx 5 \, \mu s$ shaping time. 
+	Such a long shaping time allows a consistent reduction of noise. 
+	Then signal is sampled and sent to the Tracker Data Reduction board (see Sec. 2.2.9.1).
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the structure of the AMS-02 tracker}
+	\justifying
+%	\small{The Silicon Tracker is composed by 9 layers arranged along AMS-02 detector height which allow the 3D reconstruction of incoming particle's trajectory:} 
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.43\textwidth}\justifying
+			\small{The Silicon Tracker is composed by 9 layers arranged along AMS-02 detector height which allow the 3D
+			reconstruction of incoming particle's trajectory.
+			The tracker power consumption is foreseen to be of the order 640 W. The tracker will weigh
+186 kg.
+			The total active area of $6.75 \, m^2$, for a total number of 2284 Silicon sensors arranged in 192 ladders, 
+			makes the AMS-02 Silicon Tracker the largest tracker for a magnetic spectrometer ever built for space applications.}
+		\end{column}
+		\begin{column}{0.55\textwidth}\justifying
+			\includegraphics[width=\textwidth]{TRACKER-04.png}
+			
+			\scriptsize{\bluetextbf{Figure:} 
+			Each layer contains a variable number of readout units (around 20), called ladders and each ladder, in turn, has
+			a variable number (from 7 to 15) of silicon sensors.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	
+%	\begin{columns}
+%		\begin{column}{0.01\textwidth}\end{column}
+%		\begin{column}{0.43\textwidth}\justifying
+%		\end{column}
+%		\begin{column}{0.55\textwidth}
+%			\scriptsize{\bluetextbf{Figure:} 
+%			Each layer contains a variable number of readout units (around 20), called ladders and each ladder, in turn, has
+%			a variable number (from 7 to 15) of silicon sensors.}
+%		\end{column}
+%		\begin{column}{0.01\textwidth}\end{column}
+%	\end{columns}
+
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the structure of the AMS-02 tracker}
+	\justifying
+	
+	\footnotesize{Layers 1 and 9 constitute the \textbf{external tracker} and are positioned at both ends of the detector to
+	maximize the lever arm in the trajectory determination: the first is above the TRD at $z =155 \, cm$ and the last is under the 
+	RICH (before the ECAL) at $z = -135 \, cm$. %(In Fig.2.7 the external layers during the AMS-02 detector integration are shown)
+	}
+	
+	\begin{columns}
+		\begin{column}{0.6\textwidth}\justifying
+				\footnotesize{Layers 2 to 8 constitute the \textbf{inner tracker} and are arranged just above the magnet mechanical structure 
+	(layer 2, $z = 55 \, cm$) and inside the magnet bore (layers 3-8). Three carbon fibre and aluminium honeycomb planes
+%(see Figs. 2.5 and 2.6) 
+	support the layer pairs inside the magnet bore (3-4, 5-6,7-8), with a relative distance between layers belonging to the same
+	plane of $\sim 4 \, cm$ along the z axis. 
+	The most inner plane (layers 5-6) is placed at the magnet center ($z = 0$) and the two neighbours symmetrically disposed at
+	$z = \pm 27 \, cm$ from the central one.}
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\includegraphics[width=\textwidth]{TRACKER-03.png}
+		\end{column}
+	\end{columns}
+	
+
+\end{frame}
+
+\begin{frame}
+Silicon wafers are arranged in mechanical and electrical
+units called ladders. Each ladder consists of a support
+structure and a linear arrangement of 9 to 15 sensors. Ladders
+are placed on support planes to cover the AMS acceptance
+at various heights in the detector. As also depicted in
+fig.1 the Silicon Tracker is made of 9 layers covering the
+full span of the AMS detector. Three support planes each
+equipped with ladders on both sides are placed inside the
+magnet bore, another support plane holding a single layer
+of silicon detectors is placed at the top end of the magnet.
+Two additional single layer planes are placed on top of the
+TRD and the ECAL to get the largest lever arm in measuring
+the particle rigidity. Collectively layers from 2 to 8 are
+referred as the inner tracker.
 \end{frame}
 
 \begin{frame}
@@ -2355,13 +2555,16 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\bibitem{Batignani}
 	G. Batignani et al., ``\textit{DOUBLE-SIDED READOUT SILICON STRIP DETECTORS FOR THE ALEPH MINIVERTEX}'' Nuclear 
 	Instruments and Methods in Physics Research A 277 (1989) 147-153.
-	
-	\bibitem{Lutz}
-	G. Lutz, ``\textit{Semiconductor Radiation Detectors}'' Springer 1st ed. (1999).
 
 	\bibitem{Haas}
 	D. Haas, ``\textit{The Silicon Tracker of AMS02}'' Nuclear Instruments and Methods in Physics Research A 530 (2004) 
 	173-177.
+	
+	\bibitem{Krammer}
+	M. Krammer, ``\textit{Silicon Detectors}'' XI ICFA School on Instrumentation (2010).
+	
+	\bibitem{Lutz}
+	G. Lutz, ``\textit{Semiconductor Radiation Detectors}'' Springer 1st ed. (1999).
 	
 	\bibitem{Peisert}
 	A. Peisert, ``\textit{Silicon microstrip detectors}'' Instrumentation in High Energy Physics (1992) 1-79.
@@ -2973,52 +3176,455 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hyperlink{MAGNET-Choice}{\textbf{\beamerbutton{back to the previous slide}}}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=TRK-CCreadout,noframenumbering]
 	\frametitle{Silicon Tracker}
-	\framesubtitle{more about capacitive coupling of AMS}
+	\framesubtitle{advantage of a capacitively coupled readout}
 	\justifying
 	
-	\scriptsize{
-	In the case of the AMS detector, on the $p$-side, since the implant pitch is $27.5 \, \mu m$ while the readout pitch is  $110 \, \mu m$, between the 2 readout strips there are 3 intermediate strips separate. 
+	\small{Capacitively coupled readout (right) has the obvious advantage of shielding the electronics from dark current, 
+	which with direct coupling (left) can lead to pedestal shifts, a reduction of the dynamic range, and may
+	even drive the electronics into saturation.}
+	
+	\vspace*{-0.15cm}
+%
+%	\begin{center}
+%		\includegraphics[height=0.4\paperheight]{TRK-CapacitiveCoupling.png}		
+%	\end{center}
+%	
+%	\vspace*{-0.25cm}
 	
 	\begin{columns}
-		\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.48\textwidth}\justifying
-			\scriptsize{In such case (see figure), the coupling of the center strip with the closest readout strip $C_l = C_r \approx C_i / 2$ while for strips 2 and 4, the couplings are $C_l \approx C_i$ and $C_r \approx C_i / 3$. Under the condition of an analogue readout, it is then possible, by interpolation, to more precisely locate the passage of the crossing particle.}
+		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.8\textwidth}\centering
+			\includegraphics[height=0.4\paperheight]{TRK-CapacitiveCoupling.png}		
 		\end{column}
-		\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.49\textwidth}\centering
-			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling-02.png}
-		\end{column}
-		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.1\textwidth}\end{column}
 	\end{columns}
 	
-%	\begin{center}
-%		\includegraphics[height=0.25\paperheight]{TRK-CapacitiveCoupling-02.png}
-%	\end{center}
-	Taking into account the signals collected by the two amplifiers, it is thus possible to evaluate the original signal position, by computation of the center of gravity ($cog$): If $Q$ is the charge deposited on strip n, we define as $Q_l$ and $Q_r$ the charges transmitted to the left and right readout channels, respectively. Using the relation:
-	\begin{equation*}
-		\frac{Q_l}{C_l} = \frac{Q_r}{C_r}
-	\end{equation*}
-where $C_l$ and $C_r$ correspond to the capacitance between the intermediate strip n and the left (right) readout strip respectively. The center of gravity is then expressed as:
-	\begin{equation*}
-		cog \approx \frac{Q_l x_l + Q_r x_r}{Q_l x_l + Q_r x_r} = \frac{Q_l x_l + Q_r (x_l + 1)}{Q} = x_l + \frac{Q_r}{Q}
-	\end{equation*}
-}
-%	\begin{block}{\footnotesize{Something about the center-of-gravity technique}}\justifying
+	\vspace*{0.1cm}
+	
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}
+			\justifying
+			\scriptsize{\textitem{Figure}{Direct and capacitive coupling of electronics to the detector}\bluetextbf{:}
+			With direct coupling (left) the detector reverse bias current $I_r$ has to be absorbed by the electronics. 
+			With capacitive coupling (right), only the AC part of the detector current reaches the electronics, while the
+			DC part goes into a bias circuit, here shown as a simple resistor.}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.1cm}
+	\hfill\hyperlink{TRK-DsidedDet}{\textbf{\beamerbutton{back to the presentation}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-Integration}{\textbf{\beamerbutton{integrated detector}}}
+\end{frame}
+
+\begin{frame}[label=TRK-Integration,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{integrate elements into the detector}
+	\justifying
+	
+	\small{As it is difficult to fabricate high ohmic resistors and almost impossible to produce sufficiently large capacitors on 
+	LSI electronics (\textit{Large Scale Integration}), it seemed natural to integrate these elements into the detector.  
+%	The detectors gave very satisfactory results. 
+%	Detectors of this design have been used in the vertex detector of the DELPHI experiment at the electron-positron collider 
+%	(LEP) at the European Center of Nuclear Research (CERN) in Geneva.
+	}
+	
+	\vspace*{0.05cm}
+
+	\begin{columns}
+		\begin{column}{0.08\textwidth}\end{column}
+		\begin{column}{0.4\textwidth}\centering
+			\includegraphics[height=0.4\paperheight]{TRACKER-PitchStrips.png}
+		\end{column}
+		\begin{column}{0.04\textwidth}\centering
+			\vspace*{0.3cm}
+			
+			$\Longrightarrow$		
+		\end{column}
+		\begin{column}{0.4\textwidth}\centering
+			\vspace*{-0.2cm}
+			\hspace*{0.2cm}\includegraphics[height=0.4\paperheight]{TRACKER-IntegratedCond-01.png}
+		\end{column}
+		\begin{column}{0.08\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.25cm}
+
+	\small{Capacitances have been built by separating implantation and metallization of the strips by a thin oxide layer 
+	(biassing resistors, if needed, were made in polysilicon - in the case of AMS's detectors the biassing method does 
+	not use them).}
+	
+	\vspace*{0.15cm}
+	\hfill\hyperlink{TRK-CCreadout}{\textbf{\beamerbutton{back to the previous slide}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-DsidedExample}{\textbf{\beamerbutton{example of a strip detector}}}
+\end{frame}
+
+\begin{frame}[label=TRK-DsidedExample,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{example of a double-sided strip detector}
+	\justifying
+	
+	\vspace*{-0.05cm}
+	
+	\small{Example of a double-sided strip detector with integrated biassing structures and 
+	coupling capacitors. The strips on the two detector sides have orthogonal directions.}
+
+	\vspace*{0.15cm}
+	
+	\begin{columns}
+		\begin{column}{\textwidth}\centering
+			\includegraphics[height=0.35\paperheight]{TRK-IntegratedStruct-p.png}
+			\hspace*{1cm}
+			\includegraphics[height=0.37\paperheight]{TRK-IntegratedStruct-n.png}
+		\end{column}
+	\end{columns}
+	
+	\vspace*{0.2cm}
+	
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figures:} top view of the $p$ strip side (top left); cross-section along the middle of a $p$ strip 
+			(bottom left); bottom view of the $n$ strip side (middle) and cross-section along the middle of an $n$ strip (right). 
+			The symbol $C$ indicates the coupling capacitance built by strip implant, insulator and strip metal, while $R$ stands for 
+			the biassing structure, which on the $p$ side is a punch-through structure and on the $n$ side is an 
+			electron-accumulation layer resistor whose dimensions are defined by the enclosing $p$-type insulation structure.}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+
+	\vspace*{0.15cm}
+	\hfill\hyperlink{TRK-Integration}{\textbf{\beamerbutton{back to the previous slide}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-DsidedDet}{\textbf{\beamerbutton{return to the presentation}}}
+\end{frame}
+
+\begin{frame}[label=TRK-nstrip,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{ohmic side of a AMS-02 microstrip sensor: close-up view}
+	\justifying
+	
+	\begin{columns}
+		\begin{column}{0.15\textwidth}\end{column}
+		\begin{column}{0.85\textwidth}
+				\includegraphics[height=0.65\paperheight]{TRACKER-nside.png}
+		\end{column}
+	\end{columns}
+	
+	\vspace*{0.55cm}
+	\hfill\hyperlink{TRK-DsidedProblem}{\textbf{\beamerbutton{back to the presentation}}}
+\end{frame}
+
+\begin{frame}[label=TRK-PR_prob,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{more about position resolution}
+	\justifying
+	
+	\vspace*{-0.1cm}
+
+	\small{The strip pitch determines to a large extend the position resolution. It's clear that with small pitch a better resolution is 
+	achievable, but there are several drawbacks:
+	
+	\vspace*{-0.25cm}
+	
+	\begin{itemize}\justifying{\small{
+		\item	small strip pitch requires large number of electronic channels;
+		
+		\vspace*{-0.15cm}
+		
+		\item	cost increase;
+		
+		\vspace*{-0.15cm}
+
+		\item	power dissipation increase.
+	}}\end{itemize}
+
+	\vspace*{-0.1cm}
+	
+	With an analogue readout, a possible solution is the implementation of intermediate strips. These are strips not connected to
+	the readout electronics located between readout strips (for this reason, they are also called: \textit{floating strips}).
+
+	\vspace*{0.1cm}
+
+	The signal from floating strips is transferred by capacitive coupling (through the naturally present
+	strip-strip capacitances) to the readout strips:\footnotemark[1]
+
+	\vspace*{-0.25cm}
+	
+	\begin{itemize}\justifying{\small{
+		\item	more hits with signals on more than one strip;
+
+		\vspace*{-0.15cm}
+		
+		\item	improved resolution with smaller number of readout channels obtained by interpolation of the signals
+								(charge center-of-gravity technique).
+								}}
+	\end{itemize}
+	}
+	
+	\vspace*{-0.15cm}
+	\hfill\hyperlink{TRK-CCandPR}{\textbf{\beamerbutton{back to the presentation}}}
+	\hspace{-0.1cm}
+	\hyperlink{TRK-CentOfGrav}{\textbf{\beamerbutton{center-of-gravity technique}}}
+		
+	\footnotetext[1]{\scriptsize{Important: the floating strips must held on the same voltage as the readout ones.}}
+\end{frame}
+
+%\begin{frame}[label=TRK-CentOfGrav,noframenumbering]
+%	\frametitle{Silicon Tracker}
+%	\framesubtitle{the charge center-of-gravity technique}
+%
+%	\vspace*{0.1cm}
+%	
+%	\begin{columns}
+%		\begin{column}{0.03\textwidth}\end{column}
+%		\begin{column}{0.4\textwidth}\centering
+%			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling-03.png}
+%		\end{column}
+%		\begin{column}{0.01\textwidth}\end{column}
+%		\begin{column}{0.53\textwidth}\justifying
+%			\vspace*{1.2cm}
+%
+%			\scriptsize{\textitem{Figure}{example of the capacitive coupling}\\
+%			The scheme shows a detector with two intermediate strips. 
+%			Only every $3^{rd}$ strip is connected to an electronics channel. 
+%			The charge from the intermediate strips is capacitive coupled to the neighbour strips.}
+%		\end{column}
+%		\begin{column}{0.03\textwidth}\end{column}
+%	\end{columns}
+%	
+%	\begin{block}{\scriptsize{The charge center-of-gravity technique in the simplest case}}\justifying
 %		\begin{columns}
 %			\begin{column}{0.01\textwidth}\end{column}
 %			\begin{column}{0.98\textwidth}\justifying
-%				\footnotesize{In the case of the AMS detector, on the $p$-side, since the implant pitch is $27.5 \, \mu m$ while the 
-%				readout pitch is $110 \, \mu m$, between the 2 readout strips there are 3 intermediate strips separate. 
-%				In such case (see figure), the coupling of the center strip with the closest readout strip $C_l = C_r \approx C_i / 2$ 
-%				while for strips 2 and 4, the couplings are $C_l \approx C_i$ and $C_r \approx C_i / 3$.
-%				Under the condition of an analogue readout, it is then possible, by interpolation, to more precisely locate the passage 
-%				of the crossing particle.}
-%%				when the applied reversed bias voltage approaches the full depletion voltage
+%			%	\scriptsize{Thank to the analogue readout and to the implementation of intermediate strips, it is possible to improve,  
+%			%	by interpolation, the position measurements.}	
+%				\scriptsize{Taking into account the signals collected by the two amplifiers ($h_1$ and $h_2$), it is possible to
+%				evaluate the original position $x$, by computation of the \textit{charge center-of-gravity}:}
+%				\vspace*{-0.15cm}
+%	
+%				\begin{equation*}
+%					x 	= \frac{h_1 x_1 + h_2 x_2}{h_1 + h_2} 
+%						= x_1 + \frac{h_2}{h_1 + h_2} (x_1 - x_2) 
+%						= x_1 + \frac{h_2}{h_1 + h_2} p_{read}
+%				\end{equation*}
+%				\scriptsize{where $x_1$ and $x_2$ are the positions of $1^{st}$ and $2^{nd}$ readout strip and $p_{read}$ 
+%				is their pitch. 
+%	
+%				The position resolution $\sigma_x$ is proportional to the ratio between the readout pitch and the $SNR$ 
+%				(Signal to Noise Ratio), namely $\sigma_x \approx p_{read}/SNR$.}
 %			\end{column}
 %			\begin{column}{0.01\textwidth}\end{column}
 %		\end{columns}
 %	\end{block}
+%\end{frame}
+%
+%\begin{frame}[label=TRK-CentOfGrav,noframenumbering]
+%	\frametitle{Silicon Tracker}
+%	\framesubtitle{position resolution as a function of the SNR}
+%	
+%	\begin{columns}
+%		\begin{column}{0.12\textwidth}\end{column}
+%		\begin{column}{0.78\textwidth}\justifying
+%			\includegraphics[height=0.5\paperheight]{TRK-CapacitiveCoupling-05.png}
+%		\end{column}
+%	\end{columns}
+%	
+%	\vspace*{0.15cm}
+%	
+%	\begin{columns}
+%		\begin{column}{0.13\textwidth}\end{column}
+%		\begin{column}{0.74\textwidth}\justifying
+%			\scriptsize{\bluetextbf{Figure:} Example of a detector with strip pith of $25 \, \mu m$ and analogue readout. 
+%			The position resolution, $\sigma_x$, is plotted as a function of the $SNR$ in two different cases:}
+%			
+%			\vspace*{-0.15cm}
+%
+%			\begin{itemize}\scriptsize{\justifying
+%				\item[$\rhd$]	\bluetextit{Top curve}: every 2nd strip is connected, one intermediate strip.
+%	
+%				\vspace*{-0.1cm}
+%
+%				\item[$\rhd$]	\bluetextit{Bottom curve}: every strip is connected to the readout electronics.
+%			}\end{itemize}
+%		\end{column}
+%		\begin{column}{0.13\textwidth}\end{column}
+%	\end{columns}
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{Silicon Tracker}
+%	\framesubtitle{capacitive coupling}
+%	
+%	\begin{columns}
+%		\begin{column}{0.12\textwidth}\end{column}
+%		\begin{column}{0.78\textwidth}\justifying
+%			\includegraphics[height=0.5\paperheight]{TRK-CapacitiveCoupling-03.png}
+%		\end{column}
+%	\end{columns}
+%	
+%	\vspace*{0.25cm}
+%	
+%	\begin{columns}
+%		\begin{column}{0.13\textwidth}\end{column}
+%		\begin{column}{0.74\textwidth}\justifying
+%			\scriptsize{\textitem{Figure}{example of the capacitive coupling}\\
+%			The scheme shows an example of a detector with two intermediate strips. 
+%			Only every $3^{rd}$ strip is connected to an electronics channel. 
+%			The charge from the intermediate strips is capacitive coupled to the neighbour strips.}
+%		\end{column}
+%		\begin{column}{0.13\textwidth}\end{column}
+%	\end{columns}
+%\end{frame}
+
+\begin{frame}[label=TRK-CentOfGrav,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the charge center-of-gravity technique}
+	
+	\vspace*{-0.1cm}
+	\begin{block}{\scriptsize{An example of the center-of-gravity technique}}\justifying
+		\begin{columns}
+			\begin{column}{0.01\textwidth}\end{column}
+			\begin{column}{0.98\textwidth}\justifying
+			%	\scriptsize{Thank to the analogue readout and to the implementation of intermediate strips, it is possible to improve,  
+			%	by interpolation, the position measurements.}	
+				\scriptsize{Taking into account the signals collected by the two amplifiers ($h_1$ and $h_2$), it is possible to
+				evaluate the original position $x$, by computation of the \textit{charge center-of-gravity}:}
+				\vspace*{-0.15cm}
+	
+				\begin{equation*}
+					x 	= \frac{h_1 x_1 + h_2 x_2}{h_1 + h_2} 
+						= x_1 + \frac{h_2}{h_1 + h_2} (x_1 - x_2) 
+						= x_1 + \frac{h_2}{h_1 + h_2} p_{read}
+				\end{equation*}
+				\scriptsize{where $x_1$ and $x_2$ are the positions of $1^{st}$ and $2^{nd}$ readout strip and $p_{read}$ 
+				is their pitch. 
+	
+				The position resolution $\sigma_x$ is proportional to the ratio between the readout pitch and the $SNR$ 
+				(Signal to Noise Ratio), namely $\sigma_x \approx p_{read}/SNR$.}
+			\end{column}
+			\begin{column}{0.01\textwidth}\end{column}
+		\end{columns}
+	\end{block}
+	
+	\vspace*{-0.15cm}
+	
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.35\textwidth}\centering
+			\vspace*{0.2cm}
+			\includegraphics[width=\textwidth]{TRK-CapacitiveCoupling-05.png}
+		\end{column}
+		%\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.55\textwidth}\justifying
+			\scriptsize{\bluetextbf{Figure:}
+			Plot of $\sigma_x$ as a function of the $SNR$ for detector 
+			with strip pith of $25 \, \mu m$ and analogue readout in two different cases:}
+			
+			\vspace*{-0.15cm}
+			
+			\begin{itemize}\scriptsize{\justifying{
+				\item[$\rhd$]	\bluetextit{Top curve -} every 2nd strip is connected, one intermediate strip.
+ 			
+ 				\vspace*{-0.1cm}				
+				
+				\item[$\rhd$]	\bluetextit{Bottom curve -} every strip is connected to the readout electronics.
+			}}\end{itemize}
+			
+%			\centering
+%			\hyperlink{TRK-PR_prob}{\textbf{\beamerbutton{back to the previous slide}}}
+%			\hspace{-0.1cm}
+%	 		\hyperlink{TRK-CCandPR}{\textbf{\beamerbutton{return to the presentation}}}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+
+	\vspace*{-0.3cm}
+	\hfill
+	\hyperlink{TRK-PR_prob}{\textbf{\beamerbutton{back to the previous slide}}}
+	\hspace{-0.1cm}
+ 	\hyperlink{TRK-CCandPR}{\textbf{\beamerbutton{return to the presentation}}}
+\end{frame}
+
+\begin{frame}[label=TRK-Upilex,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{upilex wrapping}
+	\vspace*{-0.45cm}
+
+	\begin{columns}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\centering		
+				\small{\bluetextit{Airex spacer gluing}}
+				\vspace*{0.1cm}
+
+				\includegraphics[height=0.485\paperheight]{TRACKER-Ladder-06.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}
+				\centering
+				\small{\bluetextit{Upilex wrapping}}
+				\vspace*{0.1cm}
+				
+				\includegraphics[height=0.485\paperheight]{TRACKER-Ladder-05.png}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{-0.3cm}
+	
+	\begin{columns}[t]
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying
+				\scriptsize{\bluetextbf{Figure 1:}
+				Once that the glue (Araldite 2011) is dispensed on the spacer surface,
+				%in similar way as for the ladder reinforcement, 
+				the spacer is aligned with a plexiglas guide.
+				A plexiglas lid is then laid on the spacer surface.
+				}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.46\textwidth}
+			\begin{figure}\justifying									
+				\scriptsize{\bluetextbf{Figure 2:} 
+				The Upilex foil, then the ladder are placed on a table. 
+				The foil is bent over the ladder with pushers.
+				The shielding is closed with rosin-free solder.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.1cm}
+	\hfill
+	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{back to the previous slide}}}
+\end{frame}
+
+\begin{frame}[label=TRK-BondSchem-side,noframenumbering]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{bonding scheme of the readout strips}
+	
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{TRACKER-BondingScheme-nside.png}
+	\end{center}
+	
+	\begin{columns}
+		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.8\textwidth}\centering
+			\scriptsize{\bluetextbf{Figure:} Signal routing for the K5 design - a ladder with 12 sensors.}		
+		\end{column}
+		\begin{column}{0.1\textwidth}\end{column}
+	\end{columns}
 \end{frame}
 \end{document}
