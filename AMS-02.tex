@@ -2197,8 +2197,8 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	
 	\vspace*{-0.1cm}
 
-	\small{The basic readout element of the Silicon Tracker is called ``\textit{ladder}'', the figures below show the two side of a 
-	15 sensors ladder being assembled.}
+	\small{The basic readout element of the Silicon Tracker is called ``\textit{ladder}'', the figures show the two sides 
+	of two ladders (sensors: 9 left; 15 right) during their assembly.}
 	
 	\vspace*{0.2cm}
 
@@ -2207,10 +2207,12 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 		\begin{column}{0.65\textwidth}\justifying
 			\small{Each ladder consists of 7 to 15 wire-bonded sensors (double-sided microstrip detectors). 
 			
-			The energy deposit is read out, for each ladder, by 1024 readout channels: 640 on the $p$-side, 384 on the $n$-side. 
+			The energy deposit is read out by \textbf{1024 readout channels per ladder}: 640 on the $p$-side, 384 on the 
+			$n$-side. 
 			The readout electronics is placed directly on the front end board at the end of the ladder. 
-			The number of ladder composing the AMS tracking system is 192, for a total of $\sim 200,000$ readout channels and a 
-			total active area of $6.74 m^2$.	}
+			
+			The AMS tracking system consists of \textbf{192 ladders} 
+			\textit{for a total of about $2 \cdot 10^5$ readout channels} and a total active area of $6.74 m^2$.}
 	
 			\vspace*{0.3cm}
 			\centering
@@ -2230,30 +2232,6 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\end{columns}	
 	
 	\vspace*{0.1cm}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Silicon Tracker}
-	\framesubtitle{ladder fabrication}
-	
-	\begin{block}{\footnotesize{Goals of the ladder fabrication}}
-		\begin{columns}
-			\begin{column}{0.01\textwidth}\end{column}
-			\begin{column}{0.98\textwidth}\justifying
-				\footnotesize{The principal goals of the ladder fabrication are to guarantee the required precision for the relative 
-				alignment of the silicon sensors ($< 5 \, \mu m$), and minimize the degradation of the electrical performance due to 
-				handling and ultra-sonic bonding. 
-				The alignment precision is provided by the mechanical precision of the jigs ($1 - 2 \, \mu m$) and the precision of the 
-				sensor cut.}
-			\end{column}
-			\begin{column}{0.01\textwidth}\end{column}
-		\end{columns}
-	\end{block}
-	
-	
-	During fabrication the sensor positions on a ladder are recorded with a 3D semi-automatic measuring machine. 
-	The results for the sensor alignment for 125 (of 192) AMS-02 ladders are shown in Figure 2.60. A particular effort has been 
-	made to maintain the low noise by passivation of the silicon and by optimization of the ladder assembly procedure.
 \end{frame}
 
 %\begin{frame}[label=TRK-Ladder1]
@@ -2321,9 +2299,9 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			
 			\vspace*{0.1cm}
 
-			The flexibility of these UFs allows the hybrids to be placed back-to-back, perpendicular to the detection plane, 
-			thus minimizing the material in the sensitive region of the tracker and maximizing the active area within the 
-			magnet bore. 
+			The \textit{flexibility of these UFs} allows the hybrids to be placed back-to-back, perpendicular to the detection plane, 
+			thus \textbf{minimizing the material} in the sensitive region of the tracker and \textbf{maximizing the active area} 
+			within the magnet bore. 
 			
 			\vspace*{0.1cm}
 
@@ -2367,8 +2345,8 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			
 			\vspace*{0.1cm}
 			
-			In order to maximize the layer acceptance and to minimize the number of readout channels the front end 
-			electronics is placed on the ladder end for both sensor sides
+			With the aim of \textbf{maximizing the layer acceptance} and \textbf{minimizing the number of readout channels}, 
+			\textit{the front end electronics is placed on the ladder end for both sensor sides} 
 			(the bonding schemes of the sensors are shown in the next slide).}
 		\end{column}
 		\begin{column}{0.01\textwidth}\end{column}
@@ -2410,57 +2388,123 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\hfill\hyperlink{TRK-BondSchem-nside}{\textbf{\beamerbutton{more details on $n$-side bonding scheme}}}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[label=TRK-Fab00]
 	\frametitle{Silicon Tracker}
-	\framesubtitle{the structure of the AMS-02 tracker}
-	\justifying
+	\framesubtitle{ladder fabrication
+	\hspace*{6.2cm}
+	\hyperlink{TRK-Fab01}{\textbf{\beamerbutton{assembly process of a ladder}}}}
+	\justifying	
 	
-	The 640 $p^+$ readout strips of each sensor of the same ladder are bonded to a short Upilex cable which brings the signal to
-	the front end electronics hosted on PCBs (hybrids, see Fig. 2.9). 
-	The flexibility of the cable allows to place the electronics of the inner layers at an angle of $90^\circ$ with respect to the 
-	tracker plane, allowing to maximize the active area within the magnet bore. 
+	\footnotesize{The alignment precision is provided by the mechanical precision of the jigs ($1 - 2 \, \mu m$) and the precision
+	of the sensor cut.
+	During fabrication, the sensor positions on a ladder are recorded with a 3D semi-automatic measuring machine
+	(see the figure below).}
 	
-	To bring the $n^+$ readout strips signal to the electronics on the ladder edge, every i-th $n^+$ strip (for a total of 192) of
-	even (odd) sensors is bonded on the same i-th channel of a long Upilex cable.
+	\vspace*{0.2cm}
 	
-	The $x$ coordinate is thus reconstructed with a multiplicity that can be solved only from the complete track knowledge.
+	\begin{columns}
+		\begin{column}{0.28\textwidth}\end{column}
+		\begin{column}{0.41\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{TRACKER-Lad_Probe_Station_Table.png}
+		\end{column}
+		%\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.28\textwidth}
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} An AMS-02 ladder under test on the probe station table. The probe station is also 
+			equipped with micropositioners and a microscope.}	
+		\end{column}
+		\begin{column}{0.03\textwidth}\end{column}
+	\end{columns}
 
-	All the 1024 (640 + 384) readout channels of a single ladder are AC coupled with 16 (10 + 6) high dynamic range Voltage
-	Amplifiers (VA) trough $700 \, pF$ capacitors.
+%	\begin{columns}
+%		\begin{column}{0.1\textwidth}\end{column}
+%		\begin{column}{0.8\textwidth}
+%			\centering
+%			\includegraphics[height=0.32\paperheight]{TRACKER-Lad_Probe_Station_Table.png}
+%			
+%			\justifying
+%			\scriptsize{\bluetextbf{Figure:} An AMS-02 ladder under test on the probe station table. The probe station is also 
+%			equipped with micropositioners and a microscope.}	
+%		\end{column}
+%		\begin{column}{0.1\textwidth}\end{column}
+%	\end{columns}
 	
-	The capacitors permit to suppress the high frequency components of the leakage current allowing a very low power 
-	consumption of less than $1 \, mW$ per channel.
-	The signal passes trough a semi-Gaussian CR-RC shaper with a $\approx 5 \, \mu s$ shaping time. 
-	Such a long shaping time allows a consistent reduction of noise. 
-	Then signal is sampled and sent to the Tracker Data Reduction board (see Sec. 2.2.9.1).
+	\begin{block}{\footnotesize{Goals of the ladder fabrication}}
+		\begin{columns}
+			\begin{column}{0.01\textwidth}\end{column}
+			\begin{column}{0.98\textwidth}\justifying
+				\footnotesize{The principal goals of the ladder fabrication are to guarantee the required precision for the relative 
+				alignment of the silicon sensors ($< 5 \, \mu m$), and minimize the degradation of the electrical performance due to 
+				handling and ultra-sonic bonding. }
+			\end{column}
+			\begin{column}{0.01\textwidth}\end{column}
+		\end{columns}
+	\end{block}	
 \end{frame}
 
 \begin{frame}
 	\frametitle{Silicon Tracker}
-	\framesubtitle{the structure of the AMS-02 tracker}
-	\justifying
-%	\small{The Silicon Tracker is composed by 9 layers arranged along AMS-02 detector height which allow the 3D reconstruction of incoming particle's trajectory:} 
+	\framesubtitle{ladder: results for the sensor alignment}
+	
+	\vspace*{-0.1cm}
+
+	\small{The results for the sensor alignment for 125 (of 192) AMS-02 ladders are shown in figure below. 
+	A particular effort has been made to maintain the low noise by passivation of the silicon and by optimization of the ladder
+	assembly procedure.}
+	
+	\vspace*{0.25cm}
 	
 	\begin{columns}
-		\begin{column}{0.01\textwidth}\end{column}
-		\begin{column}{0.43\textwidth}\justifying
-			\small{The Silicon Tracker is composed by 9 layers arranged along AMS-02 detector height which allow the 3D
-			reconstruction of incoming particle's trajectory.
-			The tracker power consumption is foreseen to be of the order 640 W. The tracker will weigh
-186 kg.
-			The total active area of $6.75 \, m^2$, for a total number of 2284 Silicon sensors arranged in 192 ladders, 
-			makes the AMS-02 Silicon Tracker the largest tracker for a magnetic spectrometer ever built for space applications.}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}
+			\centering
+			\includegraphics[height=0.44\paperheight]{TRACKER-Ladder_AssemblyPrecision.png}
+			
+			\vspace*{0.05cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} Assembly precision of 125 AMS-02 ladders: distribution of the measured differences
+			of the distance between adjacent sensors and the nominal distance, $640 \, \mu m$ including a $40 \, \mu m$ gap
+			between sensors (left), and the residual distribution of the sensor positions about the line fits defining the ladder axis
+			parallel to the magnetic field (right).}
 		\end{column}
-		\begin{column}{0.55\textwidth}\justifying
-			\includegraphics[width=\textwidth]{TRACKER-04.png}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the structure of the AMS-02 tracker}
+	\justifying
+
+	\vspace*{-0.1cm}
+	
+	\small{The Silicon Tracker is composed by \textit{9 layers} arranged along AMS-02 detector height which allow the
+	\textbf{3-D reconstruction} of incoming particle's trajectory.} 
+
+	\vspace*{0.2cm}	
+	
+	\begin{columns}
+		\begin{column}{0.15\textwidth}\end{column}
+		\begin{column}{0.7\textwidth}
+			\centering
+			\includegraphics[height=0.45\paperheight]{TRACKER-02.png}
+			
+			\vspace*{0.1cm}
 			
 			\scriptsize{\bluetextbf{Figure:} 
-			Each layer contains a variable number of readout units (around 20), called ladders and each ladder, in turn, has
-			a variable number (from 7 to 15) of silicon sensors.}
+			Each layer contains a variable number of different ladders.}
 		\end{column}
-		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.15\textwidth}\end{column}
 	\end{columns}
 	
+	\vspace*{0.2cm}
+	
+	\small{With a weigh of $186 \, kg$ and very low power consumption ($\sim 0.7 \, mW$ per channel),
+	\textbf{the Silicon Tracker of the AMS-02 experiment is the largest tracker for a magnetic spectrometer ever built for 
+	space applications}.}
 %	\begin{columns}
 %		\begin{column}{0.01\textwidth}\end{column}
 %		\begin{column}{0.43\textwidth}\justifying
@@ -2472,8 +2516,6 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 %		\end{column}
 %		\begin{column}{0.01\textwidth}\end{column}
 %	\end{columns}
-
-	
 \end{frame}
 
 \begin{frame}
@@ -2505,11 +2547,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \end{frame}
 
 \begin{frame}
-Silicon wafers are arranged in mechanical and electrical
-units called ladders. Each ladder consists of a support
-structure and a linear arrangement of 9 to 15 sensors. Ladders
-are placed on support planes to cover the AMS acceptance
-at various heights in the detector. As also depicted in
+As also depicted in
 fig.1 the Silicon Tracker is made of 9 layers covering the
 full span of the AMS detector. Three support planes each
 equipped with ladders on both sides are placed inside the
@@ -3716,29 +3754,26 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 
 \begin{frame}[label=TRK-BondSchem-nside,noframenumbering]
 	\frametitle{Silicon Tracker}
-	\framesubtitle{bonding scheme of the readout strips}
+	\framesubtitle{bonding scheme of the readout strips
+	\hspace*{3.8cm}
+	\hyperlink{TRK-BondSchem}{\textbf{\beamerbutton{back to the previous slide}}}}
 	
-	\vspace*{0.5cm}
-
-	\begin{center}
-		\includegraphics[width=0.95\textwidth]{TRACKER-BondingScheme-nside.png}
-	\end{center}
-
-	\vspace*{-0.2cm}
-
-	\begin{columns}
-		\begin{column}{0.05\textwidth}\end{column}
-		\begin{column}{0.9\textwidth}\centering
-			\small{\bluetextbf{Figure:} Signal routing for the K5 design - a ladder with 12 sensors\footnotemark[1].}		
-		\end{column}
-		\begin{column}{0.05\textwidth}\end{column}
-	\end{columns}
+	\small{The two figures show the signal routing for a ladder with 12 sensors (in particular the K5 design - top), and for one with
+	15 sensors (K7 design - bottom)\footnotemark[1].}
 	
-	\vspace*{1.2cm}
-	\hfill
-	\hyperlink{TRK-BondSchem}{\textbf{\beamerbutton{back to the previous slide}}}
+	\vspace*{0.2cm}
+
+	\centering
+	\includegraphics[height=0.25\paperheight]{TRACKER-BondingScheme-nside.png}
 	
-	\footnotetext[1]{The x coordinate is reconstructed with a multiplicity that can be solved only from the complete track knowledge.}
+	\vspace*{0.2cm}
+
+	\includegraphics[height=0.25\paperheight]{TRACKER-BondingScheme-nside02.png}
+
+	\vspace*{0.3cm}
+
+	\footnotetext[1]{\justifying{\scriptsize{The x coordinate is reconstructed with a multiplicity that can be solved only from the
+	complete track knowledge.}}}
 \end{frame}
 
 \begin{frame}[label=TRK-Fab01,noframenumbering]
@@ -3747,7 +3782,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace*{6.75cm}
 	\hyperlink{TRK-Fab02}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
@@ -3785,7 +3820,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab03}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
@@ -3871,7 +3906,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab04}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
@@ -3920,7 +3955,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab05}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
@@ -3992,7 +4027,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab06}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.4cm}
 	
@@ -4065,7 +4100,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab07}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
@@ -4150,46 +4185,52 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab08}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 	
 	\begin{columns}
-		\begin{column}{0.2\textwidth}\end{column}
-		\begin{column}{0.6\textwidth}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}
 			\begin{figure}
-				\includegraphics[width=\textwidth]{TRACKER-LadFabrication-18b.png}
+				\includegraphics[width=\textwidth]{TRACKER-LadFabrication-18-2.png}
 			\end{figure}
 		\end{column}
-		\begin{column}{0.2\textwidth}\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
 	\end{columns}
-	
-	\vspace*{-0.4cm}
-	
-	\begin{columns}
-		\begin{column}{0.2\textwidth}\end{column}
-		\begin{column}{0.6\textwidth}
-			\begin{figure}
-				\includegraphics[height=0.27\paperheight]{TRACKER-LadFabrication-18bbb.png}
-				\hfill
-				\includegraphics[height=0.27\paperheight]{TRACKER-LadFabrication-18bb.png}
-			\end{figure}
-		\end{column}
-		\begin{column}{0.2\textwidth}\end{column}
-	\end{columns}
+%	
+%	\vspace*{-0.4cm}
+%	
+%	\begin{columns}
+%		\begin{column}{0.25\textwidth}\end{column}
+%		\begin{column}{0.5\textwidth}
+%			\begin{figure}
+%				\includegraphics[height=0.23\paperheight]{TRACKER-LadFabrication-18bbb.png}
+%				\hspace*{0.1cm}
+%				\includegraphics[height=0.23\paperheight]{TRACKER-LadFabrication-18bb.png}
+%			\end{figure}
+%		\end{column}
+%		\begin{column}{0.25\textwidth}\end{column}
+%	\end{columns}
 	
 	\vspace*{-0.3cm}
 	
 	\begin{columns}[t]
-		\begin{column}{0.1\textwidth}\end{column}
-		\begin{column}{0.8\textwidth}
+		\begin{column}{0.02\textwidth}\end{column}
+		\begin{column}{0.96\textwidth}
 			\begin{figure}\justifying									
 				\scriptsize{\bluetextbf{Figure 19:} 
-				To connect electrically all the sensors in a ladder, all the strips on the $p$-side are daisy-chained with a 25 um Al wire through ultrasonic bondings.}
+				Bounding: electrically connection between the strip in a ladder with a $25 \, \mu m$ Al wire through ultrasonic 
+				bondings (in particular, the photos shown the $p$-side of a ladder where the strip are daisy-chained)
+				\footnotemark[1].}
 			\end{figure}
 		\end{column}
-		\begin{column}{0.1\textwidth}\end{column}
+		\begin{column}{0.02\textwidth}\end{column}
 	\end{columns}
+	
+	\footnotetext[1]{\justifying{\scriptsize{A ladder composed of $n$ sensors needs $(n + 1) \cdot 640$ bonds on the S-side 
+	and $n\cdot 384$ bonds on the K-side, for a total of $1024 \cdot 1024 + 640 \simeq 10^6$ bonds. The need of automatic 
+	bonding procedures is obvious.}}}
 \end{frame}
 
 \begin{frame}[label=TRK-Fab08,noframenumbering]
@@ -4200,7 +4241,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab09}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	%\vspace*{-0.45cm}
 
@@ -4253,7 +4294,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab10}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
@@ -4327,7 +4368,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace{-0.1cm}
 	\hyperlink{TRK-Fab11}{\textbf{\beamerbutton{next}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
@@ -4379,7 +4420,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\hspace*{6.25cm}
 	\hyperlink{TRK-Fab10}{\textbf{\beamerbutton{previous}}}
 	\textcolor{itemblue}{$\parallel$}
-	\hyperlink{TRK-Ladder1}{\textbf{\beamerbutton{presentation}}}}
+	\hyperlink{TRK-Fab00}{\textbf{\beamerbutton{presentation}}}}
 	
 	\vspace*{-0.45cm}
 
