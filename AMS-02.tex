@@ -16,15 +16,20 @@
 \usepackage{xcolor}
 \usepackage{shadowtext}
 
+%tabelle
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs} % aggiunge: \toprule , \midrule e \bottomrule ; stile tabella
+
 %image paths
 \graphicspath{	
-	{./Immagini/}
-	{./Immagini/TRD/}
-	{./Immagini/ToF/}
-	{./Immagini/Magnetic_Spectrometer/}
-	{./Immagini/Magnetic_Spectrometer/Magnet/}
-	{./Immagini/Magnetic_Spectrometer/Tracker/}
-	{./Immagini/Magnetic_Spectrometer/Tracker/Ladder_Fabrication/}
+	{./Images/}
+	{./Images/TRD/}
+	{./Images/ToF/}
+	{./Images/Magnetic_Spectrometer/}
+	{./Images/Magnetic_Spectrometer/Magnet/}
+	{./Images/Magnetic_Spectrometer/Tracker/}
+	{./Images/Magnetic_Spectrometer/Tracker/Ladder_Fabrication/}
 }
 
 % impostazioni base delle slide - tema, colori, caratteri, ... (deic.uab.es/~iblanes/beamer_gallery/)
@@ -2815,6 +2820,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	while a shorter term variation is caused by the temperature cycle within a single orbit.}
 \end{frame}
 
+
 \begin{frame}
 	\frametitle{Silicon Tracker}
 	\framesubtitle{tracker displacements due to the thermal variations}
@@ -2852,7 +2858,6 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			\scriptsize{\bluetextbf{Figures:} $y$ coordinate stability after alignment for the layers 1 and 9.}		
 		\end{column}
 	\end{columns}
-	
 %	It is necessary to estimate alignment parameters to be applied during the off-line track reconstruction algorithm. 
 %	First, a static alignment of all the silicon sensors is performed using cosmic 
 %	protons to correct for the sensor shifts. Moreover, a dynamical alignment procedure is applied to the external layers: their 
@@ -2864,6 +2869,229 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 %
 %	Laser alignment will be performed coincident with data taking. This allows any possible changes in the tracker geometry, from 
 %	rapid thermal deformations to long term drift, to be identified and corrected offline.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: rigidity measurements I}
+	\justifying
+
+	\small{The incoming particle rigidity is inferred by the measurement of the track curvature in the magnetic field.
+	A fit to the measured crossing coordinates is applied to extract the trajectory parameters.}
+
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.53\textwidth}
+			\justifying
+			
+			\small{Rigidity resolution can be estimated from the Monte Carlo simulation (MC) once the point resolution and the 
+			effects of the residual misalignment are correctly simulated.
+			
+			\vspace*{0.15cm}
+			
+			As can be seen in the figure, there is a very good agreement between the simulated point resolution and the measured 
+			one. 
+			Similar agreements, for both He nuclei and protons, is observed on $x$ and $y$ projections at different track
+			inclinations.
+			
+			\vspace*{0.15cm}
+
+			This results gives value to the MC used to obtain the rigidity resolution.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.44\textwidth}
+			\centering
+			\small{\bluetextit{Position Measurement Resolution}}
+			
+			\vspace*{0.15cm}
+			
+			\includegraphics[width=0.97\textwidth]{TRACKER-PosRes-Meas_VS_MC-02.png}	
+			
+			\vspace*{0.05cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} He tracks fit residual on bending coordinate for inner layers. Black points ISS
+			data, red points MC}		
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: rigidity measurements II}
+	\justifying
+	
+	\vspace*{-0.1cm}
+
+	\small{Rigidity measurement resolution for protons and He estimated from MC simulation:}
+	
+	\vspace*{0.15cm}
+	
+	\begin{columns}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.92\textwidth}
+			\centering
+			\includegraphics[height=0.35\paperheight]{TRACKER-RigidityRes-01.png}	
+			
+%			\vspace*{0.05cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figures:}  
+			The rigidity measurement resolution is calculated for different tracker spans.
+			Note: the Maximum Detectable Rigidity correspond to a value of resolution equal to 1.}		
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+	\end{columns}	
+
+	\vspace*{0.25cm}
+
+	\small{Since the accuracy of the curvature measurements, among other parameters, strongly depend on the
+	span (i.e. distance between the uppermost and the bottommost measurement of the position), the rigidity resolution 
+	also depends on this parameter.
+	
+	\vspace*{0.15cm}
+
+	The pictures show that the presence of external layers, used to increase the trajectory lever arm, allows to measure the 
+	rigidity of traversing particles up to $TeV$.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: rigidity measurements III}
+	\justifying
+	
+	As can be see from graphs in the previous slide, the Maximum Detectable Rigidity (MDR) in the different span configurations
+	is: 
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{p{0.5cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}}
+			\multicolumn{1}{c}{\textbf{}} & 
+			\multicolumn{1}{c}{\textbf{\footnotesize{Inner Tracker}}} & 
+			\multicolumn{1}{c}{\textbf{\footnotesize{Inner + Layer 1}}} & 
+			\multicolumn{1}{c}{\textbf{\footnotesize{Inner + Layer 9}}} &
+			\multicolumn{1}{c}{\textbf{\footnotesize{Full Tracker}}}
+			\\
+			\toprule
+			\multicolumn{1}{r|}{\footnotesize{$p$}} & 
+			\multicolumn{1}{|c|}{\footnotesize{$240 \, GV$}} &
+			\multicolumn{1}{|c|}{\footnotesize{$540 \, GV$}} &
+			\multicolumn{1}{|c|}{\footnotesize{$750 \, GV$}} &
+			\multicolumn{1}{|c}{\footnotesize{$2000 \, GV$}} 
+			\\
+			\multicolumn{1}{r|}{\footnotesize{He}} & 
+			\multicolumn{1}{|c|}{\footnotesize{$400 \, GV$}} &
+			\multicolumn{1}{|c|}{\footnotesize{$1100 \, GV$}} &
+			\multicolumn{1}{|c|}{\footnotesize{$1600 \, GV$}} &
+			\multicolumn{1}{|c}{\footnotesize{$3200 \, GV$}} 
+			\\
+			\bottomrule	
+		\end{tabular}
+		
+		\vspace*{0.1cm}
+		
+		\scriptsize{\textit{These reported estimations are affected by a 10\% error} \cite{Ambrosi-01}\textit{.}}
+	\end{table}
+	
+	Therefore, the greatest MDR (obtained in the maximum span configuration with the Full Tracker) is approximatively $2 \, TV$ 
+	for protons and  $3.2 \, TV$ for He nuclei.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: charge confusion I}
+	\justifying
+	
+	The \textbf{charge confusion}, i.e. reconstructing a track with the wrong sign of charge, is one of the limiting factor in 
+	the measurement of antiparticle abundances in cosmic rays.
+	
+	\begin{block}{\small{Two sources of charge confusion:}}
+		\vspace*{-0.25cm}
+		\begin{columns}
+			\begin{column}{0.99\textwidth}
+				\begin{itemize}\justifying
+				\footnotesize{
+					\item[$\blacktriangleright$]	\textbf{Intrinsic:} Since tracker measures the curvature with a given gaussian 
+					resolution, the tails of this gaussian may extend beyond zero introducing then the probability to get a measured 
+					rigidity of the wrong sign. 
+					The resolution on the curvature worsen for larger rigidities as a consequence the probability of charge confusion 
+					equally increases. 
+					\textit{This source of charge confusion can not practically reduced but can be well estimated once the rigidity 
+					resolution is well known}.
+
+					%\vspace*{-0.1cm}
+					
+					\item[$\blacktriangleright$]	\textbf{Extrinsic:} arises from the particle interactions with the AMS material. 
+					The scattering of a particle may create a kink in the trajectory. 
+					As a consequence of the finite tracker point resolution this kink may fake the fit procedure into producing a wrong 
+					sign rigidity. 
+					\textit{This second class of charge confused events may be identified from the event features} \cite{Ambrosi-01}.
+				}	
+				\end{itemize}
+			\end{column}
+			\begin{column}{0.01\textwidth}	\end{column}
+		\end{columns}
+		\vspace*{0.05cm}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: charge confusion II}
+	\justifying
+	
+	\small{In order to spot charge confusion events, a set of 22 variables from the data are taken in account.
+	None of these variables, however, shows individually a large separation power between ``well'' and ``bad'' reconstructed 
+	tracks.}
+	
+	\vspace*{0.05cm}
+
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.52\textwidth}
+			\justifying
+			\vspace*{-0.15cm}
+
+			\small{Therefore has been implemented a Boosted Decision Tree (BDT), including the mentioned 22 quantities, that was 
+			trained on Monte Carlo simulated data.	
+			
+			\vspace*{0.15cm}
+			
+			The figure shows the charge confusion for electron events as observed in a MC simulation (red line) and 
+			as estimated with the Tracker BDT on the data (black points).
+	
+			\vspace*{0.15cm}
+
+			An overall agreement between the MC estimation and the Tracker BDT applied to the data confirms the
+			validity of the approach.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.45\textwidth}
+			\centering
+			\vspace*{0.05cm}
+
+			\small{\bluetextit{Charge Confusion}}
+			
+			\vspace*{0.05cm}
+			
+			\includegraphics[width=0.97\textwidth]{TRACKER-ChargeConfusion-02.png}	
+			
+%			\vspace*{0.05cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} Charge confusion is presented as a function of the total electron energy as measured in 
+			the ECAL, thus corresponding to a very good estimation of the true rigidity. }		
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: charge measurements I}
+	\justifying
+	
 \end{frame}
 
 \section{Others sub-system of AMS-02}
@@ -2893,6 +3121,10 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	
 	\bibitem{AMS-website}
 	AMS Collaboration, ``\textit{AMS-02 - The Alpha Magnetic Spectrometer Experiment}'' \url{http://www.ams02.org/}
+	
+	\bibitem{AMS-website-Gen}
+	AMS Geneva group, ``\textit{AMS - The Alpha Magnetic Spectrometer Experiment}'' 
+	\url{http://dpnc.unige.ch/ams/ams_beta/Welcome_New.shtml}
 	
 	\bibitem{Duranti}
 	M. Duranti, ``\textit{Measurement of the Atmospheric Muon Flux on Ground with the AMS-02 Detector}'' PhD thesis, University 
