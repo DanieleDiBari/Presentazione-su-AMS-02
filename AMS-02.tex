@@ -2211,7 +2211,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 			$n$-side. 
 			The readout electronics is placed directly on the front end board at the end of the ladder. 
 			
-			The AMS tracking system consists of \textbf{192 ladders} 
+			The AMS tracking system consists of \textbf{$\approx$ 200 ladders} 
 			\textit{for a total of about $2 \cdot 10^5$ readout channels} and a total active area of $6.74 m^2$.}
 	
 			\vspace*{0.3cm}
@@ -2523,54 +2523,348 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\framesubtitle{the structure of the AMS-02 tracker}
 	\justifying
 	
-	\footnotesize{Layers 1 and 9 constitute the \textbf{external tracker} and are positioned at both ends of the detector to
-	maximize the lever arm in the trajectory determination: the first is above the TRD at $z =155 \, cm$ and the last is under the 
-	RICH (before the ECAL) at $z = -135 \, cm$. %(In Fig.2.7 the external layers during the AMS-02 detector integration are shown)
-	}
+	\vspace*{-0.3cm}
+
+	\footnotesize{\textit{Layers 1 and 9 constitute the} \textbf{external tracker} and are positioned at both ends of the 
+	detector to maximize the lever arm in the trajectory determination: the first is above the TRD at $z =155 \, cm$ and the 
+	last is under the RICH (before the ECAL) at $z = -135 \, cm$.}
+
+	\vspace*{0.05cm}
 	
 	\begin{columns}
-		\begin{column}{0.6\textwidth}\justifying
-				\footnotesize{Layers 2 to 8 constitute the \textbf{inner tracker} and are arranged just above the magnet mechanical structure 
-	(layer 2, $z = 55 \, cm$) and inside the magnet bore (layers 3-8). Three carbon fibre and aluminium honeycomb planes
-%(see Figs. 2.5 and 2.6) 
-	support the layer pairs inside the magnet bore (3-4, 5-6,7-8), with a relative distance between layers belonging to the same
-	plane of $\sim 4 \, cm$ along the z axis. 
-	The most inner plane (layers 5-6) is placed at the magnet center ($z = 0$) and the two neighbours symmetrically disposed at
-	$z = \pm 27 \, cm$ from the central one.}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.59\textwidth}\justifying
+			\footnotesize{\textit{The layers from 2 to 8 constitute the} \textbf{inner tracker}\footnotemark[1]. 
+			
+			\vspace*{0.05cm}
+
+			The layer 2 is arranged just above the magnet mechanical structure (at $z = 55 \, cm$), the other seven layers of the 
+			inner tracker (from 3 to 8) are all located inside the magnet bore. 
+			
+			\vspace*{0.05cm}
+			
+			Three carbon fibre and aluminium honeycomb planes support the layer pairs (namely: 3-4, 5-6, 7-8) inside the magnet
+			bore, with a relative distance between layers belonging to the same plane of about $4 \, cm$ along the $z$ axis. 
+			The most inner plane (layers 5-6) is placed at the magnet center ($z = 0$) and the two neighbours symmetrically 
+			disposed at $z = \pm 27 \, cm$ from the central one.}
 		\end{column}
-		\begin{column}{0.4\textwidth}
-			\includegraphics[width=\textwidth]{TRACKER-03.png}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.38\textwidth}
+			\vspace*{0.1cm}			
+			
+			\centering
+			\includegraphics[width=0.8\textwidth]{TRACKER-03.png}
+			
+			\vspace*{0.2cm}
+
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} measured $369 \, GeV$ $e^+$ event (bending plane view).}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	
+%	\footnotetext[1]{\justifying{\scriptsize{There is no overlap between the ladders in the planes of the tracker because, 
+%	even if this operation involve an improvement of the planes tightness, it has also the drawback of significantly increase the 
+%	complication of the mechanical design of the support structure.}}}
+	\footnotetext[1]{\justifying{\scriptsize{In view of the marginal increase of the planes tightness, and the very significant 
+	complication of the mechanical design, there is no overlap between the ladders in the planes of the tracker.}}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{need for a thermal control system for AMS}
+	\justifying
+	
+	Due to the high number of readout channels, the tracker front end electronics (mainly the voltage amplifiers in the hybrids) 
+	develop about $200 \, W$ of heat that must be removed from the volume of the inner tracker to prevent overheating of the 
+	system: a maximum temperature of $80 \, ^\circ{C}$ can be tolerated by the electronics before a permanent damage, 
+	however an optimal constant temperature of about $20 \, ^\circ{C}$ is desirable to keep uniform performance of the overall
+	system. 
+	
+	Temperature inside the magnet bore is thus actively controlled by the \textbf{Tracker Thermal Control System} 
+	(TTCS)\footnotemark[1].
+	
+	\footnotetext[1]{\justifying{The TTCS also provide for the compensation of the tracker temperature variation induced by the 
+	variation of the incidence angle of sunlight on the ISS and, therefore, on the AMS-02 module.}}
+%	The hybrids are mounted on Thermal Pyrolytic Graphite-Al cooling bars, which evacuate the heat
+%generated by the front-end electronics inside the magnet.
+	
+	
+%			\footnotesize{The layers from 2 to 8 constitute the \textbf{inner tracker}. The layer 2 is arranged just above the magnet 
+%			mechanical structure (at $z = 55 \, cm$), the other seven layers of the inner tracker (from 3 to 8) are all located inside
+%			the magnet bore. 
+%			
+%			Three composite structure (with two $220 \, \mu m$ thick layers of carbon fibre surrounding a $12 \, mm$ thick, low 
+%			density aluminium honeycomb interior, $\rho = 16.02 \, kg/m^3$ - thve diameter of the planes is $1 \, m$) support the 
+%			layer pairs inside the magnet bore (3-4, 5-6,7-8), with a relative distance between layers belonging to the same plane of 
+%			$\sim 4 \, cm$ along the z axis. 
+%			The most inner plane (layers 5-6) is placed at the magnet center ($z = 0$) and the two neighbours symmetrically 
+%			disposed at $z = \pm 27 \, cm$ from the central one.
+
+%As also depicted in
+%fig.1 the Silicon Tracker is made of 9 layers covering the
+%full span of the AMS detector. Three support planes each
+%equipped with ladders on both sides are placed inside the
+%magnet bore, another support plane holding a single layer
+%of silicon detectors is placed at the top end of the magnet.
+%Two additional single layer planes are placed on top of the
+%TRD and the ECAL to get the largest lever arm in measuring
+%the particle rigidity. Collectively layers from 2 to 8 are
+%referred as the inner tracker.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{need for a thermal control system for AMS}
+	
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.62\textwidth}\justifying
+			\small{Due to the high number of readout channels, the tracker front end electronics 
+			(mainly the voltage amplifiers in the hybrids) 
+			develop about $200 \, W$ of heat that must be removed from the volume of the inner tracker to prevent overheating of
+			the system: a maximum temperature of $80 \, ^\circ{C}$ can be tolerated by the electronics before a permanent 
+			damage, however an optimal constant temperature of about $20 \, ^\circ{C}$ is desirable to keep uniform performance 
+			of the overall system. 
+			
+			\vspace*{0.15cm}			
+	
+			Temperature inside the magnet bore is thus actively controlled by the:\\ 
+			$\quad \triangleright$ \textbf{Tracker Thermal Control System} (TTCS)\footnotemark[1].}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+
+		\begin{column}{0.35\textwidth}
+			\centering
+			\bluetextit{\footnotesize{Tracker thermal bars}}
+
+			\vspace*{0.1cm}			
+			
+			\includegraphics[width=0.7\textwidth]{TRACKER-TTCS-Thermal_Bars-cut.png}
+			
+			\vspace*{0.05cm}
+						
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} The ladder hybrids are thermally connected to a system of thermal bars to keep the whole 
+			tracker at the same temperature.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+	
+	\footnotetext[1]{\justifying{\scriptsize{The TTCS also provide for the compensation of the tracker temperature variation 
+	induced by the variation of the incidence angle of sunlight on the ISS and, therefore, on the AMS-02 module.}}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the Tracker Thermal Control System I}
+	\justifying
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}\justifying			
+			\small{\bluetextbf{\hspace{0.15cm} TTCS operating principle}}
+			
+			\vspace*{-0.15cm}
+
+			\begin{itemize}\justifying
+			\footnotesize{
+				\item[$\blacktriangleright$]	A pump forces the liquid $\text{CO}_2$ into a loop passing trough the thermal bars, 
+							working as evaporator. 
+							In this evaporator the hybrids heat makes the $\text{CO}_2$ boiling and becoming two phases.
+														
+							\vspace*{-0.05cm}
+							 
+				\item[$\blacktriangleright$]	Exiting from the tracker  the two phases $\text{CO}_2$ is thermally connected to the 
+							liquid entering the evaporator, bringing the second as close as possible to the boiling point. 
+							
+							\vspace*{-0.05cm}
+							
+				\item[$\blacktriangleright$] 	After this step the two phases $\text{CO}_2$ goes toward a two radiators system,
+							facing the outer space, working as condenser.
+			}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\includegraphics[width=\textwidth]{TRACKER-TTCS_Op_Principle.jpg}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the Tracker Thermal Control System II}
+	\justifying
+	
+	\begin{columns}
+		\begin{column}{0.5\textwidth}\justifying
+		
+			\small{\bluetextbf{\hspace{0.15cm} TTCS operating principle}}
+			
+			\vspace*{-0.15cm}
+
+			\begin{itemize}\justifying
+			\footnotesize{
+				\item[$\blacktriangleright$]	To adjust the temperature set point of the system, a reservoir regulated by a 
+							thermo-electric (Peltier) element controls the amount of $\text{CO}_2$ in the loop.
+														
+							\vspace*{-0.05cm}
+							 
+				\item[$\blacktriangleright$]	The boiling of the liquid, and so the use of latent heat, makes the system more efficient 
+							with respect to a single phase device.
+							
+							\vspace*{-0.05cm}
+							
+				\item[$\blacktriangleright$] 	The whole TTCS system (loop, pumps, accumulators, etc.) is completely doubled to have 
+							fully redundancy.
+			}
+			\end{itemize}
+			
+			\begin{columns}
+				\begin{column}{0.04\textwidth}\end{column}
+				\begin{column}{0.96\textwidth}\justifying
+					\footnotesize{\textbf{N.B.} The layer 1, facing almost directly the outer space, has no over-heating problem and
+					doesn't need a cooling system.}
+				\end{column}
+			\end{columns}
+			
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\includegraphics[width=\textwidth]{TRACKER-TTCS_Op_Principle.jpg}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{the performance of the TTCS}
+	\justifying
+	
+	\small{The TTCS keeps the Inner Tracker temperature under control within $1 \, ^\circ{C}$ fluctuation of its 
+	nominal operational temperature. 
+	This guarantees the Tracker stability in terms of tracking efficiency and position measurement performance.}
+	
+	\vspace*{0.3cm}
+
+%	\begin{columns}
+%		\begin{column}{0.03\textwidth}\end{column}
+%		\begin{column}{0.61\textwidth}
+%			\includegraphics[width=\textwidth]{TRACKER-TempVar-03.png}			
+%		\end{column}
+%		\begin{column}{0.33\textwidth}
+%			\scriptsize{\textitem{Figure}{Tracker Temperature}}
+%			
+%			\justifying
+%			\scriptsize{Time variation of the tracker temperature measured\footnotemark[1] by different 
+%			sensors in the period between May 2011 and September 2014. 
+%			Inner Tracker is more stable since it is contained in the magnet bore while the two outer layers are more exposed
+%			to the space environment.}
+%		\end{column}
+%		\begin{column}{0.04\textwidth}\end{column}
+%	\end{columns}
+%
+%	\footnotetext[1]{\justifying{\scriptsize{The temperatures are measured at different locations of the detector, either close to 
+%	the electronics, either in the carbon fibre support structures, by a chain of sensors.}}}
+	
+	\begin{columns}
+		\begin{column}{0.05\textwidth}\end{column}
+		\begin{column}{0.9\textwidth}
+			\centering
+			\includegraphics[height=0.45\paperheight]{TRACKER-TempVar-01.png}			
+
+			\vspace*{0.1cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} Time variation of the tracker temperature measured, between May 2011 and September 
+			2014, by different sensors. 
+			Inner Tracker is more stable since it is contained in the magnet bore while the two outer layers are more exposed
+			to the space environment.}
+		\end{column}
+		\begin{column}{0.05\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{tracker displacements due to the thermal variations}
+	\justifying
+	\footnotesize{In order to maximize the Tracker resolution, it is necessary to know the position of each sensor with an accuracy 
+	of few $\mu m$, but the variation of the mean temperature and gradients across the mechanical structure lead to shifts of 
+	several hundred $\mu m$.}
+	
+	\vspace*{0.25cm}
+	
+	\begin{columns}
+		\begin{column}{0.12\textwidth}\end{column}
+		\begin{column}{0.62\textwidth}
+			\includegraphics[width=\textwidth]{TRACKER-Thermal_Disp-02.png}			
+		\end{column}
+		\begin{column}{0.21\textwidth}
+			\justifying
+			\scriptsize{\bluetextbf{Figures:}\\Shift of external layers based on nominal position in the bending side ($y$) and 
+			in the non-bending one ($x$).}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+	\end{columns}
+	
+	\vspace*{0.25cm}
+	
+	\footnotesize{Indeed, due to the temperature variation on orbit, displacements of the outer Tracker layers were observed at a 
+	time scale of tens of minutes. 
+	A long-term movement of the sensors correlates with the evolution of the solar beta angle ($\sim 2$ months cycle), 
+	while a shorter term variation is caused by the temperature cycle within a single orbit.}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{tracker displacements due to the thermal variations}
+	\justifying
+	
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.49\textwidth}
+			\justifying
+			
+			\small{To take into account the thermal movements and correct for time dependencies, two independent dynamic 
+			procedures of track alignment have been developed. 
+			
+			\vspace*{0.15cm}
+			
+			The alignment was based on the minimization of the proton and helium track residuals in the external planes. 
+			
+			\vspace*{0.15cm}
+			
+			The stability in the bending coordinate after the alignment is shown in figures, no time dependent structure is visible
+			and a dispersion at $\sim 3 \, \mu m$ level, well below the spatial resolution of the sensors, is reached.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\small{\bluetextit{Tracker displacements}}
+			
+			\vspace*{0.1cm}
+			
+			\includegraphics[width=0.95\textwidth]{TRACKER-Alignment.png}	
+			
+			\vspace*{0.1cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figures:} $y$ coordinate stability after alignment for the layers 1 and 9.}		
 		\end{column}
 	\end{columns}
 	
-
+%	It is necessary to estimate alignment parameters to be applied during the off-line track reconstruction algorithm. 
+%	First, a static alignment of all the silicon sensors is performed using cosmic 
+%	protons to correct for the sensor shifts. Moreover, a dynamical alignment procedure is applied to the external layers: their 
+%	supporting structures suffer in fact deformations and shifts due to the large temperature gradient which they are exposed to 
+%	(up to $\pm 80 \, ^\circ{C}$ in a 2 month beta angle cycle). Using cosmic protons to provide a time-dependent correction, the 
+%	outer plane alignment is known with a precision $\sim 3 \, \mu m$. 
+%	In parallel to the alignment procedure, the 7 inner planes movements are monitored by the Tracker Alignment System (TAS), 
+%	which consists of 5 laser beams produced by diodes installed on the layer 2 support structures.
+%
+%	Laser alignment will be performed coincident with data taking. This allows any possible changes in the tracker geometry, from 
+%	rapid thermal deformations to long term drift, to be identified and corrected offline.
 \end{frame}
-
-\begin{frame}
-As also depicted in
-fig.1 the Silicon Tracker is made of 9 layers covering the
-full span of the AMS detector. Three support planes each
-equipped with ladders on both sides are placed inside the
-magnet bore, another support plane holding a single layer
-of silicon detectors is placed at the top end of the magnet.
-Two additional single layer planes are placed on top of the
-TRD and the ECAL to get the largest lever arm in measuring
-the particle rigidity. Collectively layers from 2 to 8 are
-referred as the inner tracker.
-\end{frame}
-
-\begin{frame}
-\justifying
-\small{
-The AMS-02 tracker contains 2264, $41.360 \times 72.045 \times 0.300 \, mm^3$, double-sided microstrip sensors obtained from n-type, high resistivity ($> 6\,k\Omega$) circular silicon wafers with $<1 \, 1\, 1>$ lattice orientation. 
-The sensors are biased via the punchthrough technique. 
-The $14 \, \mu m$ wide p-side (junction) strips have implantation and readout pitches of 27.5 and $110 \, \mu m$; the
-$15 \, \mu m$ wide n-side (ohmic) strips have implantation and readout pitches of 52 and $208 \, \mu m$. 
-The average values of the important noise performance parameters, based on the measurements of
-$\sim 1500$ AMS-02 sensors, are reported in Table 1.
-}
-\end{frame}
-
 
 \section{Others sub-system of AMS-02}
 \begin{frame}{Others sub-system of the AMS-02 experimet}{}
@@ -2739,6 +3033,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
  		 }%
  	\vskip0pt%
 }
+
 
 \section*{Appendix}\pdfbookmark[2]{Appendix}{Append}
 \begin{frame}[noframenumbering]
@@ -3792,7 +4087,7 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 			\begin{figure}
 				\includegraphics[height=0.52\paperheight]{TRACKER-LadFabrication-01.png}
 				\hspace*{0.5cm}
-				\includegraphics[height=0.52\paperheight]{TRACKER-LadFabrication-01b.png}
+				\includegraphics[height=0.52\paperheight]{TRACKER-LadFabrication-01b.jpg}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.02\textwidth}\end{column}
@@ -3803,9 +4098,12 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 	\begin{columns}[t]
 		\begin{column}{0.02\textwidth}\end{column}
 		\begin{column}{0.98\textwidth}
-			\begin{figure}\centering
+			\begin{figure}\justifying
 				\scriptsize{\bluetextbf{Figures 1 and 2:}
-				Sensor positioning. The detectors are longitudinally aligned with two pins, and transversely with one pin.}
+				Sensor positioning. The detectors are longitudinally aligned with two pins, and transversely with one pin 
+				(the pins have an geometrical accuracy of $5 \, \mu m$). 
+				The mechanical precision required for the sensors alignment is $10 \, \mu m$ (actually, the precision reached for the 
+				assembled ladders, is $6 \div 9 \, \mu m$).}
 			\end{figure}
 		\end{column}
 		\begin{column}{0.02\textwidth}\end{column}
@@ -4404,8 +4702,8 @@ $\sim 1500$ AMS-02 sensors, are reported in Table 1.
 		\begin{column}{0.04\textwidth}\end{column}
 		\begin{column}{0.46\textwidth}
 			\begin{figure}\justifying									
-				\scriptsize{\bluetextbf{Figure 27:} 
-				The Upilex foil, then the ladder are placed on a table. 
+				\scriptsize{\bluetextbf{Figure 27:} Shielding.
+				The doubly-metallized Upilex foil, then the ladder are placed on a table. 
 				The foil is bent over the ladder with pushers.
 				The shielding is closed with rosin-free solder.}
 			\end{figure}
