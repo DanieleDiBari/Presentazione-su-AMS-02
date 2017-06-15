@@ -175,10 +175,10 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 
 \usebackgroundtemplate{}
 
-\begin{frame}[allowframebreaks]\pdfbookmark[2]{Contents}{Contents}
-\frametitle{Table of Contents}
-\tableofcontents
-\end{frame}
+%\begin{frame}[allowframebreaks]\pdfbookmark[2]{Contents}{Contents}
+%\frametitle{Table of Contents}
+%\tableofcontents
+%\end{frame}
 
 \begin{frame}<presentation:0>[noframenumbering]
 	\frametitle{Technical Question about the Detector}
@@ -573,6 +573,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 \begin{frame}[label=TRD-main]
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{the main features of transition radiation process}
+	\justifying
 
 	\small{
 	Typically, this emission phenomena \textbf{is relevant for ultra-relativistic particles} ($\gamma \geqslant 300$) 
@@ -643,9 +644,9 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{more about the straw tubes of a TRD straw module}
 	\justifying
-	The straw tubes have a diameter of 6 mm and different lengths, up to 2m. Their walls, made of 72 $\mu m$ a 
-	double-layer kapton–aluminum foil, work as cathodes. In the center of each tube, there is a 30 $\mu m$ thick fine 
-	gold plated wire (tensioned with 1N) that works as anode for the proportional chamber.
+	The straw tubes have a diameter of $6 \, mm$ and different lengths, up to $2 \, m$. Their walls, made of 72 $\mu m$ a 
+	double-layer kapton-aluminum foil, work as cathodes. In the center of each tube, there is a 30 $\mu m$ thick fine 
+	gold plated wire (tensioned with $1 \, N$) that works as anode for the proportional chamber.
 
 	\vspace{-0.15cm}
 	\begin{columns}
@@ -837,7 +838,7 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\frametitle{TRD - Transition Radiation Detector}
 	\framesubtitle{space qualification of the straw modules}
 	\justifying	
-	\small{Space qualification tests have been carried out for eight 0.7m long straw modules.}
+	\small{Space qualification tests have been carried out for eight $0.7 \, m$ long straw modules.}
 	
 	\vspace{-0.25cm}
 	\begin{columns}
@@ -3092,6 +3093,121 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	\framesubtitle{performance: charge measurements I}
 	\justifying
 	
+	\small{Redundancy is key to obtain high accuracy measurements of $|Z|$ by $dE/dx$. 
+	
+	\vspace*{0.15cm}
+
+	For this purpose, the specific energy loss is measured no less than 13 times along the particle trajectory. 
+	Actually, each tracker hit delivers two measurements of specific energy loss (one arise from the $n$-side and the other 
+	from the $p$-side), with different gain and saturation properties on the two readout sides.}
+	
+	\vspace*{0.1cm}
+	
+	\begin{columns}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.4\textwidth}
+			\centering
+			\footnotesize{\bluetextit{Charge Resolution (CR)}}
+		\end{column}
+		\begin{column}{0.56\textwidth}\end{column}
+	\end{columns}
+
+	\vspace*{0.06cm}
+	
+	\begin{columns}
+		\begin{column}{0.04\textwidth}\end{column}
+		\begin{column}{0.4\textwidth}
+			\includegraphics[width=0.98\textwidth]{TRACKER-C_distrib-Calibration-01.png}			
+		\end{column}
+		\begin{column}{0.52\textwidth}
+			\justifying
+			\scriptsize{\textitem{Figure}{CR for the two sides of the tracker sensors}\\
+			The figure shows, up to silicon ($Z = 14$), the two different resolution of the full tracker for the $n$-side and $p$-side 
+			and the overall improvement in the tracker charge measurement after applying the calibration. 
+			At high $Z$ the response of the microstrip detector starts saturating (for each side), implying a natural
+			degradation of the measurement.}
+		\end{column}
+		\begin{column}{0.04\textwidth}\end{column}
+	\end{columns}
+	
+%	\small{Typical charge resolutions for Carbon nuclei after calibration are 0.3 charge units per tracker layer (that correspond 
+%			at a resolution of about 0.15 for the inner tracker).}
+\end{frame}
+
+\begin{frame}[label=Perf]
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: charge measurements II}
+	\justifying		
+	
+	\vspace*{-0.05cm}
+	
+	\small{The \textbf{charge calibration} see before consist in a procedure that allows to corrects for path length differences, the 
+	front end gains, charge losses depending on impact position and angle as well as the dependence of $dE/dx$ on momentum.}
+	\vspace*{0.15cm}
+
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.52\textwidth}
+			\justifying
+			\small{In order to obtain the overall charge identification power, the two measurements shown in the previous slide are 
+			combined using a weighted sum, where the weights are related to the specific resolutions.
+			
+			\vspace*{0.15cm}
+			
+			The \textit{figure shows the final combined estimator for the full tracker} over the full range of charges.
+			
+			\vspace*{0.15cm}
+			
+			At 99\% selection efficiency, the contamination from neighbouring charges is estimated to be lower 
+			than $10^{-4}$ up 	to oxygen ($Z = 8$) with a miss-identification probability for carbon lower than $10^{-6}$.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.45\textwidth}
+			\centering
+			\includegraphics[width=0.97\textwidth]{TRACKER-Charge_distrib-04.png}	
+			
+			\vspace*{0.02cm}
+			
+			\justifying
+			\scriptsize{\bluetextbf{Figure:} Nuclei up to Si can clearly be separated. 
+			Above, nuclei with even $Z$ can also be distinguished. 
+			The Fe peak itself is clearly visible due to its natural higher abundance compared to neighbouring charges.}
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Silicon Tracker}
+	\framesubtitle{performance: charge measurements III}
+	\justifying		
+
+	\begin{columns}
+		\begin{column}{0.01\textwidth}\end{column}
+		\begin{column}{0.5\textwidth}
+			\justifying
+			\small{Finally, for the combined measurement, the tracker reach a resolution at the level of 0.1 charge units ($c.u.$) for 
+			carbon and lower than $0.3 \,  c.u.$ up to silicon. }
+	
+			\vspace*{0.15cm}
+		
+			\small{This is shown in the figure where the quoted values are obtained by fitting 
+			single charge distributions with a simple gaussian function for two different cases: a minimum number of 8 layers entering 
+			the measurement (magenta curve) and the general case with at least 4 layers (black curve).}
+		\end{column}
+		\begin{column}{0.48\textwidth}
+			\centering
+%			\hspace*{0.35cm}\tiny{}
+%			
+			\includegraphics[width=0.96\textwidth]{TRACKER-Resolutio-01.png}	
+			
+			\vspace*{0.05cm}
+
+			\hspace*{0.35cm}\footnotesize{\bluetextit{Tracker Charge Resolution}}\\	
+			\hspace*{0.35cm}\footnotesize{\bluetextit{in charge unit}}		
+		\end{column}
+		\begin{column}{0.01\textwidth}\end{column}
+	\end{columns}	
 \end{frame}
 
 \section{Others sub-system of AMS-02}
@@ -3238,10 +3354,6 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 	
 	\bibitem{Pohl}
 	M. Pohl, ``\textit{AMS tracking in-orbit performance}'' PoS (VERTEX2015) 022
-
-	\bibitem{Zuccon}
-	P. Zuccon, ``\textit{The AMS silicon tracker: Construction and performance}'' Nuclear Instruments and Methods in Physics 
-	Research A 596 (2008) 74-78.
 	}
 	
 	\end{thebibliography}
@@ -3265,7 +3377,6 @@ AMS successfully confirmed the possibility of operating a particle physics detec
  		 }%
  	\vskip0pt%
 }
-
 
 \section*{Appendix}\pdfbookmark[2]{Appendix}{Append}
 \begin{frame}[noframenumbering]
@@ -5002,5 +5113,4 @@ AMS successfully confirmed the possibility of operating a particle physics detec
 		\begin{column}{0.09\textwidth}\end{column}
 	\end{columns}
 \end{frame}
-
 \end{document}
